@@ -21,7 +21,7 @@
          </children>
       </VBox>
       <Label layoutX="177.0" layoutY="116.0" text="Email" />
-      <TextField layoutX="263.0" layoutY="112.0" promptText="Enter Email" />
+      <TextField layoutX="263.0" layoutY="112.0" promptText="example@email.com" />
       <Label layoutX="177.0" layoutY="148.0" text="Password" />
       <TextField layoutX="263.0" layoutY="144.0" promptText="Enter Password" />
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="177.0" layoutY="184.0" prefHeight="17.0" prefWidth="236.0" style="-fx-background-color: gray;" textAlignment="CENTER" />
