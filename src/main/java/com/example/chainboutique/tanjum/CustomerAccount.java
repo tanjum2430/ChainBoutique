@@ -53,4 +53,40 @@ public class CustomerAccount {
                 ", phoneNo='" + phoneNo + '\'' +
                 '}';
     }
+
+    public boolean register(){
+        if (email.isEmpty()||phoneNo.isEmpty()||password.isEmpty()){
+            return false;
+        }
+        return true;
+    }
+
+    public boolean login(String email, String password){
+        return this.email.equals(email) &&
+                this.password.equals(password);
+    }
+
+    public boolean changePassword(String oldPassword,
+                                  String newPassword){
+        if(this.password.equals(oldPassword)){
+            this.password = newPassword;
+            return true;
+        }
+        return false;
+    }
+
+    public void logout(){
+        System.out.println("Logged out successfully.");
+    }
+
+    public boolean resetPassword(String email,
+                                 String newPassword){
+        if(this.email.equals(email)){
+            this.password = newPassword;
+            return true;
+        }
+        return false;
+    }
+
+
 }

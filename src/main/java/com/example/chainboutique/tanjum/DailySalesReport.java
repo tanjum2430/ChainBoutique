@@ -65,4 +65,15 @@ public class DailySalesReport {
                 ", totalReturns=" + totalReturns +
                 '}';
     }
+    public void generateReport(){
+        System.out.println("Sales Report Generated");
+    }
+
+    public void displaySummary(){
+        System.out.println("Report Date:"+ reportDate);
+        System.out.println("Total Sales:"+totalSales);
+        System.out.println("Total Discount:"+totalDiscount);
+        System.out.println("Total returns"+totalReturns);
+
+    }
 }

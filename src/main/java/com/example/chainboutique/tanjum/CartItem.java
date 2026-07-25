@@ -3,6 +3,7 @@ package com.example.chainboutique.tanjum;
 public class CartItem {
     private int quantity;
     private double subTotal;
+    private Product product;
 
 
     public CartItem(int quantity, double subTotal) {
@@ -32,5 +33,9 @@ public class CartItem {
                 "quantity=" + quantity +
                 ", subTotal=" + subTotal +
                 '}';
+    }
+    
+    public double calculateSubtotal(){
+        return quantity * product.getPrice();
     }
 }

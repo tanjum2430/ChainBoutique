@@ -45,4 +45,11 @@ public class Invoice {
                 ", totalAmount=" + totalAmount +
                 '}';
     }
+    public void generateInvoice(){
+        date = LocalDate.now();
+    }
+
+    public void printInvoice(){
+        System.out.println(this);
+    }
 }

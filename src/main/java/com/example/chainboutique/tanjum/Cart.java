@@ -33,5 +33,21 @@ public class Cart {
                 '}';
     }
 
+    public void addItem(Product product,int quantity){
+        totalPrice += product.getPrice() * quantity;
+    }
+
+    public void removeItem(Product product, int quantity){
+        totalPrice -= product.getPrice() * quantity;
+    }
+
+    public double calculateTotal(){
+        return totalPrice;
+    }
+
+    public void clearCart(){
+        totalPrice = 0;
+    }
+
 
 }

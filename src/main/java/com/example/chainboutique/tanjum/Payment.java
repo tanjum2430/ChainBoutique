@@ -63,4 +63,16 @@ public class Payment {
                 ", paidAmount=" + paidAmount +
                 '}';
     }
+
+    public boolean verifyPayment(){
+        return paymentStatus.equalsIgnoreCase("Paid");
+    }
+
+    public void makePayment(String paymentMethod,
+                            double amount){
+        this.paymentMethod = paymentMethod;
+        this.paidAmount = amount;
+        this.paymentStatus = "Paid";
+        this.transactionId = "TXN" + paymentID;
+    }
 }

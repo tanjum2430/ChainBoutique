@@ -43,4 +43,14 @@ public class Discount {
                 ", discountPercentage=" + discountPercentage +
                 '}';
     }
+
+    public double applyDiscount(double totalAmount) {
+        return totalAmount - (totalAmount*discountPercentage/100);
+    }
+
+    public boolean validateDiscount(){
+        return status.equalsIgnoreCase("Active");
+    }
+
+
 }

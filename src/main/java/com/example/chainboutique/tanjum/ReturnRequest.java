@@ -87,4 +87,14 @@ public class ReturnRequest {
                 ", status='" + status + '\'' +
                 '}';
     }
+
+    public void approveReturn() {
+        status = "Approved";
+        return true;
+    }
+
+    public boolean rejectedReturn(){
+        status = "Rejected";
+        return true;
+    }
 }

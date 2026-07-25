@@ -32,4 +32,8 @@ public class OrderItem {
                 ", unitPrice=" + unitPrice +
                 '}';
     }
+
+    public double calculateSubtotal(){
+        return quantity * unitPrice;
+    }
 }

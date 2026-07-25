@@ -6,6 +6,7 @@ public class SalesBill {
     private int build; // Primary Key
     private LocalDate billDate;
     private double totalAmount;
+    private String billId;
 
     public SalesBill(int build, LocalDate billDate, double totalAmount) {
         this.build = build;
@@ -44,5 +45,15 @@ public class SalesBill {
                 ", billDate=" + billDate +
                 ", totalAmount=" + totalAmount +
                 '}';
+    }
+    
+    public double calculateBill(){
+        return totalAmount;
+    }
+    
+    public void generateBill(){
+        System.out.println("Bill ID:"+ billId);
+        System.out.println("Date:" + billDate);
+        System.out.println("Total Amount:"+totalAmount);
     }
 }

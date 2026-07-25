@@ -66,4 +66,21 @@ public class Order {
                 ", totalAmount=" + totalAmount +
                 '}';
     }
+
+    public void placeOrder(){
+        status = "Placed";
+        orderDate = LocalDate.now();
+    }
+
+    public boolean cancelOrder(){
+        if (status.equals("Placed")){
+            status = "Cancelled";
+            return true;
+        }
+        return false;
+    }
+
+    public double calculateTotal(){
+        return totalAmount;
+    }
 }
