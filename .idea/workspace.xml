@@ -117,7 +117,23 @@
       <option name="project" value="LOCAL" />
       <updated>1784992159166</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Initial project upload">
+      <option name="closed" value="true" />
+      <created>1784994889711</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1784994889711</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Initial project upload">
+      <option name="closed" value="true" />
+      <created>1784994904396</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1784994904396</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
