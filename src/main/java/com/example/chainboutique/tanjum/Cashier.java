@@ -41,4 +41,5 @@ public class Cashier {
                 ", cashierID=" + cashierID +
                 '}';
     }
+
 }

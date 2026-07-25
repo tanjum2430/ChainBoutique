@@ -76,4 +76,44 @@ public class Customer {
                 ", customerId=" + customerId +
                 '}';
     }
+
+    public boolean createAccount(){
+        if(name.isEmpty()||email.isEmpty()||phoneNo.isEmpty()
+        ||password.isEmpty()||address.isEmpty()){
+            return false;
+        }
+        return true;
+    }
+
+    public boolean login(String email,String password){
+        return this.email.equals(email) &&
+                this.password.equals(password);
+    }
+
+    public void viewProducts(){
+        System.out.println("Displaying all available products.");
+    }
+
+    public void searchProduct(String keyword){
+        System.out.println("Searching product."+ keyword);
+    }
+
+    public void addToCart(Product product, int quantity){
+        System.out.println(quantity+""+product.getProductName()+"added to cart.");
+    }
+
+    public void placeOrder(){
+        System.out.println("Order placed successfully.");
+    }
+
+    public void viewOrderHistory(){
+        System.out.println("Displaying order history.");
+    }
+
+    public boolean cancelOrder(int orderId){
+        System.out.println("Order"+ orderId + "cancelled.");
+        return true;
+    }
+
+
 }
