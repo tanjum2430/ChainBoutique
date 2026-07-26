@@ -1,15 +1,17 @@
 package com.example.chainboutique.tanjum;
 
-public class customerLoginController
+public class cashierLoginController
 {
     @javafx.fxml.FXML
-    private TextField passwordTextField;
+    private Label cashierIDLabel;
     @javafx.fxml.FXML
-    private TextField emailTextField;
+    private Label writeMessageLabel;
     @javafx.fxml.FXML
-    private Label customerLoginLabel;
+    private Button handleLoginButton;
     @javafx.fxml.FXML
-    private Label emailLabel;
+    private PasswordField pfPassword;
+    @javafx.fxml.FXML
+    private TextField cashierIDTextField;
     @javafx.fxml.FXML
     private Label messageLabel;
     @javafx.fxml.FXML
@@ -20,11 +22,11 @@ public class customerLoginController
     }
 
     @javafx.fxml.FXML
-    public void handleClearButton(ActionEvent actionEvent) {
+    public void handleBackButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void handleRegisterButton(ActionEvent actionEvent) {
+    public void handleClearButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

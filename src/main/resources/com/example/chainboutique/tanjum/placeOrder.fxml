@@ -1,14 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.chainboutique.tanjum.placeOrderController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="540.0" prefWidth="945.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.tanjum.placeOrderController">
+   <children>
+      <VBox alignment="CENTER" layoutX="309.0" layoutY="14.0" prefHeight="57.0" prefWidth="400.0">
+         <children>
+            <Label fx:id="checkoutPlaceOrderLabel" alignment="CENTER" text="Checkout/Place Order" textAlignment="CENTER">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label fx:id="customerNameLabel" layoutX="29.0" layoutY="81.0" text="Customer Name" />
+      <TextField fx:id="customerNameTextField" layoutX="123.0" layoutY="77.0" promptText="Enter Your Name" />
+      <Label fx:id="phoneLabel" layoutX="29.0" layoutY="120.0" text="Phone" />
+      <TextField fx:id="phoneTextField" layoutX="123.0" layoutY="116.0" promptText="01XXXXXXXXX" />
+      <Label fx:id="deliveryAddressLabel" layoutX="29.0" layoutY="153.0" text="Delivery Address" />
+      <TextField fx:id="deliveryAddressTextField" layoutX="123.0" layoutY="149.0" promptText="Enter Your Address" />
+      <TableView fx:id="orderSummaryTableView" layoutX="312.0" layoutY="74.0" prefHeight="272.0" prefWidth="393.0">
+        <columns>
+          <TableColumn fx:id="productCol" prefWidth="143.0" text="Product" />
+          <TableColumn fx:id="quantityCol" prefWidth="61.0" text="Quantity" />
+            <TableColumn fx:id="unitPriceCol" prefWidth="85.0" text="Unit Price" />
+            <TableColumn fx:id="subtotalCol" prefWidth="100.0" text="Subtotal" />
+        </columns>
+      </TableView>
+      <VBox alignment="CENTER" layoutX="723.0" layoutY="74.0" prefHeight="272.0" prefWidth="187.0" spacing="10.0">
+         <children>
+            <Label fx:id="paymentMethodLabel" text="Payment Method" />
+            <ComboBox fx:id="paymentMethodComboBox" prefHeight="25.0" prefWidth="181.0" promptText="Choose Payment Method" />
+            <Label fx:id="totalAmountLabel" text="Total Amount" />
+            <TextField fx:id="totalAmountTextField" editable="false" promptText="Total" />
+            <Label fx:id="orderStatusLabel" text="Order Status" />
+            <TextField fx:id="orderStatusTextField" editable="false" promptText="Status" text="Pending" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="312.0" layoutY="379.0" prefHeight="100.0" prefWidth="417.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleConfirmOrderButton" text="Confirm Order" />
+            <Button mnemonicParsing="false" onAction="#handleCancelOrderButton" text="Cancel Order" />
+            <Button mnemonicParsing="false" onAction="#handleBackToCartButton" text="Back to Cart" />
+         </children>
+      </HBox>
+   </children>
 </AnchorPane>

@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="594.0" prefWidth="949.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.tanjum.customerDashboardController">
    <children>
       <VBox alignment="CENTER" layoutX="164.0" layoutY="33.0" prefHeight="60.0" prefWidth="557.0">
@@ -25,38 +24,38 @@
       </VBox>
       <VBox alignment="CENTER" layoutX="14.0" layoutY="93.0" prefHeight="253.0" prefWidth="175.0" spacing="10.0">
          <children>
-            <Label text="Category" />
-            <ComboBox prefWidth="150.0" promptText=" Category" />
-            <Label text="Search Products" />
-            <TextField prefHeight="25.0" prefWidth="196.0" promptText="Enter Product Name" />
-            <Button mnemonicParsing="false" text="Search" />
-            <Button mnemonicParsing="false" text="Refresh" />
+            <Label fx:id="categoryLabel" text="Category" />
+            <ComboBox fx:id="categoryComboBox" prefWidth="150.0" promptText=" Category" />
+            <Label fx:id="searchProductsLabel" text="Search Products" />
+            <TextField fx:id="enterProductNameTextField" prefHeight="25.0" prefWidth="196.0" promptText="Enter Product Name" />
+            <Button mnemonicParsing="false" onAction="#handleSearchButton" text="Search" />
+            <Button mnemonicParsing="false" onAction="#handleRefreshButton" text="Refresh" />
          </children>
       </VBox>
-      <TableView layoutX="211.0" layoutY="109.0" prefHeight="242.0" prefWidth="499.0">
+      <TableView fx:id="customerDashboardTableView" layoutX="211.0" layoutY="109.0" prefHeight="242.0" prefWidth="499.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Product ID" />
-          <TableColumn prefWidth="116.0" text="Product Name" />
-            <TableColumn prefWidth="77.0" text="Category" />
-            <TableColumn prefWidth="61.0" text="Size" />
-            <TableColumn prefWidth="94.0" text="Price" />
-            <TableColumn prefWidth="74.0" text="Stock" />
+          <TableColumn fx:id="productIdCol" prefWidth="75.0" text="Product ID" />
+          <TableColumn fx:id="productNameCol" prefWidth="116.0" text="Product Name" />
+            <TableColumn fx:id="categoryCol" prefWidth="77.0" text="Category" />
+            <TableColumn fx:id="sizeCol" prefWidth="61.0" text="Size" />
+            <TableColumn fx:id="priceCol" prefWidth="94.0" text="Price" />
+            <TableColumn fx:id="stockCol" prefWidth="74.0" text="Stock" />
         </columns>
       </TableView>
       <VBox alignment="CENTER" layoutX="741.0" layoutY="81.0" prefHeight="242.0" prefWidth="183.0" spacing="10.0">
          <children>
-            <Label text="Selected Product" />
-            <TextField editable="false" />
-            <Label text="Quantity" />
-            <TextField />
-            <Button mnemonicParsing="false" text="Add to Cart" />
+            <Label fx:id="selectedProductLabel" text="Selected Product" />
+            <TextField fx:id="selectedProductTextField" editable="false" />
+            <Label fx:id="quantityLabel" text="Quantity" />
+            <TextField fx:id="quantityTextField" />
+            <Button mnemonicParsing="false" onAction="#handleAddToCartButton" text="Add to Cart" />
          </children>
       </VBox>
       <HBox alignment="CENTER" layoutX="166.0" layoutY="377.0" prefHeight="100.0" prefWidth="491.0" spacing="20.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="141.0" text="View Cart" />
-            <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="137.0" text="Order History" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="114.0" text="Logout" />
+            <Button fx:id="handleViewCartButton" mnemonicParsing="false" prefHeight="37.0" prefWidth="141.0" text="View Cart" />
+            <Button mnemonicParsing="false" onAction="#handleOrderHistoryButton" prefHeight="34.0" prefWidth="137.0" text="Order History" />
+            <Button mnemonicParsing="false" onAction="#handleLogoutButton" prefHeight="35.0" prefWidth="114.0" text="Logout" />
          </children>
       </HBox>
    </children>

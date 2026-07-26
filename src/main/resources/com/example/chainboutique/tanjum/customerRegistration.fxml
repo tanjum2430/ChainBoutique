@@ -8,53 +8,52 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="612.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.tanjum.customerRegistrationController">
    <children>
       <HBox alignment="CENTER" layoutX="126.0" layoutY="424.0" prefHeight="100.0" prefWidth="486.0" spacing="20.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Register" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Reset" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Back" />
+            <Button mnemonicParsing="false" onAction="#handleRegisterButton" prefHeight="25.0" prefWidth="89.0" text="Register" />
+            <Button mnemonicParsing="false" onAction="#handleResetButton" prefHeight="25.0" prefWidth="75.0" text="Reset" />
+            <Button mnemonicParsing="false" onAction="#handleBackButton" prefHeight="25.0" prefWidth="84.0" text="Back" />
          </children>
       </HBox>
-      <Label alignment="CENTER" layoutX="124.0" layoutY="148.0" prefHeight="36.0" prefWidth="130.0" text="Name">
+      <Label fx:id="nameLabel" alignment="CENTER" layoutX="124.0" layoutY="148.0" prefHeight="36.0" prefWidth="130.0" text="Name">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="281.0" layoutY="153.0" prefHeight="25.0" prefWidth="231.0" promptText="Enter Full Name" />
-      <TextField layoutX="281.0" layoutY="189.0" prefHeight="25.0" prefWidth="231.0" promptText="Enter Email" />
-      <TextField layoutX="281.0" layoutY="225.0" prefHeight="25.0" prefWidth="231.0" promptText="01XXXXXXXXX" />
-      <Label alignment="CENTER" layoutX="124.0" layoutY="256.0" prefHeight="36.0" prefWidth="130.0" text="Password">
+      <TextField fx:id="nameTextField" layoutX="281.0" layoutY="153.0" prefHeight="25.0" prefWidth="231.0" promptText="Enter Full Name" />
+      <TextField fx:id="emailTextField" layoutX="281.0" layoutY="189.0" prefHeight="25.0" prefWidth="231.0" promptText="Enter Email" />
+      <TextField fx:id="phoneNoTextField" layoutX="281.0" layoutY="225.0" prefHeight="25.0" prefWidth="231.0" promptText="01XXXXXXXXX" />
+      <Label fx:id="passwordLabel" alignment="CENTER" layoutX="124.0" layoutY="256.0" prefHeight="36.0" prefWidth="130.0" text="Password">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="281.0" layoutY="261.0" prefHeight="25.0" prefWidth="217.0" promptText="Enter Password" />
-      <Label alignment="CENTER" layoutX="124.0" layoutY="292.0" prefHeight="36.0" prefWidth="130.0" text="Address">
+      <TextField fx:id="passwordTextField" layoutX="281.0" layoutY="261.0" prefHeight="25.0" prefWidth="217.0" promptText="Enter Password" />
+      <Label fx:id="addressLabel" alignment="CENTER" layoutX="124.0" layoutY="292.0" prefHeight="36.0" prefWidth="130.0" text="Address">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="281.0" layoutY="297.0" prefHeight="25.0" prefWidth="404.0" promptText="Enter Address" />
-      <Label alignment="CENTER" layoutX="162.0" layoutY="340.0" prefHeight="17.0" prefWidth="60.0" text="Message" />
-      <Label layoutX="281.0" layoutY="340.0" prefHeight="25.0" prefWidth="404.0" style="-fx-background-color: grey;" />
+      <TextField fx:id="addressTextField" layoutX="281.0" layoutY="297.0" prefHeight="25.0" prefWidth="404.0" promptText="Enter Address" />
+      <Label fx:id="messageLabel" alignment="CENTER" layoutX="162.0" layoutY="340.0" prefHeight="17.0" prefWidth="60.0" text="Message" />
+      <Label fx:id="msgLabel" layoutX="281.0" layoutY="340.0" prefHeight="25.0" prefWidth="404.0" style="-fx-background-color: grey;" />
       <VBox alignment="CENTER" layoutX="171.0" layoutY="6.0" prefHeight="120.0" prefWidth="381.0">
          <children>
-            <Label alignment="CENTER" prefHeight="38.0" prefWidth="362.0" text="Customer Registration" textAlignment="CENTER">
+            <Label fx:id="customerRegistrationLabel" alignment="CENTER" prefHeight="38.0" prefWidth="362.0" text="Customer Registration" textAlignment="CENTER">
                <font>
                   <Font size="26.0" />
                </font>
             </Label>
          </children>
       </VBox>
-      <Label alignment="CENTER" layoutX="124.0" layoutY="184.0" prefHeight="36.0" prefWidth="130.0" text="Email">
+      <Label fx:id="emailLabel" alignment="CENTER" layoutX="124.0" layoutY="184.0" prefHeight="36.0" prefWidth="130.0" text="Email">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="127.0" layoutY="220.0" prefHeight="36.0" prefWidth="130.0" text="Phone No">
+      <Label fx:id="phoneNoLabel" alignment="CENTER" layoutX="127.0" layoutY="220.0" prefHeight="36.0" prefWidth="130.0" text="Phone No">
          <font>
             <Font size="13.0" />
          </font>
