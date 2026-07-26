@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b215a45a-9d31-42ac-9d01-6368b8318195" name="Changes" comment="Initial project upload" />
+    <list default="true" id="b215a45a-9d31-42ac-9d01-6368b8318195" name="Changes" comment="Initial project upload">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Announcement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/AnnualReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/ApprovalRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/CEOController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/ClientAnalytics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Dashboard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Department.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/EmployeePerformanceReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/FinancialSummary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Inventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/InventoryOfficer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/InventoryOfficerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/PerformanceReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Supplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Supply.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Warehouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/CEO.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Inventoryofficer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/CEO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/CEO.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +36,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>

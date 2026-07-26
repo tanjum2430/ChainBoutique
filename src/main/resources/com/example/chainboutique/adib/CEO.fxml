@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="784.0" prefWidth="914.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.adib.CEOController">
+   <children>
+      <TextField fx:id="employeeIdField" layoutX="16.0" layoutY="65.0" text="Employee ID" />
+      <DatePicker fx:id="startDatePicker" layoutX="16.0" layoutY="102.0" />
+      <Spinner fx:id="reportYearSpinner" layoutX="376.0" layoutY="347.0" prefHeight="25.0" prefWidth="150.0" />
+      <DatePicker fx:id="endDatePicker" layoutX="16.0" layoutY="134.0" />
+      <ComboBox fx:id="reportTypeComboBox" layoutX="16.0" layoutY="165.0" prefWidth="150.0" promptText="report type" />
+      <ComboBox fx:id="departmentComboBox" layoutX="16.0" layoutY="199.0" prefWidth="150.0" promptText="Department" />
+      <ComboBox fx:id="decisionComboBox" layoutX="16.0" layoutY="306.0" prefHeight="25.0" prefWidth="188.0" promptText="Decision (Approve/Reject)" />
+      <TextField fx:id="filterCriteriaField" layoutX="17.0" layoutY="233.0" text="Filter Criteria" />
+      <TextField fx:id="requestIdField" layoutX="18.0" layoutY="269.0" text="Request ID" />
+      <TextArea fx:id="remarksTextArea" layoutX="376.0" layoutY="24.0" prefHeight="81.0" prefWidth="281.0" text="Remarks" />
+      <TextField fx:id="announcementTitleField" layoutX="376.0" layoutY="115.0" prefHeight="25.0" prefWidth="281.0" text="Announcement Title" />
+      <TextArea fx:id="announcementMessageTextArea" layoutX="376.0" layoutY="144.0" prefHeight="163.0" prefWidth="450.0" text="Announcement Message" />
+      <Text layoutX="376.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Year" />
+      <Text layoutX="196.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date" />
+      <Text layoutX="196.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EndDate" />
+      <Button fx:id="saveCEOActionButton" layoutX="622.0" layoutY="349.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="136.0" text="Save CEO Action" />
+      <TableView fx:id="ceoTableView" layoutY="616.0" prefHeight="200.0" prefWidth="914.0">
+        <columns>
+          <TableColumn fx:id="employeeIdColumn" prefWidth="93.0" text="Employee ID" />
+          <TableColumn fx:id="dashboardColumn" prefWidth="110.0" text="Dashboard" />
+            <TableColumn fx:id="performanceReportColumn" prefWidth="145.0" text="Performance Report" />
+            <TableColumn fx:id="financialSummaryColumn" prefWidth="130.0" text="Financial Summary" />
+            <TableColumn fx:id="clientAnalyticsColumn" prefWidth="99.0" text="Client Analytics" />
+            <TableColumn fx:id="employeePerformanceColumn" prefWidth="135.0" text="Employee Performance" />
+            <TableColumn fx:id="announcementColumn" prefWidth="100.0" text="Announcement" />
+            <TableColumn fx:id="annualReportColumn" prefWidth="101.0" text="Annual Report" />
+        </columns>
+      </TableView>
+      <HBox layoutX="4.0" layoutY="516.0" prefHeight="100.0" prefWidth="906.0">
+         <children>
+            <Button fx:id="filterButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="447.0" text="Filter Records" />
+            <ComboBox fx:id="filterDepartmentCombo" prefHeight="25.0" prefWidth="378.0" promptText="Department " />
+            <ComboBox fx:id="filterReportTypeCombo" prefHeight="25.0" prefWidth="330.0" promptText="Report Type" />
+            <Spinner fx:id="filterYearSpinner" prefHeight="25.0" prefWidth="481.0" />
+         </children>
+      </HBox>
+      <Label layoutX="14.0" layoutY="16.0" text="CEO Dashboard" />
+      <Text layoutX="610.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year" wrappingWidth="23.185546875" />
+      <Button fx:id="reportsummaryButton" layoutX="622.0" layoutY="442.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="215.0" text="Generated Report Summary" />
+      <Button fx:id="generatereportButton" layoutX="622.0" layoutY="408.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="215.0" text="Generate Report Button" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,1815 @@
+Index: src/main/java/com/example/chainboutique/adib/CEO.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.chainboutique.adib;\r\n\r\npublic class CEO {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/chainboutique/adib/CEO.java b/src/main/java/com/example/chainboutique/adib/CEO.java
+--- a/src/main/java/com/example/chainboutique/adib/CEO.java	(revision 1ced9785a09baf8afac01ccbabc86458d44f3385)
++++ b/src/main/java/com/example/chainboutique/adib/CEO.java	(date 1785033170044)
+@@ -1,4 +1,79 @@
+ package com.example.chainboutique.adib;
+ 
+ public class CEO {
++
++    private String name;
++    private String email;// Unique
++    private String phoneNo; // Unique
++    private String password, address;
++    private String employeeID; // Primary Key (Unique)
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++    @Override
++    public String toString() {
++        return "CEO{" +
++                "name='" + name + '\'' +
++                ", email='" + email + '\'' +
++                ", phoneNo='" + phoneNo + '\'' +
++                ", password='" + password + '\'' +
++                ", address='" + address + '\'' +
++                ", employeeID='" + employeeID + '\'' +
++                '}';
++    }
++
++    public String getEmail() {
++        return email;
++    }
++
++    public void setEmail(String email) {
++        this.email = email;
++    }
++
++    public String getPhoneNo() {
++        return phoneNo;
++    }
++
++    public void setPhoneNo(String phoneNo) {
++        this.phoneNo = phoneNo;
++    }
++
++    public String getPassword() {
++        return password;
++    }
++
++    public void setPassword(String password) {
++        this.password = password;
++    }
++
++    public String getAddress() {
++        return address;
++    }
++
++    public void setAddress(String address) {
++        this.address = address;
++    }
++
++    public String getEmployeeID() {
++        return employeeID;
++    }
++
++    public void setEmployeeID(String employeeID) {
++        this.employeeID = employeeID;
++    }
++
++    public CEO(String name, String email, String phoneNo, String password, String address, String employeeID) {
++        this.name = name;
++        this.email = email;
++        this.phoneNo = phoneNo;
++        this.password = password;
++        this.address = address;
++        this.employeeID = employeeID;
++    }
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"b215a45a-9d31-42ac-9d01-6368b8318195\" name=\"Changes\" comment=\"Initial project upload\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/CEO.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;tanjum2430&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/tanjum2430/ChainBoutique.git&quot;,\r\n    &quot;accountId&quot;: &quot;e04d39f5-6799-4a9f-9e17-ac5f7d977708&quot;\r\n  }\r\n}</component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHomeTypeForPersistence\" value=\"WRAPPER\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 5\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"3Gxq9Ja25TPC0bPAdFAfw6wByw7\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,\r\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,\r\n    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95\" />\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"b215a45a-9d31-42ac-9d01-6368b8318195\" name=\"Changes\" comment=\"\" />\r\n      <created>1784923434278</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1784923434278</updated>\r\n      <workItem from=\"1784923438835\" duration=\"15000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Initial project upload\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1784986492063</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1784986492063</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Initial project upload\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1784992159166</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1784992159166</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Initial project upload\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1784994889711</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1784994889711</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Initial project upload\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1784994904396</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1784994904396</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Initial project upload\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1784998904207</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1784998904207</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Initial project upload\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1784998987246</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1784998987246</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Initial project upload\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1785013550921</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1785013550923</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Initial project upload\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1785018071047</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1785018071047</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Initial project upload\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1785023133817</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1785023133817</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"10\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Initial project upload\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Initial project upload\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 1ced9785a09baf8afac01ccbabc86458d44f3385)
++++ b/.idea/workspace.xml	(date 1785102565722)
+@@ -5,7 +5,27 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="b215a45a-9d31-42ac-9d01-6368b8318195" name="Changes" comment="Initial project upload">
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/CEO.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Announcement.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/AnnualReport.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/ApprovalRequest.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Client.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/ClientAnalytics.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Dashboard.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Department.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Employee.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/EmployeePerformanceReport.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/FinancialSummary.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Inventory.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/InventoryOfficer.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/InventoryOfficerController.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/PerformanceReport.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Supplier.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Supply.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Warehouse.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/CEO.fxml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Inventoryofficer.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/CEO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/CEO.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -29,12 +49,12 @@
+     &quot;assignee&quot;: &quot;tanjum2430&quot;
+   }
+ }</component>
+-  <component name="GithubPullRequestsUISettings">{
+-  &quot;selectedUrlAndAccountId&quot;: {
+-    &quot;url&quot;: &quot;https://github.com/tanjum2430/ChainBoutique.git&quot;,
+-    &quot;accountId&quot;: &quot;e04d39f5-6799-4a9f-9e17-ac5f7d977708&quot;
+-  }
+-}</component>
++  <component name="GithubPullRequestsUISettings"><![CDATA[{
++  "selectedUrlAndAccountId": {
++    "url": "https://github.com/tanjum2430/ChainBoutique.git",
++    "accountId": "166d2989-8e5f-4402-b5fe-a7d078320aaa"
++  }
++}]]></component>
+   <component name="MavenImportPreferences">
+     <option name="generalSettings">
+       <MavenGeneralSettings>
+@@ -53,30 +73,31 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Application.HelloApplication.executor": "Run",
++    "ModuleVcsDetector.initialDetectionPerformed": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
++    "RunOnceActivity.git.unshallow": "true",
++    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
++    "codeWithMe.voiceChat.enabledByDefault": "false",
++    "git-widget-placeholder": "master",
++    "kotlin-language-version-configured": "true",
++    "last_directory_selection": "C:/Users/69adi/IdeaProjects/ChainBoutique/src/main/java/com/example/chainboutique/adib",
++    "nodejs_package_manager_path": "npm",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.0",
++    "project.structure.side.proportion": "0.0",
++    "settings.editor.selected.configurable": "vcs.Git",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
++        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.337" />
++        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.337" />
+       </set>
+     </attachedChunks>
+   </component>
+Index: src/main/java/com/example/chainboutique/adib/InventoryOfficer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/chainboutique/adib/InventoryOfficer.java b/src/main/java/com/example/chainboutique/adib/InventoryOfficer.java
+new file mode 100644
+--- /dev/null	(date 1785033169993)
++++ b/src/main/java/com/example/chainboutique/adib/InventoryOfficer.java	(date 1785033169993)
+@@ -0,0 +1,82 @@
++package com.example.chainboutique.adib;
++
++public class InventoryOfficer {
++
++    private String name;
++    private String email;// Unique
++    private String phoneNo; // Unique
++    private String password;
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++    public String getEmail() {
++        return email;
++    }
++
++    @Override
++    public String toString() {
++        return "InventoryOfficer{" +
++                "name='" + name + '\'' +
++                ", email='" + email + '\'' +
++                ", phoneNo='" + phoneNo + '\'' +
++                ", password='" + password + '\'' +
++                ", address='" + address + '\'' +
++                ", employeeID='" + employeeID + '\'' +
++                '}';
++    }
++
++    public void setEmail(String email) {
++        this.email = email;
++    }
++
++    public String getPhoneNo() {
++        return phoneNo;
++    }
++
++    public void setPhoneNo(String phoneNo) {
++        this.phoneNo = phoneNo;
++    }
++
++    public String getPassword() {
++        return password;
++    }
++
++    public void setPassword(String password) {
++        this.password = password;
++    }
++
++    public String getAddress() {
++        return address;
++    }
++
++    public void setAddress(String address) {
++        this.address = address;
++    }
++
++    public String getEmployeeID() {
++        return employeeID;
++    }
++
++    public void setEmployeeID(String employeeID) {
++        this.employeeID = employeeID;
++    }
++
++    public InventoryOfficer(String name, String email, String phoneNo, String password, String address, String employeeID) {
++        this.name = name;
++        this.email = email;
++        this.phoneNo = phoneNo;
++        this.password = password;
++        this.address = address;
++        this.employeeID = employeeID;
++    }
++
++    private String address;
++    private String employeeID; // Primary Key (Unique)
++
++}
+\ No newline at end of file
+Index: src/main/java/com/example/chainboutique/adib/Inventory.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/chainboutique/adib/Inventory.java b/src/main/java/com/example/chainboutique/adib/Inventory.java
+new file mode 100644
+--- /dev/null	(date 1785033170025)
++++ b/src/main/java/com/example/chainboutique/adib/Inventory.java	(date 1785033170025)
+@@ -0,0 +1,49 @@
++package com.example.chainboutique.adib;
++
++public class Inventory {
++
++    private String inventoryID;     // Primary Key (Unique)
++    private double totalStockValue;
++
++    public String getInventoryID() {
++        return inventoryID;
++    }
++
++    public void setInventoryID(String inventoryID) {
++        this.inventoryID = inventoryID;
++    }
++
++    public double getTotalStockValue() {
++        return totalStockValue;
++    }
++
++    @Override
++    public String toString() {
++        return "Inventory{" +
++                "inventoryID='" + inventoryID + '\'' +
++                ", totalStockValue=" + totalStockValue +
++                ", lastUpdated=" + lastUpdated +
++                '}';
++    }
++
++    public void setTotalStockValue(double totalStockValue) {
++        this.totalStockValue = totalStockValue;
++    }
++
++    public LocalDateTime getLastUpdated() {
++        return lastUpdated;
++    }
++
++    public void setLastUpdated(LocalDateTime lastUpdated) {
++        this.lastUpdated = lastUpdated;
++    }
++
++    public Inventory(String inventoryID, double totalStockValue, LocalDateTime lastUpdated) {
++        this.inventoryID = inventoryID;
++        this.totalStockValue = totalStockValue;
++        this.lastUpdated = lastUpdated;
++    }
++
++    private LocalDateTime lastUpdated;
++
++}
+\ No newline at end of file
+Index: src/main/java/com/example/chainboutique/adib/Supply.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/chainboutique/adib/Supply.java b/src/main/java/com/example/chainboutique/adib/Supply.java
+new file mode 100644
+--- /dev/null	(date 1785033169997)
++++ b/src/main/java/com/example/chainboutique/adib/Supply.java	(date 1785033169997)
+@@ -0,0 +1,69 @@
++package com.example.chainboutique.adib;
++
++public class Supply {
++
++    private String supplyID;        // Primary Key (Unique)
++    private String productID;       // Foreign Key
++    private String supplierID;      // Foreign Key
++    private double purchasePrice;
++    private LocalDate deliveryDate;
++
++    public String getSupplyID() {
++        return supplyID;
++    }
++
++    public void setSupplyID(String supplyID) {
++        this.supplyID = supplyID;
++    }
++
++    public String getProductID() {
++        return productID;
++    }
++
++    @Override
++    public String toString() {
++        return "Supply{" +
++                "supplyID='" + supplyID + '\'' +
++                ", productID='" + productID + '\'' +
++                ", supplierID='" + supplierID + '\'' +
++                ", purchasePrice=" + purchasePrice +
++                ", deliveryDate=" + deliveryDate +
++                '}';
++    }
++
++    public void setProductID(String productID) {
++        this.productID = productID;
++    }
++
++    public String getSupplierID() {
++        return supplierID;
++    }
++
++    public void setSupplierID(String supplierID) {
++        this.supplierID = supplierID;
++    }
++
++    public double getPurchasePrice() {
++        return purchasePrice;
++    }
++
++    public void setPurchasePrice(double purchasePrice) {
++        this.purchasePrice = purchasePrice;
++    }
++
++    public LocalDate getDeliveryDate() {
++        return deliveryDate;
++    }
++
++    public void setDeliveryDate(LocalDate deliveryDate) {
++        this.deliveryDate = deliveryDate;
++    }
++
++    public Supply(String supplyID, String productID, String supplierID, double purchasePrice, LocalDate deliveryDate) {
++        this.supplyID = supplyID;
++        this.productID = productID;
++        this.supplierID = supplierID;
++        this.purchasePrice = purchasePrice;
++        this.deliveryDate = deliveryDate;
++    }
++}
+Index: src/main/java/com/example/chainboutique/adib/Supplier.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/chainboutique/adib/Supplier.java b/src/main/java/com/example/chainboutique/adib/Supplier.java
+new file mode 100644
+--- /dev/null	(date 1785033170051)
++++ b/src/main/java/com/example/chainboutique/adib/Supplier.java	(date 1785033170051)
+@@ -0,0 +1,88 @@
++package com.example.chainboutique.adib;
++
++public class Supplier {
++
++    private String supplierID;      // Primary Key (Unique)
++    private String supplierName, address, status, contactPerson;
++    private String email;           // Unique
++    private String phoneNo;         // Unique
++
++    public String getSupplierID() {
++        return supplierID;
++    }
++
++    public void setSupplierID(String supplierID) {
++        this.supplierID = supplierID;
++    }
++
++    public String getSupplierName() {
++        return supplierName;
++    }
++
++    @Override
++    public String toString() {
++        return "Supplier{" +
++                "supplierID='" + supplierID + '\'' +
++                ", supplierName='" + supplierName + '\'' +
++                ", address='" + address + '\'' +
++                ", status='" + status + '\'' +
++                ", contactPerson='" + contactPerson + '\'' +
++                ", email='" + email + '\'' +
++                ", phoneNo='" + phoneNo + '\'' +
++                '}';
++    }
++
++    public void setSupplierName(String supplierName) {
++        this.supplierName = supplierName;
++    }
++
++    public String getAddress() {
++        return address;
++    }
++
++    public void setAddress(String address) {
++        this.address = address;
++    }
++
++    public String getStatus() {
++        return status;
++    }
++
++    public void setStatus(String status) {
++        this.status = status;
++    }
++
++    public String getContactPerson() {
++        return contactPerson;
++    }
++
++    public void setContactPerson(String contactPerson) {
++        this.contactPerson = contactPerson;
++    }
++
++    public String getEmail() {
++        return email;
++    }
++
++    public void setEmail(String email) {
++        this.email = email;
++    }
++
++    public String getPhoneNo() {
++        return phoneNo;
++    }
++
++    public void setPhoneNo(String phoneNo) {
++        this.phoneNo = phoneNo;
++    }
++
++    public Supplier(String supplierID, String supplierName, String address, String status, String contactPerson, String email, String phoneNo) {
++        this.supplierID = supplierID;
++        this.supplierName = supplierName;
++        this.address = address;
++        this.status = status;
++        this.contactPerson = contactPerson;
++        this.email = email;
++        this.phoneNo = phoneNo;
++    }
++}
+Index: src/main/java/com/example/chainboutique/adib/Dashboard.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/chainboutique/adib/Dashboard.java b/src/main/java/com/example/chainboutique/adib/Dashboard.java
+new file mode 100644
+--- /dev/null	(date 1785033170012)
++++ b/src/main/java/com/example/chainboutique/adib/Dashboard.java	(date 1785033170012)
+@@ -0,0 +1,82 @@
++package com.example.chainboutique.adib;
++
++public class Dashboard {
++
++    private String dashboardID;     // Primary Key (Unique)
++    private int totalJobsPosted;
++    private int totalHires;
++    private double totalRevenue;
++
++    public String getDashboardID() {
++        return dashboardID;
++    }
++
++    public void setDashboardID(String dashboardID) {
++        this.dashboardID = dashboardID;
++    }
++
++    @Override
++    public String toString() {
++        return "Dashboard{" +
++                "dashboardID='" + dashboardID + '\'' +
++                ", totalJobsPosted=" + totalJobsPosted +
++                ", totalHires=" + totalHires +
++                ", totalRevenue=" + totalRevenue +
++                ", activeClients=" + activeClients +
++                ", generatedOn=" + generatedOn +
++                '}';
++    }
++
++    public int getTotalJobsPosted() {
++        return totalJobsPosted;
++    }
++
++    public void setTotalJobsPosted(int totalJobsPosted) {
++        this.totalJobsPosted = totalJobsPosted;
++    }
++
++    public int getTotalHires() {
++        return totalHires;
++    }
++
++    public void setTotalHires(int totalHires) {
++        this.totalHires = totalHires;
++    }
++
++    public double getTotalRevenue() {
++        return totalRevenue;
++    }
++
++    public void setTotalRevenue(double totalRevenue) {
++        this.totalRevenue = totalRevenue;
++    }
++
++    public int getActiveClients() {
++        return activeClients;
++    }
++
++    public void setActiveClients(int activeClients) {
++        this.activeClients = activeClients;
++    }
++
++    public LocalDateTime getGeneratedOn() {
++        return generatedOn;
++    }
++
++    public void setGeneratedOn(LocalDateTime generatedOn) {
++        this.generatedOn = generatedOn;
++    }
++
++    public Dashboard(String dashboardID, int totalJobsPosted, int totalHires, double totalRevenue, int activeClients, LocalDateTime generatedOn) {
++        this.dashboardID = dashboardID;
++        this.totalJobsPosted = totalJobsPosted;
++        this.totalHires = totalHires;
++        this.totalRevenue = totalRevenue;
++        this.activeClients = activeClients;
++        this.generatedOn = generatedOn;
++    }
++
++    private int activeClients;
++    private LocalDateTime generatedOn;
++
++}
+Index: src/main/java/com/example/chainboutique/adib/Warehouse.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/chainboutique/adib/Warehouse.java b/src/main/java/com/example/chainboutique/adib/Warehouse.java
+new file mode 100644
+--- /dev/null	(date 1785033170001)
++++ b/src/main/java/com/example/chainboutique/adib/Warehouse.java	(date 1785033170001)
+@@ -0,0 +1,59 @@
++package com.example.chainboutique.adib;
++
++public class Warehouse {
++
++    private String warehouseID;     // Primary Key (Unique)
++    private String warehouseName;
++    private String location;
++    private String status;
++
++    public String getWarehouseID() {
++        return warehouseID;
++    }
++
++    public void setWarehouseID(String warehouseID) {
++        this.warehouseID = warehouseID;
++    }
++
++    public String getWarehouseName() {
++        return warehouseName;
++    }
++
++    @Override
++    public String toString() {
++        return "Warehouse{" +
++                "warehouseID='" + warehouseID + '\'' +
++                ", warehouseName='" + warehouseName + '\'' +
++                ", location='" + location + '\'' +
++                ", status='" + status + '\'' +
++                '}';
++    }
++
++    public void setWarehouseName(String warehouseName) {
++        this.warehouseName = warehouseName;
++    }
++
++    public String getLocation() {
++        return location;
++    }
++
++    public void setLocation(String location) {
++        this.location = location;
++    }
++
++    public String getStatus() {
++        return status;
++    }
++
++    public void setStatus(String status) {
++        this.status = status;
++    }
++
++    public Warehouse(String warehouseID, String warehouseName, String location, String status) {
++        this.warehouseID = warehouseID;
++        this.warehouseName = warehouseName;
++        this.location = location;
++        this.status = status;
++    }
++}
++
+Index: src/main/java/com/example/chainboutique/adib/FinancialSummary.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/chainboutique/adib/FinancialSummary.java b/src/main/java/com/example/chainboutique/adib/FinancialSummary.java
+new file mode 100644
+--- /dev/null	(date 1785033170032)
++++ b/src/main/java/com/example/chainboutique/adib/FinancialSummary.java	(date 1785033170032)
+@@ -0,0 +1,78 @@
++package com.example.chainboutique.adib;
++
++public class FinancialSummary {
++
++    private String reportID;        // Primary Key (Unique)
++    private LocalDate startDate;
++    private LocalDate endDate;
++    private double totalRevenue ,totalExpense ,netProfit ;
++
++    public String getReportID() {
++        return reportID;
++    }
++
++    public void setReportID(String reportID) {
++        this.reportID = reportID;
++    }
++
++    @Override
++    public String toString() {
++        return "FinancialSummary{" +
++                "reportID='" + reportID + '\'' +
++                ", startDate=" + startDate +
++                ", endDate=" + endDate +
++                ", totalRevenue=" + totalRevenue +
++                ", totalExpense=" + totalExpense +
++                ", netProfit=" + netProfit +
++                '}';
++    }
++
++    public LocalDate getStartDate() {
++        return startDate;
++    }
++
++    public void setStartDate(LocalDate startDate) {
++        this.startDate = startDate;
++    }
++
++    public LocalDate getEndDate() {
++        return endDate;
++    }
++
++    public void setEndDate(LocalDate endDate) {
++        this.endDate = endDate;
++    }
++
++    public double getTotalRevenue() {
++        return totalRevenue;
++    }
++
++    public void setTotalRevenue(double totalRevenue) {
++        this.totalRevenue = totalRevenue;
++    }
++
++    public double getTotalExpense() {
++        return totalExpense;
++    }
++
++    public void setTotalExpense(double totalExpense) {
++        this.totalExpense = totalExpense;
++    }
++
++    public double getNetProfit() {
++        return netProfit;
++    }
++
++    public void setNetProfit(double netProfit) {
++        this.netProfit = netProfit;
++    }
++
++    public FinancialSummary(String reportID, LocalDate startDate, LocalDate endDate, double totalRevenue, double totalExpense, double netProfit) {
++        this.reportID = reportID;
++        this.startDate = startDate;
++        this.endDate = endDate;
++        this.totalRevenue = totalRevenue;
++        this.totalExpense = totalExpense;
++        this.netProfit = netProfit;
++    }
++}
+\ No newline at end of file
+Index: src/main/java/com/example/chainboutique/adib/PerformanceReport.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/chainboutique/adib/PerformanceReport.java b/src/main/java/com/example/chainboutique/adib/PerformanceReport.java
+new file mode 100644
+--- /dev/null	(date 1785033170047)
++++ b/src/main/java/com/example/chainboutique/adib/PerformanceReport.java	(date 1785033170047)
+@@ -0,0 +1,94 @@
++package com.example.chainboutique.adib;
++
++public class PerformanceReport {
++
++    private String reportID;        // Primary Key (Unique)
++    private LocalDate startDate;
++
++    public PerformanceReport(String reportID, LocalDate startDate, LocalDate endDate, String reportType, double timeToHire, double placementRate, double recruiterProductivity) {
++        this.reportID = reportID;
++        this.startDate = startDate;
++        this.endDate = endDate;
++        this.reportType = reportType;
++        this.timeToHire = timeToHire;
++        this.placementRate = placementRate;
++        this.recruiterProductivity = recruiterProductivity;
++    }
++
++    private LocalDate endDate;
++    private String reportType;
++
++    public String getReportID() {
++        return reportID;
++    }
++
++    @Override
++    public String toString() {
++        return "PerformanceReport{" +
++                "reportID='" + reportID + '\'' +
++                ", startDate=" + startDate +
++                ", endDate=" + endDate +
++                ", reportType='" + reportType + '\'' +
++                ", timeToHire=" + timeToHire +
++                ", placementRate=" + placementRate +
++                ", recruiterProductivity=" + recruiterProductivity +
++                '}';
++    }
++
++    public void setReportID(String reportID) {
++        this.reportID = reportID;
++    }
++
++    public LocalDate getStartDate() {
++        return startDate;
++    }
++
++    public void setStartDate(LocalDate startDate) {
++        this.startDate = startDate;
++    }
++
++    public LocalDate getEndDate() {
++        return endDate;
++    }
++
++    public void setEndDate(LocalDate endDate) {
++        this.endDate = endDate;
++    }
++
++    public String getReportType() {
++        return reportType;
++    }
++
++    public void setReportType(String reportType) {
++        this.reportType = reportType;
++    }
++
++    public double getTimeToHire() {
++        return timeToHire;
++    }
++
++    public void setTimeToHire(double timeToHire) {
++        this.timeToHire = timeToHire;
++    }
++
++    public double getPlacementRate() {
++        return placementRate;
++    }
++
++    public void setPlacementRate(double placementRate) {
++        this.placementRate = placementRate;
++    }
++
++    public double getRecruiterProductivity() {
++        return recruiterProductivity;
++    }
++
++    public void setRecruiterProductivity(double recruiterProductivity) {
++        this.recruiterProductivity = recruiterProductivity;
++    }
++
++    private double timeToHire;
++    private double placementRate;
++    private double recruiterProductivity;
++
++}
+Index: src/main/java/com/example/chainboutique/adib/ClientAnalytics.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/chainboutique/adib/ClientAnalytics.java b/src/main/java/com/example/chainboutique/adib/ClientAnalytics.java
+new file mode 100644
+--- /dev/null	(date 1785033170020)
++++ b/src/main/java/com/example/chainboutique/adib/ClientAnalytics.java	(date 1785033170020)
+@@ -0,0 +1,82 @@
++package com.example.chainboutique.adib;
++
++public class ClientAnalytics {
++
++    private String reportID;        // Primary Key (Unique)
++    private int totalClients;
++    private int newClients;
++    private int retainedClients;
++    private double retentionRate;
++
++    public String getReportID() {
++        return reportID;
++    }
++
++    public void setReportID(String reportID) {
++        this.reportID = reportID;
++    }
++
++    @Override
++    public String toString() {
++        return "ClientAnalytics{" +
++                "reportID='" + reportID + '\'' +
++                ", totalClients=" + totalClients +
++                ", newClients=" + newClients +
++                ", retainedClients=" + retainedClients +
++                ", retentionRate=" + retentionRate +
++                ", generatedOn=" + generatedOn +
++                '}';
++    }
++
++    public int getTotalClients() {
++        return totalClients;
++    }
++
++    public void setTotalClients(int totalClients) {
++        this.totalClients = totalClients;
++    }
++
++    public int getNewClients() {
++        return newClients;
++    }
++
++    public void setNewClients(int newClients) {
++        this.newClients = newClients;
++    }
++
++    public int getRetainedClients() {
++        return retainedClients;
++    }
++
++    public void setRetainedClients(int retainedClients) {
++        this.retainedClients = retainedClients;
++    }
++
++    public double getRetentionRate() {
++        return retentionRate;
++    }
++
++    public void setRetentionRate(double retentionRate) {
++        this.retentionRate = retentionRate;
++    }
++
++    public LocalDateTime getGeneratedOn() {
++        return generatedOn;
++    }
++
++    public void setGeneratedOn(LocalDateTime generatedOn) {
++        this.generatedOn = generatedOn;
++    }
++
++    public ClientAnalytics(String reportID, int totalClients, int newClients, int retainedClients, double retentionRate, LocalDateTime generatedOn) {
++        this.reportID = reportID;
++        this.totalClients = totalClients;
++        this.newClients = newClients;
++        this.retainedClients = retainedClients;
++        this.retentionRate = retentionRate;
++        this.generatedOn = generatedOn;
++    }
++
++    private LocalDateTime generatedOn;
++
++}
+\ No newline at end of file
+Index: src/main/java/com/example/chainboutique/adib/AnnualReport.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/chainboutique/adib/AnnualReport.java b/src/main/java/com/example/chainboutique/adib/AnnualReport.java
+new file mode 100644
+--- /dev/null	(date 1785033170029)
++++ b/src/main/java/com/example/chainboutique/adib/AnnualReport.java	(date 1785033170029)
+@@ -0,0 +1,69 @@
++package com.example.chainboutique.adib;
++
++public class AnnualReport {
++
++    private String reportID;        // Primary Key (Unique)
++    private int reportYear;
++    private LocalDateTime generatedOn;
++    private String generatedBy;     // Foreign Key
++    private String filePath;
++
++    public String getReportID() {
++        return reportID;
++    }
++
++    public void setReportID(String reportID) {
++        this.reportID = reportID;
++    }
++
++    @Override
++    public String toString() {
++        return "AnnualReport{" +
++                "reportID='" + reportID + '\'' +
++                ", reportYear=" + reportYear +
++                ", generatedOn=" + generatedOn +
++                ", generatedBy='" + generatedBy + '\'' +
++                ", filePath='" + filePath + '\'' +
++                '}';
++    }
++
++    public int getReportYear() {
++        return reportYear;
++    }
++
++    public void setReportYear(int reportYear) {
++        this.reportYear = reportYear;
++    }
++
++    public LocalDateTime getGeneratedOn() {
++        return generatedOn;
++    }
++
++    public void setGeneratedOn(LocalDateTime generatedOn) {
++        this.generatedOn = generatedOn;
++    }
++
++    public String getGeneratedBy() {
++        return generatedBy;
++    }
++
++    public void setGeneratedBy(String generatedBy) {
++        this.generatedBy = generatedBy;
++    }
++
++    public String getFilePath() {
++        return filePath;
++    }
++
++    public void setFilePath(String filePath) {
++        this.filePath = filePath;
++    }
++
++    public AnnualReport(String reportID, int reportYear, LocalDateTime generatedOn, String generatedBy, String filePath) {
++        this.reportID = reportID;
++        this.reportYear = reportYear;
++        this.generatedOn = generatedOn;
++        this.generatedBy = generatedBy;
++        this.filePath = filePath;
++    }
++}
+Index: src/main/java/com/example/chainboutique/adib/Announcement.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/chainboutique/adib/Announcement.java b/src/main/java/com/example/chainboutique/adib/Announcement.java
+new file mode 100644
+--- /dev/null	(date 1785033170036)
++++ b/src/main/java/com/example/chainboutique/adib/Announcement.java	(date 1785033170036)
+@@ -0,0 +1,74 @@
++package com.example.chainboutique.adib;
++
++public class Announcement {
++    private String announcementID;  // Primary Key (Unique)
++    private String title , message;
++
++    @Override
++    public String toString() {
++        return "Announcement{" +
++                "announcementID='" + announcementID + '\'' +
++                ", title='" + title + '\'' +
++                ", message='" + message + '\'' +
++                ", createdBy='" + createdBy + '\'' +
++                ", createdOn=" + createdOn +
++                '}';
++    }
++
++    public String getAnnouncementID() {
++        return announcementID;
++    }
++
++    public void setAnnouncementID(String announcementID) {
++        this.announcementID = announcementID;
++    }
++
++    public String getTitle() {
++        return title;
++    }
++
++    public void setTitle(String title) {
++        this.title = title;
++    }
++
++    public String getMessage() {
++        return message;
++    }
++
++    public void setMessage(String message) {
++        this.message = message;
++    }
++
++    public String getCreatedBy() {
++        return createdBy;
++    }
++
++    public void setCreatedBy(String createdBy) {
++        this.createdBy = createdBy;
++    }
++
++    public LocalDateTime getCreatedOn() {
++        return createdOn;
++    }
++
++    public void setCreatedOn(LocalDateTime createdOn) {
++        this.createdOn = createdOn;
++    }
++
++    public Announcement(String announcementID, String title, String message, String createdBy, LocalDateTime createdOn) {
++        this.announcementID = announcementID;
++        this.title = title;
++        this.message = message;
++        this.createdBy = createdBy;
++        this.createdOn = createdOn;
++    }
++
++    private String createdBy;       // Foreign Key
++    private LocalDateTime createdOn;
++
++
++
++
++
++}
++
+Index: src/main/java/com/example/chainboutique/adib/EmployeePerformanceReport.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/chainboutique/adib/EmployeePerformanceReport.java b/src/main/java/com/example/chainboutique/adib/EmployeePerformanceReport.java
+new file mode 100644
+--- /dev/null	(date 1785033170040)
++++ b/src/main/java/com/example/chainboutique/adib/EmployeePerformanceReport.java	(date 1785033170040)
+@@ -0,0 +1,71 @@
++package com.example.chainboutique.adib;
++
++public class EmployeePerformanceReport {
++
++    private String reportID;        // Primary Key (Unique)
++    private String departmentID;    // Foreign Key
++    private double averageScore;
++
++    public EmployeePerformanceReport(String reportID, String departmentID, double averageScore, String topPerformer, LocalDateTime generatedOn) {
++        this.reportID = reportID;
++        this.departmentID = departmentID;
++        this.averageScore = averageScore;
++        this.topPerformer = topPerformer;
++        this.generatedOn = generatedOn;
++    }
++
++    public String getReportID() {
++        return reportID;
++    }
++
++    @Override
++    public String toString() {
++        return "EmployeePerformanceReport{" +
++                "reportID='" + reportID + '\'' +
++                ", departmentID='" + departmentID + '\'' +
++                ", averageScore=" + averageScore +
++                ", topPerformer='" + topPerformer + '\'' +
++                ", generatedOn=" + generatedOn +
++                '}';
++    }
++
++    public void setReportID(String reportID) {
++        this.reportID = reportID;
++    }
++
++    public String getDepartmentID() {
++        return departmentID;
++    }
++
++    public void setDepartmentID(String departmentID) {
++        this.departmentID = departmentID;
++    }
++
++    public double getAverageScore() {
++        return averageScore;
++    }
++
++    public void setAverageScore(double averageScore) {
++        this.averageScore = averageScore;
++    }
++
++    public String getTopPerformer() {
++        return topPerformer;
++    }
++
++    public void setTopPerformer(String topPerformer) {
++        this.topPerformer = topPerformer;
++    }
++
++    public LocalDateTime getGeneratedOn() {
++        return generatedOn;
++    }
++
++    public void setGeneratedOn(LocalDateTime generatedOn) {
++        this.generatedOn = generatedOn;
++    }
++
++    private String topPerformer;
++    private LocalDateTime generatedOn;
++
++}
+\ No newline at end of file
+Index: src/main/java/com/example/chainboutique/adib/Employee.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/chainboutique/adib/Employee.java b/src/main/java/com/example/chainboutique/adib/Employee.java
+new file mode 100644
+--- /dev/null	(date 1785033170009)
++++ b/src/main/java/com/example/chainboutique/adib/Employee.java	(date 1785033170009)
+@@ -0,0 +1,104 @@
++package com.example.chainboutique.adib;
++
++public class Employee {
++
++    private String employeeID;      // Primary Key (Unique)
++    private String fullName;
++    private String email;           // Unique
++
++    public String getEmployeeID() {
++        return employeeID;
++    }
++
++    public void setEmployeeID(String employeeID) {
++        this.employeeID = employeeID;
++    }
++
++    public String getFullName() {
++        return fullName;
++    }
++
++    public void setFullName(String fullName) {
++        this.fullName = fullName;
++    }
++
++    @Override
++    public String toString() {
++        return "Employee{" +
++                "employeeID='" + employeeID + '\'' +
++                ", fullName='" + fullName + '\'' +
++                ", email='" + email + '\'' +
++                ", phoneNo='" + phoneNo + '\'' +
++                ", departmentID='" + departmentID + '\'' +
++                ", designation='" + designation + '\'' +
++                ", status='" + status + '\'' +
++                ", hireDate=" + hireDate +
++                '}';
++    }
++
++    public String getEmail() {
++        return email;
++    }
++
++    public void setEmail(String email) {
++        this.email = email;
++    }
++
++    public String getPhoneNo() {
++        return phoneNo;
++    }
++
++    public void setPhoneNo(String phoneNo) {
++        this.phoneNo = phoneNo;
++    }
++
++    public String getDepartmentID() {
++        return departmentID;
++    }
++
++    public void setDepartmentID(String departmentID) {
++        this.departmentID = departmentID;
++    }
++
++    public String getDesignation() {
++        return designation;
++    }
++
++    public void setDesignation(String designation) {
++        this.designation = designation;
++    }
++
++    public String getStatus() {
++        return status;
++    }
++
++    public void setStatus(String status) {
++        this.status = status;
++    }
++
++    public LocalDate getHireDate() {
++        return hireDate;
++    }
++
++    public void setHireDate(LocalDate hireDate) {
++        this.hireDate = hireDate;
++    }
++
++    public Employee(String employeeID, String fullName, String email, String phoneNo, String departmentID, String designation, String status, LocalDate hireDate) {
++        this.employeeID = employeeID;
++        this.fullName = fullName;
++        this.email = email;
++        this.phoneNo = phoneNo;
++        this.departmentID = departmentID;
++        this.designation = designation;
++        this.status = status;
++        this.hireDate = hireDate;
++    }
++
++    private String phoneNo;         // Unique
++    private String departmentID;    // Foreign Key
++    private String designation , status;
++    private LocalDate hireDate;
++
++
++}
+\ No newline at end of file
+Index: src/main/java/com/example/chainboutique/adib/ApprovalRequest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/chainboutique/adib/ApprovalRequest.java b/src/main/java/com/example/chainboutique/adib/ApprovalRequest.java
+new file mode 100644
+--- /dev/null	(date 1785033170005)
++++ b/src/main/java/com/example/chainboutique/adib/ApprovalRequest.java	(date 1785033170005)
+@@ -0,0 +1,80 @@
++package com.example.chainboutique.adib;
++
++public class ApprovalRequest {
++
++    private String requestID;       // Primary Key (Unique)
++    private String requestType;
++    private String requestedBy;     // Foreign Key
++    private LocalDateTime requestedOn;
++    private String status;
++    private String remarks;
++
++    public String getRequestID() {
++        return requestID;
++    }
++
++    public void setRequestID(String requestID) {
++        this.requestID = requestID;
++    }
++
++    @Override
++    public String toString() {
++        return "ApprovalRequest{" +
++                "requestID='" + requestID + '\'' +
++                ", requestType='" + requestType + '\'' +
++                ", requestedBy='" + requestedBy + '\'' +
++                ", requestedOn=" + requestedOn +
++                ", status='" + status + '\'' +
++                ", remarks='" + remarks + '\'' +
++                '}';
++    }
++
++    public String getRequestType() {
++        return requestType;
++    }
++
++    public void setRequestType(String requestType) {
++        this.requestType = requestType;
++    }
++
++    public String getRequestedBy() {
++        return requestedBy;
++    }
++
++    public void setRequestedBy(String requestedBy) {
++        this.requestedBy = requestedBy;
++    }
++
++    public LocalDateTime getRequestedOn() {
++        return requestedOn;
++    }
++
++    public void setRequestedOn(LocalDateTime requestedOn) {
++        this.requestedOn = requestedOn;
++    }
++
++    public String getStatus() {
++        return status;
++    }
++
++    public void setStatus(String status) {
++        this.status = status;
++    }
++
++    public String getRemarks() {
++        return remarks;
++    }
++
++    public void setRemarks(String remarks) {
++        this.remarks = remarks;
++    }
++
++    public ApprovalRequest(String requestID, String requestType, String requestedBy, LocalDateTime requestedOn, String status, String remarks) {
++        this.requestID = requestID;
++        this.requestType = requestType;
++        this.requestedBy = requestedBy;
++        this.requestedOn = requestedOn;
++        this.status = status;
++        this.remarks = remarks;
++    }
++}
+Index: src/main/java/com/example/chainboutique/adib/Client.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/chainboutique/adib/Client.java b/src/main/java/com/example/chainboutique/adib/Client.java
+new file mode 100644
+--- /dev/null	(date 1785033169989)
++++ b/src/main/java/com/example/chainboutique/adib/Client.java	(date 1785033169989)
+@@ -0,0 +1,93 @@
++package com.example.chainboutique.adib;
++
++public class Client {
++
++    private String clientID;        // Primary Key (Unique)
++    private String clientName;
++    private String contactPerson;
++    private String email;           // Unique
++    private String phoneNo;         // Unique
++    private String address;
++
++    public Client(String clientID, String clientName, String contactPerson, String email, String phoneNo, String address, String status) {
++        this.clientID = clientID;
++        this.clientName = clientName;
++        this.contactPerson = contactPerson;
++        this.email = email;
++        this.phoneNo = phoneNo;
++        this.address = address;
++        this.status = status;
++    }
++
++    @Override
++    public String toString() {
++        return "Client{" +
++                "clientID='" + clientID + '\'' +
++                ", clientName='" + clientName + '\'' +
++                ", contactPerson='" + contactPerson + '\'' +
++                ", email='" + email + '\'' +
++                ", phoneNo='" + phoneNo + '\'' +
++                ", address='" + address + '\'' +
++                ", status='" + status + '\'' +
++                '}';
++    }
++
++    public String getClientID() {
++        return clientID;
++    }
++
++    public void setClientID(String clientID) {
++        this.clientID = clientID;
++    }
++
++    public String getClientName() {
++        return clientName;
++    }
++
++    public void setClientName(String clientName) {
++        this.clientName = clientName;
++    }
++
++    public String getContactPerson() {
++        return contactPerson;
++    }
++
++    public void setContactPerson(String contactPerson) {
++        this.contactPerson = contactPerson;
++    }
++
++    public String getEmail() {
++        return email;
++    }
++
++    public void setEmail(String email) {
++        this.email = email;
++    }
++
++    public String getPhoneNo() {
++        return phoneNo;
++    }
++
++    public void setPhoneNo(String phoneNo) {
++        this.phoneNo = phoneNo;
++    }
++
++    public String getAddress() {
++        return address;
++    }
++
++    public void setAddress(String address) {
++        this.address = address;
++    }
++
++    public String getStatus() {
++        return status;
++    }
++
++    public void setStatus(String status) {
++        this.status = status;
++    }
++
++    private String status;
++
++}
+\ No newline at end of file
+Index: src/main/java/com/example/chainboutique/adib/Department.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/chainboutique/adib/Department.java b/src/main/java/com/example/chainboutique/adib/Department.java
+new file mode 100644
+--- /dev/null	(date 1785033170017)
++++ b/src/main/java/com/example/chainboutique/adib/Department.java	(date 1785033170017)
+@@ -0,0 +1,49 @@
++package com.example.chainboutique.adib;
++
++public class Department {
++
++    private String departmentID;    // Primary Key (Unique)
++    private String departmentName;
++
++    public Department(String departmentID, String departmentName, String description) {
++        this.departmentID = departmentID;
++        this.departmentName = departmentName;
++        this.description = description;
++    }
++
++    public String getDepartmentID() {
++        return departmentID;
++    }
++
++    public void setDepartmentID(String departmentID) {
++        this.departmentID = departmentID;
++    }
++
++    @Override
++    public String toString() {
++        return "Department{" +
++                "departmentID='" + departmentID + '\'' +
++                ", departmentName='" + departmentName + '\'' +
++                ", description='" + description + '\'' +
++                '}';
++    }
++
++    public String getDepartmentName() {
++        return departmentName;
++    }
++
++    public void setDepartmentName(String departmentName) {
++        this.departmentName = departmentName;
++    }
++
++    public String getDescription() {
++        return description;
++    }
++
++    public void setDescription(String description) {
++        this.description = description;
++    }
++
++    private String description;
++
++}
+\ No newline at end of file
+Index: src/main/resources/com/example/chainboutique/adib/CEO.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/chainboutique/adib/CEO.fxml b/src/main/resources/com/example/chainboutique/adib/CEO.fxml
+new file mode 100644
+--- /dev/null	(date 1785101096023)
++++ b/src/main/resources/com/example/chainboutique/adib/CEO.fxml	(date 1785101096023)
+@@ -0,0 +1,60 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<?import javafx.scene.control.Button?>
++<?import javafx.scene.control.ComboBox?>
++<?import javafx.scene.control.DatePicker?>
++<?import javafx.scene.control.Label?>
++<?import javafx.scene.control.Spinner?>
++<?import javafx.scene.control.TableColumn?>
++<?import javafx.scene.control.TableView?>
++<?import javafx.scene.control.TextArea?>
++<?import javafx.scene.control.TextField?>
++<?import javafx.scene.layout.AnchorPane?>
++<?import javafx.scene.layout.HBox?>
++<?import javafx.scene.text.Text?>
++
++
++<AnchorPane prefHeight="784.0" prefWidth="914.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.adib.CEOController">
++   <children>
++      <TextField fx:id="employeeIdField" layoutX="16.0" layoutY="65.0" text="Employee ID" />
++      <DatePicker fx:id="startDatePicker" layoutX="16.0" layoutY="102.0" />
++      <Spinner fx:id="reportYearSpinner" layoutX="376.0" layoutY="347.0" prefHeight="25.0" prefWidth="150.0" />
++      <DatePicker fx:id="endDatePicker" layoutX="16.0" layoutY="134.0" />
++      <ComboBox fx:id="reportTypeComboBox" layoutX="16.0" layoutY="165.0" prefWidth="150.0" promptText="report type" />
++      <ComboBox fx:id="departmentComboBox" layoutX="16.0" layoutY="199.0" prefWidth="150.0" promptText="Department" />
++      <ComboBox fx:id="decisionComboBox" layoutX="16.0" layoutY="306.0" prefHeight="25.0" prefWidth="188.0" promptText="Decision (Approve/Reject)" />
++      <TextField fx:id="filterCriteriaField" layoutX="17.0" layoutY="233.0" text="Filter Criteria" />
++      <TextField fx:id="requestIdField" layoutX="18.0" layoutY="269.0" text="Request ID" />
++      <TextArea fx:id="remarksTextArea" layoutX="376.0" layoutY="24.0" prefHeight="81.0" prefWidth="281.0" text="Remarks" />
++      <TextField fx:id="announcementTitleField" layoutX="376.0" layoutY="115.0" prefHeight="25.0" prefWidth="281.0" text="Announcement Title" />
++      <TextArea fx:id="announcementMessageTextArea" layoutX="376.0" layoutY="144.0" prefHeight="163.0" prefWidth="450.0" text="Announcement Message" />
++      <Text layoutX="376.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Year" />
++      <Text layoutX="196.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date" />
++      <Text layoutX="196.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EndDate" />
++      <Button fx:id="saveCEOActionButton" layoutX="622.0" layoutY="349.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="136.0" text="Save CEO Action" />
++      <TableView fx:id="ceoTableView" layoutY="616.0" prefHeight="200.0" prefWidth="914.0">
++        <columns>
++          <TableColumn fx:id="employeeIdColumn" prefWidth="93.0" text="Employee ID" />
++          <TableColumn fx:id="dashboardColumn" prefWidth="110.0" text="Dashboard" />
++            <TableColumn fx:id="performanceReportColumn" prefWidth="145.0" text="Performance Report" />
++            <TableColumn fx:id="financialSummaryColumn" prefWidth="130.0" text="Financial Summary" />
++            <TableColumn fx:id="clientAnalyticsColumn" prefWidth="99.0" text="Client Analytics" />
++            <TableColumn fx:id="employeePerformanceColumn" prefWidth="135.0" text="Employee Performance" />
++            <TableColumn fx:id="announcementColumn" prefWidth="100.0" text="Announcement" />
++            <TableColumn fx:id="annualReportColumn" prefWidth="101.0" text="Annual Report" />
++        </columns>
++      </TableView>
++      <HBox layoutX="4.0" layoutY="516.0" prefHeight="100.0" prefWidth="906.0">
++         <children>
++            <Button fx:id="filterButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="447.0" text="Filter Records" />
++            <ComboBox fx:id="filterDepartmentCombo" prefHeight="25.0" prefWidth="378.0" promptText="Department " />
++            <ComboBox fx:id="filterReportTypeCombo" prefHeight="25.0" prefWidth="330.0" promptText="Report Type" />
++            <Spinner fx:id="filterYearSpinner" prefHeight="25.0" prefWidth="481.0" />
++         </children>
++      </HBox>
++      <Label layoutX="14.0" layoutY="16.0" text="CEO Dashboard" />
++      <Text layoutX="610.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year" wrappingWidth="23.185546875" />
++      <Button fx:id="reportsummaryButton" layoutX="622.0" layoutY="442.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="215.0" text="Generated Report Summary" />
++      <Button fx:id="generatereportButton" layoutX="622.0" layoutY="408.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="215.0" text="Generate Report Button" />
++   </children>
++</AnchorPane>
+Index: src/main/resources/com/example/chainboutique/adib/Inventoryofficer.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/chainboutique/adib/Inventoryofficer.fxml b/src/main/resources/com/example/chainboutique/adib/Inventoryofficer.fxml
+new file mode 100644
+--- /dev/null	(date 1785102436822)
++++ b/src/main/resources/com/example/chainboutique/adib/Inventoryofficer.fxml	(date 1785102436822)
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<?import java.lang.*?>
++<?import java.util.*?>
++<?import javafx.scene.*?>
++<?import javafx.scene.control.*?>
++<?import javafx.scene.layout.*?>
++
++<AnchorPane xmlns="http://javafx.com/javafx"
++            xmlns:fx="http://javafx.com/fxml"
++            fx:controller="com.example.chainboutique.adib.InventoryOfficerController"
++            prefHeight="400.0" prefWidth="600.0">
++
++</AnchorPane>
+Index: src/main/java/com/example/chainboutique/adib/CEOController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/chainboutique/adib/CEOController.java b/src/main/java/com/example/chainboutique/adib/CEOController.java
+new file mode 100644
+--- /dev/null	(date 1785102701659)
++++ b/src/main/java/com/example/chainboutique/adib/CEOController.java	(date 1785102701659)
+@@ -0,0 +1,106 @@
++package com.example.chainboutique.adib;
++
++import java.awt.*;
++
++public class CEOController {
++    package com.example.chainboutique.adib;
++
++import javafx.fxml.FXML;
++import javafx.scene.control.Button;
++import javafx.scene.control.ComboBox;
++import javafx.scene.control.DatePicker;
++import javafx.scene.control.Spinner;
++import javafx.scene.control.TableColumn;
++import javafx.scene.control.TableView;
++import javafx.scene.control.TextArea;
++import javafx.scene.control.TextField;
++
++    public class CEOController {
++
++        @FXML
++        private TableColumn<?, ?> announcementColumn;
++
++        @FXML
++        private TextArea announcementMessageTextArea;
++
++        @FXML
++        private TextField announcementTitleField;
++
++        @FXML
++        private TableColumn<?, ?> annualReportColumn;
++
++        @FXML
++        private TableView<?> ceoTableView;
++
++        @FXML
++        private TableColumn<?, ?> clientAnalyticsColumn;
++
++        @FXML
++        private TableColumn<?, ?> dashboardColumn;
++
++        @FXML
++        private ComboBox<?> decisionComboBox;
++
++        @FXML
++        private ComboBox<?> departmentComboBox;
++
++        @FXML
++        private TableColumn<?, ?> employeeIdColumn;
++
++        @FXML
++        private TextField employeeIdField;
++
++        @FXML
++        private TableColumn<?, ?> employeePerformanceColumn;
++
++        @FXML
++        private DatePicker endDatePicker;
++
++        @FXML
++        private Button filterButton;
++
++        @FXML
++        private TextField filterCriteriaField;
++
++        @FXML
++        private ComboBox<?> filterDepartmentCombo;
++
++        @FXML
++        private ComboBox<?> filterReportTypeCombo;
++
++        @FXML
++        private Spinner<?> filterYearSpinner;
++
++        @FXML
++        private TableColumn<?, ?> financialSummaryColumn;
++
++        @FXML
++        private Button generatereportButton;
++
++        @FXML
++        private TableColumn<?, ?> performanceReportColumn;
++
++        @FXML
++        private TextArea remarksTextArea;
++
++        @FXML
++        private ComboBox<?> reportTypeComboBox;
++
++        @FXML
++        private Spinner<?> reportYearSpinner;
++
++        @FXML
++        private Button reportsummaryButton;
++
++        @FXML
++        private TextField requestIdField;
++
++        @FXML
++        private Button saveCEOActionButton;
++
++        @FXML
++        private DatePicker startDatePicker;
++
++    }
++
++}
+Index: src/main/java/com/example/chainboutique/adib/InventoryOfficerController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/chainboutique/adib/InventoryOfficerController.java b/src/main/java/com/example/chainboutique/adib/InventoryOfficerController.java
+new file mode 100644
+--- /dev/null	(date 1785102522374)
++++ b/src/main/java/com/example/chainboutique/adib/InventoryOfficerController.java	(date 1785102522374)
+@@ -0,0 +1,4 @@
++package com.example.chainboutique.adib;
++
++public class InventoryOfficerController {
++}

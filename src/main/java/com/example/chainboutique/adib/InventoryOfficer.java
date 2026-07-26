@@ -1,12 +1,11 @@
 package com.example.chainboutique.adib;
 
-public class CEO {
+public class InventoryOfficer {
 
     private String name;
     private String email;// Unique
     private String phoneNo; // Unique
-    private String password, address;
-    private String employeeID; // Primary Key (Unique)
+    private String password;
 
     public String getName() {
         return name;
@@ -16,9 +15,13 @@ public class CEO {
         this.name = name;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     @Override
     public String toString() {
-        return "CEO{" +
+        return "InventoryOfficer{" +
                 "name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNo='" + phoneNo + '\'' +
@@ -26,10 +29,6 @@ public class CEO {
                 ", address='" + address + '\'' +
                 ", employeeID='" + employeeID + '\'' +
                 '}';
-    }
-
-    public String getEmail() {
-        return email;
     }
 
     public void setEmail(String email) {
@@ -68,7 +67,7 @@ public class CEO {
         this.employeeID = employeeID;
     }
 
-    public CEO(String name, String email, String phoneNo, String password, String address, String employeeID) {
+    public InventoryOfficer(String name, String email, String phoneNo, String password, String address, String employeeID) {
         this.name = name;
         this.email = email;
         this.phoneNo = phoneNo;
@@ -76,4 +75,8 @@ public class CEO {
         this.address = address;
         this.employeeID = employeeID;
     }
+
+    private String address;
+    private String employeeID; // Primary Key (Unique)
+
 }
