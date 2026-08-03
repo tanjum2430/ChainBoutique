@@ -1,14 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.chainboutique.tanjum.dailySalesSummaryController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="696.0" prefWidth="1325.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.tanjum.dailySalesSummaryController">
+   <children>
+      <VBox alignment="CENTER" layoutX="222.0" layoutY="30.0" prefHeight="77.0" prefWidth="537.0">
+         <children>
+            <Label fx:id="dailySalesSummaryTitleLabel" text="Daily Sales Summary">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="82.0" layoutY="150.0" prefHeight="27.0" prefWidth="125.0" text="Report Filters" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="reportDateDatePicker" layoutX="55.0" layoutY="211.0" prefHeight="25.0" prefWidth="211.0" promptText="Report Date" />
+      <Label fx:id="cashierIdLabel" layoutX="55.0" layoutY="277.0" text="Cashier ID" />
+      <TextField fx:id="cashierIdTextField" editable="false" layoutX="122.0" layoutY="273.0" />
+      <Button fx:id="btnGenerateReport" layoutX="48.0" layoutY="322.0" mnemonicParsing="false" onAction="#generateReportOnAction" prefHeight="25.0" prefWidth="222.0" text="Generate Report" />
+      <TableView fx:id="salesSummaryTableView" layoutX="336.0" layoutY="204.0" prefHeight="340.0" prefWidth="687.0">
+        <columns>
+          <TableColumn fx:id="billIdCol" prefWidth="135.0" text="Bill ID" />
+          <TableColumn fx:id="customerNameCol" prefWidth="159.0" text="Customer Name" />
+            <TableColumn fx:id="paymentMethodCol" prefWidth="110.0" text="Payment Method" />
+            <TableColumn fx:id="totalAmountCol" prefWidth="152.0" text="Total Amount" />
+            <TableColumn fx:id="dateCol" prefWidth="130.0" text="Date" />
+        </columns>
+      </TableView>
+      <Label layoutX="635.0" layoutY="150.0" text="Sales Table" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <VBox alignment="CENTER" layoutX="1071.0" layoutY="204.0" prefHeight="340.0" prefWidth="229.0" spacing="10.0">
+         <children>
+            <Label fx:id="totalBillsSummaryLabel" text="Total Bills" />
+            <TextField fx:id="totalBillsSummaryTextField" editable="false" />
+            <Label fx:id="totalSalesSummaryLabel" text="Total Sales" />
+            <TextField fx:id="totalSalesSummaryTextField" editable="false" />
+            <Label text="Total Discount" />
+            <TextField fx:id="totalDiscountSummaryTextField" editable="false" />
+            <Label fx:id="totalReturnsSummaryLabel" text="Total Returns" />
+            <TextField fx:id="totalReturnsSummaryTextField" editable="false" />
+            <Label fx:id="netSalesLabel" text="Net Sales" />
+            <TextField fx:id="netSalesTextField" />
+         </children>
+      </VBox>
+      <Label layoutX="1139.0" layoutY="150.0" text="Summary" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="117.0" layoutY="573.0" prefHeight="100.0" prefWidth="1021.0" spacing="20.0">
+         <children>
+            <Button fx:id="btnRefresh" mnemonicParsing="false" onAction="#refreshOnAction" prefHeight="25.0" prefWidth="276.0" text="Refresh" />
+            <Button fx:id="btnPrint" mnemonicParsing="false" onAction="#printReportOnAction" prefHeight="25.0" prefWidth="236.0" text="Print Report" />
+            <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#logoutOnAction" prefHeight="25.0" prefWidth="169.0" text="Logout" />
+            <Button fx:id="btnExit" mnemonicParsing="false" onAction="#exitOnAction" prefHeight="25.0" prefWidth="104.0" text="Exit" />
+         </children>
+      </HBox>
+   </children>
 </AnchorPane>

@@ -1,14 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.chainboutique.tanjum.applyDiscountController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="applyDiscountLabel" prefHeight="526.0" prefWidth="1122.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.tanjum.applyDiscountController">
+   <children>
+      <VBox alignment="CENTER" layoutX="304.0" layoutY="14.0" prefHeight="57.0" prefWidth="461.0">
+         <children>
+            <Label text="Apply Discount">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label fx:id="billIdLabel" layoutX="24.0" layoutY="144.0" prefHeight="17.0" prefWidth="83.0" text="Bill ID" />
+      <TextField fx:id="billIdTextField" editable="false" layoutX="171.0" layoutY="140.0" />
+      <Label fx:id="customerNameLabel" layoutX="24.0" layoutY="176.0" prefHeight="17.0" prefWidth="114.0" text="Customer Name" />
+      <TextField fx:id="customerNameTextField" editable="false" layoutX="171.0" layoutY="172.0" />
+      <Label fx:id="totalAmountLabel" layoutX="23.0" layoutY="210.0" prefHeight="17.0" prefWidth="114.0" text="Total Amount" />
+      <TextField fx:id="totalAmountTextField" editable="false" layoutX="170.0" layoutY="206.0" />
+      <Label fx:id="discountCodeLabel" layoutX="395.0" layoutY="138.0" prefHeight="17.0" prefWidth="114.0" text="Discount Code" />
+      <TextField fx:id="discountCodeTextField" layoutX="526.0" layoutY="134.0" promptText="Enter Discount Code" />
+      <Label fx:id="discountPercentageLabel" layoutX="395.0" layoutY="170.0" prefHeight="17.0" prefWidth="114.0" text="Discount Percentage" />
+      <TextField fx:id="discountPercentageTextField" editable="false" layoutX="526.0" layoutY="166.0" />
+      <Label fx:id="discountAmountLabel" layoutX="395.0" layoutY="204.0" prefHeight="17.0" prefWidth="114.0" text="Discount Amount" />
+      <TextField fx:id="discountAmountTextField" editable="false" layoutX="526.0" layoutY="200.0" />
+      <Label fx:id="finalAmountLabel" layoutX="395.0" layoutY="239.0" prefHeight="17.0" prefWidth="114.0" text="Final Amount" />
+      <TextField fx:id="finalAmountTextField" editable="false" layoutX="526.0" layoutY="235.0" />
+      <TextArea fx:id="discountDetailsTextArea" editable="false" layoutX="771.0" layoutY="96.0" prefHeight="256.0" prefWidth="292.0" promptText="Discount Details" />
+      <HBox alignment="CENTER" layoutX="224.0" layoutY="372.0" prefHeight="100.0" prefWidth="809.0" spacing="20.0">
+         <children>
+            <Button fx:id="btnValidate" mnemonicParsing="false" onAction="#validateOnAction" prefHeight="25.0" prefWidth="203.0" text="Validate Code" />
+            <Button fx:id="btnApplyDiscount" mnemonicParsing="false" onAction="#applyDiscountOnAction" prefHeight="25.0" prefWidth="216.0" text="Apply Discount" />
+            <Button fx:id="btnNext" mnemonicParsing="false" onAction="#nextOnAction" prefHeight="25.0" prefWidth="154.0" text="Next" />
+            <Button fx:id="btnBack" mnemonicParsing="false" onAction="#backOnAction" prefHeight="25.0" prefWidth="112.0" text="Back" />
+         </children>
+      </HBox>
+      <Label fx:id="billInformationLabel" layoutX="92.0" layoutY="88.0" text="Bill Information" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="discountInformationLabel" layoutX="442.0" layoutY="88.0" text="Discount Information" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
