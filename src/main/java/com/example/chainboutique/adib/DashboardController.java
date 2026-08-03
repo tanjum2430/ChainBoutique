@@ -10,17 +10,17 @@ public class DashboardController
     @javafx.fxml.FXML
     private TextField searchField;
     @javafx.fxml.FXML
-    private Spinner totalJobsPostedSpinner;
+    private Spinner <Integer> totalJobsPostedSpinner;
     @javafx.fxml.FXML
-    private TableColumn totalRevenueColumn;
+    private TableColumn <Dashboard,Double> totalRevenueColumn;
     @javafx.fxml.FXML
     private Button addDashboardButton;
     @javafx.fxml.FXML
-    private TableColumn totalJobsPostedColumn;
+    private TableColumn <Dashboard,Integer> totalJobsPostedColumn;
     @javafx.fxml.FXML
-    private TableView dashboardTable;
+    private TableView <Dashboard> dashboardTable;
     @javafx.fxml.FXML
-    private Spinner totalHiresSpinner;
+    private Spinner <Integer> totalHiresSpinner;
     @javafx.fxml.FXML
     private TextField totalRevenueField;
     @javafx.fxml.FXML
@@ -32,15 +32,15 @@ public class DashboardController
     @javafx.fxml.FXML
     private Button refreshButton;
     @javafx.fxml.FXML
-    private TableColumn totalHiresColumn;
+    private TableColumn <Dashboard,Integer> totalHiresColumn;
     @javafx.fxml.FXML
-    private TableColumn activeClientsColumn;
+    private TableColumn <Dashboard,Integer> activeClientsColumn;
     @javafx.fxml.FXML
-    private TableColumn dashboardIdColumn;
+    private TableColumn <Dashboard,String> dashboardIdColumn;
     @javafx.fxml.FXML
-    private Spinner activeClientsSpinner;
+    private Spinner <Integer> activeClientsSpinner;
     @javafx.fxml.FXML
-    private TableColumn generatedOnColumn;
+    private TableColumn <Dashboard,Integer> generatedOnColumn;
 
     @javafx.fxml.FXML
     public void initialize() {

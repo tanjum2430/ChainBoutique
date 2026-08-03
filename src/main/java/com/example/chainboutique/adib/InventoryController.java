@@ -17,7 +17,7 @@ public class InventoryController
     @javafx.fxml.FXML
     private Button clearButton;
     @javafx.fxml.FXML
-    private TableColumn totalStockValueColumn;
+    private TableColumn <Inventory,Double> totalStockValueColumn;
     @javafx.fxml.FXML
     private TextField searchField;
     @javafx.fxml.FXML
@@ -25,11 +25,11 @@ public class InventoryController
     @javafx.fxml.FXML
     private TextField inventoryIdField;
     @javafx.fxml.FXML
-    private TableColumn lastUpdatedColumn;
+    private TableColumn <Inventory,Integer> lastUpdatedColumn;
     @javafx.fxml.FXML
     private DatePicker lastUpdatedPicker;
     @javafx.fxml.FXML
-    private TableColumn inventoryIdColumn;
+    private TableColumn <Inventory,String> inventoryIdColumn;
 
     @javafx.fxml.FXML
     public void initialize() {

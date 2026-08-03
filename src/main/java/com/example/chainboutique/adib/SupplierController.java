@@ -44,25 +44,24 @@ public class SupplierController {
     private Button refreshButton;
 
     @FXML
-    private TableView<?> supplyTable;
+    private TableColumn<Supplier,String> supplierIdColumn;
 
     @FXML
-    private TableColumn<?, ?> supplierIdColumn;
+    private TableColumn<Supplier,String> supplierNameColumn;
 
     @FXML
-    private TableColumn<?, ?> supplierNameColumn;
+    private TableColumn<Supplier,String> companyNameColumn;
 
     @FXML
-    private TableColumn<?, ?> companyNameColumn;
+    private TableColumn<Supplier,String> emailColumn;
 
     @FXML
-    private TableColumn<?, ?> emailColumn;
+    private TableColumn<Supplier,String> phoneNumberColumn;
 
     @FXML
-    private TableColumn<?, ?> phoneNumberColumn;
-
+    private TableColumn<Supplier,String> addressColumn;
     @FXML
-    private TableColumn<?, ?> addressColumn;
+    private TableView supplierTable;
 
     @FXML
     public void initialize() {

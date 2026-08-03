@@ -16,9 +16,9 @@ public class EmployeeController
     @javafx.fxml.FXML
     private DatePicker hireDatePicker;
     @javafx.fxml.FXML
-    private TableColumn fullNameColumn;
+    private TableColumn <Employee,String> fullNameColumn;
     @javafx.fxml.FXML
-    private TableColumn hireDateColumn;
+    private TableColumn <Employee,Integer> hireDateColumn;
     @javafx.fxml.FXML
     private TextField departmentIdField;
     @javafx.fxml.FXML
@@ -26,7 +26,7 @@ public class EmployeeController
     @javafx.fxml.FXML
     private TextField designationField;
     @javafx.fxml.FXML
-    private TableColumn departmentIdColumn;
+    private TableColumn <Employee,String> departmentIdColumn;
     @javafx.fxml.FXML
     private Button clearButton;
     @javafx.fxml.FXML
@@ -34,21 +34,21 @@ public class EmployeeController
     @javafx.fxml.FXML
     private Button addEmployeeButton;
     @javafx.fxml.FXML
-    private ComboBox statusComboBox;
+    private ComboBox <String> statusComboBox;
     @javafx.fxml.FXML
     private Button RefreshButton;
     @javafx.fxml.FXML
-    private TableView employeeTable;
+    private TableView <Employee> employeeTable;
     @javafx.fxml.FXML
-    private TableColumn employeeIdColumn;
+    private TableColumn <Employee,String> employeeIdColumn;
     @javafx.fxml.FXML
-    private TableColumn statusColumn;
+    private TableColumn <Employee,String> statusColumn;
     @javafx.fxml.FXML
-    private TableColumn designationColumn;
+    private TableColumn <Employee,String> designationColumn;
     @javafx.fxml.FXML
-    private TableColumn phoneNumberColumn;
+    private TableColumn <Employee,String> phoneNumberColumn;
     @javafx.fxml.FXML
-    private TableColumn emailColumn;
+    private TableColumn <Employee,String> emailColumn;
 
     @javafx.fxml.FXML
     public void initialize() {

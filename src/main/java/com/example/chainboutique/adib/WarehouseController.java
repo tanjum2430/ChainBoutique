@@ -12,52 +12,36 @@ public class WarehouseController {
 
     @FXML
     private TextField warehouseIdField;
-
     @FXML
     private TextField warehouseNameField;
-
     @FXML
     private TextField locationField;
-
     @FXML
     private Spinner<Integer> capacitySpinner;
-
     @FXML
     private TextField managerNameField;
-
     @FXML
     private TextField searchField;
-
     @FXML
     private Button addWarehouseButton;
-
     @FXML
     private Button clearButton;
-
     @FXML
     private Button searchButton;
-
     @FXML
     private Button refreshButton;
-
     @FXML
-    private TableView<?> warehouseTable;
-
+    private TableView<Warehouse> warehouseTable;
     @FXML
-    private TableColumn<?, ?> warehouseIdColumn;
-
+    private TableColumn<Warehouse,String> warehouseIdColumn;
     @FXML
-    private TableColumn<?, ?> warehouseNameColumn;
-
+    private TableColumn<Warehouse,String>warehouseNameColumn;
     @FXML
-    private TableColumn<?, ?> locationColumn;
-
+    private TableColumn<Warehouse,String> locationColumn;
     @FXML
-    private TableColumn<?, ?> capacityColumn;
-
+    private TableColumn<Warehouse,String> capacityColumn;
     @FXML
-    private TableColumn<?, ?> managerNameColumn;
-
+    private TableColumn<Warehouse,String> managerNameColumn;
     @FXML
     public void initialize() {
 

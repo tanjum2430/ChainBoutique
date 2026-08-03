@@ -27,7 +27,7 @@
       <Button fx:id="refreshButton" layoutX="180.0" layoutY="323.0" mnemonicParsing="false" onAction="#refreshTable" prefHeight="48.0" prefWidth="81.0" text="Refresh" />
       <Label layoutX="33.0" layoutY="291.0" prefHeight="17.0" prefWidth="125.0" text="Search Supplier" />
       <TextField fx:id="searchField" layoutX="115.0" layoutY="287.0" />
-      <TableView fx:id="supplyTable" layoutX="5.0" layoutY="398.0" prefHeight="200.0" prefWidth="995.0">
+      <TableView fx:id="supplierTable" layoutX="5.0" layoutY="398.0" prefHeight="200.0" prefWidth="995.0">
         <columns>
           <TableColumn fx:id="supplierIdColumn" prefWidth="83.0" text="Supplier ID" />
           <TableColumn fx:id="supplierNameColumn" prefWidth="242.0" text="Supplier Name" />

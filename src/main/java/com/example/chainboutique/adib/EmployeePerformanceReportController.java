@@ -3,6 +3,8 @@ package com.example.chainboutique.adib;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
+import java.time.LocalDate;
+
 public class EmployeePerformanceReportController
 {
     @javafx.fxml.FXML
@@ -14,29 +16,29 @@ public class EmployeePerformanceReportController
     @javafx.fxml.FXML
     private TextField reportIdField;
     @javafx.fxml.FXML
-    private TableColumn topPerformerColumn;
+    private TableColumn <EmployeePerformanceReport,String> topPerformerColumn;
     @javafx.fxml.FXML
     private TextField departmentIdField;
     @javafx.fxml.FXML
-    private TableColumn departmentIdColumn;
+    private TableColumn <EmployeePerformanceReport,String> departmentIdColumn;
     @javafx.fxml.FXML
     private TextField topPerformerField;
     @javafx.fxml.FXML
-    private TableColumn averageScoreColumn;
+    private TableColumn <EmployeePerformanceReport,String> averageScoreColumn;
     @javafx.fxml.FXML
     private DatePicker generatedOnPicker;
     @javafx.fxml.FXML
     private Button clearButton;
     @javafx.fxml.FXML
-    private TableColumn reportIdColumn;
+    private TableColumn <EmployeePerformanceReport,String> reportIdColumn;
     @javafx.fxml.FXML
     private Button refreshButton;
     @javafx.fxml.FXML
     private TextField averageScoreField;
     @javafx.fxml.FXML
-    private TableColumn generatedOnColumn;
+    private TableColumn <EmployeePerformanceReport,LocalDate> generatedOnColumn;
     @javafx.fxml.FXML
-    private TableView employeePerformanceReportTable;
+    private TableView <EmployeePerformanceReport> employeePerformanceReportTable;
 
     @javafx.fxml.FXML
     public void initialize() {

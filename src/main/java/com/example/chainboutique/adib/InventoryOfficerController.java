@@ -12,76 +12,52 @@ public class InventoryOfficerController {
 
     @FXML
     private TextField productIdField;
-
     @FXML
     private TextField productNameField;
-
     @FXML
-    private ComboBox<?> categoryComboBox;
-
+    private ComboBox<String> categoryComboBox;
     @FXML
     private Spinner<Integer> quantitySpinner;
-
     @FXML
-    private ComboBox<?> supplierComboBox;
-
+    private ComboBox<String> supplierComboBox;
     @FXML
-    private ComboBox<?> warehouseComboBox;
-
+    private ComboBox<String> warehouseComboBox;
     @FXML
     private TextField unitPriceField;
-
     @FXML
     private TextField sellingPriceField;
-
     @FXML
     private Button addProductButton;
-
     @FXML
     private Button clearButton;
-
     @FXML
     private Button searchButton;
-
     @FXML
     private Button filterButton;
-
     @FXML
     private Button refreshButton;
-
     @FXML
     private TextField searchField;
-
     @FXML
-    private ComboBox<?> filterCategoryComboBox;
-
+    private ComboBox<String> filterCategoryComboBox;
     @FXML
-    private TableView<?> inventoryTable;
-
+    private TableView<InventoryOfficer> inventoryTable;
     @FXML
-    private TableColumn<?, ?> productIdColumn;
-
+    private TableColumn<InventoryOfficer,String> productIdColumn;
     @FXML
-    private TableColumn<?, ?> productNameColumn;
-
+    private TableColumn<InventoryOfficer,String> productNameColumn;
     @FXML
-    private TableColumn<?, ?> categoryColumn;
-
+    private TableColumn<InventoryOfficer,String> categoryColumn;
     @FXML
-    private TableColumn<?, ?> quantityColumn;
-
+    private TableColumn<InventoryOfficer,String> quantityColumn;
     @FXML
-    private TableColumn<?, ?> supplierColumn;
-
+    private TableColumn<InventoryOfficer,String> supplierColumn;
     @FXML
-    private TableColumn<?, ?> warehouseColumn;
-
+    private TableColumn<InventoryOfficer,String> warehouseColumn;
     @FXML
-    private TableColumn<?, ?> unitPriceColumn;
-
+    private TableColumn<InventoryOfficer,Double> unitPriceColumn;
     @FXML
-    private TableColumn<?, ?> sellingPriceColumn;
-
+    private TableColumn<InventoryOfficer,Double> sellingPriceColumn;
     @FXML
     public void initialize() {
 

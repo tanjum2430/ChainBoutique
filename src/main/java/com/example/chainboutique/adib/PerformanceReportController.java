@@ -3,6 +3,9 @@ package com.example.chainboutique.adib;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public class PerformanceReportController
 {
     @javafx.fxml.FXML
@@ -28,23 +31,23 @@ public class PerformanceReportController
     @javafx.fxml.FXML
     private TextField recruiterProductivityField;
     @javafx.fxml.FXML
-    private ComboBox reportTypeComboBox;
+    private ComboBox <String> reportTypeComboBox;
     @javafx.fxml.FXML
-    private TableView performanceReportTable;
+    private TableView <PerformanceReport> performanceReportTable;
     @javafx.fxml.FXML
-    private TableColumn recruiterProductivityColumn;
+    private TableColumn <PerformanceReport,String> recruiterProductivityColumn;
     @javafx.fxml.FXML
-    private TableColumn placementRateColumn;
+    private TableColumn <PerformanceReport,String> placementRateColumn;
     @javafx.fxml.FXML
-    private TableColumn startDateColumn;
+    private TableColumn<PerformanceReport, LocalDate> startDateColumn;
     @javafx.fxml.FXML
-    private TableColumn reportTypeColumn;
+    private TableColumn <PerformanceReport,String> reportTypeColumn;
     @javafx.fxml.FXML
-    private TableColumn endDateColumn;
+    private TableColumn<PerformanceReport,LocalDate> endDateColumn;
     @javafx.fxml.FXML
-    private TableColumn timeToHireColumn;
+    private TableColumn <PerformanceReport, LocalDateTime> timeToHireColumn;
     @javafx.fxml.FXML
-    private TableColumn reportIdColumn;
+    private TableColumn <PerformanceReport,String> reportIdColumn;
 
     @javafx.fxml.FXML
     public void initialize() {

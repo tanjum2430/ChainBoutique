@@ -14,33 +14,33 @@ public class FinancialSummaryController
     @javafx.fxml.FXML
     private TextField reportIdField;
     @javafx.fxml.FXML
-    private TableColumn startDateColumn;
+    private TableColumn <FinancialSummary,Integer> startDateColumn;
     @javafx.fxml.FXML
-    private TableColumn totalRevenueColumn;
+    private TableColumn <FinancialSummary,Double> totalRevenueColumn;
     @javafx.fxml.FXML
     private DatePicker startDatePicker;
     @javafx.fxml.FXML
-    private TableColumn netProfitColumn;
+    private TableColumn <FinancialSummary,Double> netProfitColumn;
     @javafx.fxml.FXML
     private Button addSummaryButton;
     @javafx.fxml.FXML
     private TextField totalRevenueField;
     @javafx.fxml.FXML
-    private TableColumn endDateColumn;
+    private TableColumn <FinancialSummary,Integer> endDateColumn;
     @javafx.fxml.FXML
     private DatePicker endDatePicker;
     @javafx.fxml.FXML
     private Button clearButton;
     @javafx.fxml.FXML
-    private TableColumn reportIdColumn;
+    private TableColumn <FinancialSummary,String> reportIdColumn;
     @javafx.fxml.FXML
     private Button refreshButton;
     @javafx.fxml.FXML
-    private TableView financialSummaryTable;
+    private TableView <FinancialSummary> financialSummaryTable;
     @javafx.fxml.FXML
     private TextField totalExpenseField;
     @javafx.fxml.FXML
-    private TableColumn totalExpenseColumn;
+    private TableColumn <FinancialSummary,Double> totalExpenseColumn;
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -8,7 +8,7 @@ public class DepartmentController
     @javafx.fxml.FXML
     private Button searchButton;
     @javafx.fxml.FXML
-    private TableView departmentTable;
+    private TableView <Department> departmentTable;
     @javafx.fxml.FXML
     private TextArea descriptionArea;
     @javafx.fxml.FXML
@@ -24,11 +24,11 @@ public class DepartmentController
     @javafx.fxml.FXML
     private TextField departmentIdField;
     @javafx.fxml.FXML
-    private TableColumn departmentIdColumn;
+    private TableColumn <Department,String> departmentIdColumn;
     @javafx.fxml.FXML
-    private TableColumn departmentNameColumn;
+    private TableColumn <Department,String> departmentNameColumn;
     @javafx.fxml.FXML
-    private TableColumn descriptionColumn;
+    private TableColumn <Department,String> descriptionColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
