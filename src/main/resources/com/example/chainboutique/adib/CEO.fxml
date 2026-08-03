@@ -13,25 +13,24 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="784.0" prefWidth="914.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.adib.CEOController">
    <children>
-      <TextField fx:id="employeeIdField" layoutX="16.0" layoutY="65.0" text="Employee ID" />
+      <TextField fx:id="employeeIdField" layoutX="16.0" layoutY="65.0" />
       <DatePicker fx:id="startDatePicker" layoutX="16.0" layoutY="102.0" />
-      <Spinner fx:id="reportYearSpinner" layoutX="376.0" layoutY="347.0" prefHeight="25.0" prefWidth="150.0" />
+      <Spinner fx:id="reportYearSpinner" layoutX="442.0" layoutY="380.0" prefHeight="25.0" prefWidth="150.0" />
       <DatePicker fx:id="endDatePicker" layoutX="16.0" layoutY="134.0" />
-      <ComboBox fx:id="reportTypeComboBox" layoutX="16.0" layoutY="165.0" prefWidth="150.0" promptText="report type" />
-      <ComboBox fx:id="departmentComboBox" layoutX="16.0" layoutY="199.0" prefWidth="150.0" promptText="Department" />
-      <ComboBox fx:id="decisionComboBox" layoutX="16.0" layoutY="306.0" prefHeight="25.0" prefWidth="188.0" promptText="Decision (Approve/Reject)" />
-      <TextField fx:id="filterCriteriaField" layoutX="17.0" layoutY="233.0" text="Filter Criteria" />
-      <TextField fx:id="requestIdField" layoutX="18.0" layoutY="269.0" text="Request ID" />
-      <TextArea fx:id="remarksTextArea" layoutX="376.0" layoutY="24.0" prefHeight="81.0" prefWidth="281.0" text="Remarks" />
-      <TextField fx:id="announcementTitleField" layoutX="376.0" layoutY="115.0" prefHeight="25.0" prefWidth="281.0" text="Announcement Title" />
-      <TextArea fx:id="announcementMessageTextArea" layoutX="376.0" layoutY="144.0" prefHeight="163.0" prefWidth="450.0" text="Announcement Message" />
-      <Text layoutX="376.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Year" />
+      <ComboBox fx:id="reportTypeComboBox" layoutX="16.0" layoutY="165.0" prefWidth="150.0" />
+      <ComboBox fx:id="departmentComboBox" layoutX="16.0" layoutY="199.0" prefWidth="150.0" />
+      <ComboBox fx:id="decisionComboBox" layoutX="16.0" layoutY="306.0" prefHeight="25.0" prefWidth="188.0" />
+      <TextField fx:id="filterCriteriaField" layoutX="17.0" layoutY="233.0" />
+      <TextField fx:id="requestIdField" layoutX="18.0" layoutY="269.0" />
+      <TextArea fx:id="remarksTextArea" layoutX="376.0" layoutY="31.0" prefHeight="81.0" prefWidth="281.0" />
+      <TextField fx:id="announcementTitleField" layoutX="376.0" layoutY="138.0" prefHeight="25.0" prefWidth="281.0" />
+      <TextArea fx:id="announcementMessageTextArea" layoutX="376.0" layoutY="189.0" prefHeight="163.0" prefWidth="450.0" />
+      <Text layoutX="376.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Year" />
       <Text layoutX="196.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date" />
       <Text layoutX="196.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EndDate" />
-      <Button fx:id="saveCEOActionButton" layoutX="622.0" layoutY="349.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="136.0" text="Save CEO Action" />
+      <Button fx:id="saveCEOActionButton" layoutX="622.0" layoutY="369.0" mnemonicParsing="false" onAction="#saveCEOAction" prefHeight="49.0" prefWidth="136.0" text="Save CEO Action" />
       <TableView fx:id="ceoTableView" layoutY="616.0" prefHeight="200.0" prefWidth="914.0">
         <columns>
           <TableColumn fx:id="employeeIdColumn" prefWidth="93.0" text="Employee ID" />
@@ -46,15 +45,24 @@
       </TableView>
       <HBox layoutX="4.0" layoutY="516.0" prefHeight="100.0" prefWidth="906.0">
          <children>
-            <Button fx:id="filterButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="447.0" text="Filter Records" />
-            <ComboBox fx:id="filterDepartmentCombo" prefHeight="25.0" prefWidth="378.0" promptText="Department " />
-            <ComboBox fx:id="filterReportTypeCombo" prefHeight="25.0" prefWidth="330.0" promptText="Report Type" />
+            <Button fx:id="filterButton" mnemonicParsing="false" onAction="#filterRecords" prefHeight="25.0" prefWidth="447.0" text="Filter Records" />
+            <ComboBox fx:id="filterDepartmentComboBox" prefHeight="25.0" prefWidth="378.0" promptText="Department " />
+            <ComboBox fx:id="filterReportTypeComboBox" prefHeight="25.0" prefWidth="330.0" promptText="Report Type" />
             <Spinner fx:id="filterYearSpinner" prefHeight="25.0" prefWidth="481.0" />
          </children>
       </HBox>
       <Label layoutX="14.0" layoutY="16.0" text="CEO Dashboard" />
       <Text layoutX="610.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year" wrappingWidth="23.185546875" />
-      <Button fx:id="reportsummaryButton" layoutX="622.0" layoutY="442.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="215.0" text="Generated Report Summary" />
-      <Button fx:id="generatereportButton" layoutX="622.0" layoutY="408.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="215.0" text="Generate Report Button" />
+      <Button fx:id="reportsummaryButton" layoutX="622.0" layoutY="462.0" mnemonicParsing="false" onAction="#generateReportSummary" prefHeight="25.0" prefWidth="215.0" text="Generated Report Summary" />
+      <Button fx:id="generatereportButton" layoutX="622.0" layoutY="428.0" mnemonicParsing="false" onAction="#generateReport" prefHeight="25.0" prefWidth="215.0" text="Generate Report Button" />
+      <Text layoutX="170.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee ID" />
+      <Text layoutX="170.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="report type" />
+      <Text layoutX="171.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EmployDepartment ID" />
+      <Text layoutX="169.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter Criteria" />
+      <Text layoutX="170.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Request ID" />
+      <Text layoutX="207.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Decision (Approve/Reject)" />
+      <Text layoutX="376.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remarks" />
+      <Text layoutX="379.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Announcement Title" />
+      <Text layoutX="376.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Announcement Message" />
    </children>
 </AnchorPane>

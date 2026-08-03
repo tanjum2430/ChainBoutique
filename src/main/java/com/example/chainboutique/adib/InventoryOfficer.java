@@ -2,81 +2,105 @@ package com.example.chainboutique.adib;
 
 public class InventoryOfficer {
 
-    private String name;
-    private String email;// Unique
-    private String phoneNo; // Unique
-    private String password;
+    private String productID;
+    private String productName;
+    private String category;
 
-    public String getName() {
-        return name;
+    public String getProductID() {
+        return productID;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
+    public void setProductID(String productID) {
+        this.productID = productID;
     }
 
     @Override
     public String toString() {
         return "InventoryOfficer{" +
-                "name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", phoneNo='" + phoneNo + '\'' +
-                ", password='" + password + '\'' +
-                ", address='" + address + '\'' +
-                ", employeeID='" + employeeID + '\'' +
+                "productID='" + productID + '\'' +
+                ", productName='" + productName + '\'' +
+                ", category='" + category + '\'' +
+                ", quantity=" + quantity +
+                ", supplier='" + supplier + '\'' +
+                ", warehouse='" + warehouse + '\'' +
+                ", unitPrice=" + unitPrice +
+                ", sellingPrice=" + sellingPrice +
                 '}';
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public String getProductName() {
+        return productName;
     }
 
-    public String getPhoneNo() {
-        return phoneNo;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
-    public void setPhoneNo(String phoneNo) {
-        this.phoneNo = phoneNo;
+    public String getCategory() {
+        return category;
     }
 
-    public String getPassword() {
-        return password;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public String getAddress() {
-        return address;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public String getSupplier() {
+        return supplier;
     }
 
-    public String getEmployeeID() {
-        return employeeID;
+    public void setSupplier(String supplier) {
+        this.supplier = supplier;
     }
 
-    public void setEmployeeID(String employeeID) {
-        this.employeeID = employeeID;
+    public String getWarehouse() {
+        return warehouse;
     }
 
-    public InventoryOfficer(String name, String email, String phoneNo, String password, String address, String employeeID) {
-        this.name = name;
-        this.email = email;
-        this.phoneNo = phoneNo;
-        this.password = password;
-        this.address = address;
-        this.employeeID = employeeID;
+    public void setWarehouse(String warehouse) {
+        this.warehouse = warehouse;
     }
 
-    private String address;
-    private String employeeID; // Primary Key (Unique)
+    public double getUnitPrice() {
+        return unitPrice;
+    }
+
+    public void setUnitPrice(double unitPrice) {
+        this.unitPrice = unitPrice;
+    }
+
+    public double getSellingPrice() {
+        return sellingPrice;
+    }
+
+    public void setSellingPrice(double sellingPrice) {
+        this.sellingPrice = sellingPrice;
+    }
+
+    public InventoryOfficer(String productID, String productName, String category, int quantity, String supplier, String warehouse, double unitPrice, double sellingPrice) {
+        this.productID = productID;
+        this.productName = productName;
+        this.category = category;
+        this.quantity = quantity;
+        this.supplier = supplier;
+        this.warehouse = warehouse;
+        this.unitPrice = unitPrice;
+        this.sellingPrice = sellingPrice;
+    }
+
+    private int quantity;
+
+    private String supplier;
+    private String warehouse;
+
+    private double unitPrice;
+    private double sellingPrice;
 
 }

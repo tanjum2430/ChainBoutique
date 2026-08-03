@@ -5,24 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b215a45a-9d31-42ac-9d01-6368b8318195" name="Changes" comment="Initial project upload">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/mainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/applyDiscountController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/createSalesBillController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/dailySalesSummaryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/generateInvoiceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/receivePaymentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/returnExchangeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/searchCustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/AnnouncementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/AnnualReportController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/ApprovalRequestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/ClientAnalyticsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/ClientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/DashboardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/DepartmentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/EmployeePerformanceReportController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/FinancialSummaryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/InventoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/PerformanceReportController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/SupplierController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/SupplyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/WarehouseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Announcement.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/AnnualReport.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/ApprovalRequest.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/ClientAnalytics.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Dashboard.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Department.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Employee.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/EmployeePerformanceReport.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/FinancialSummary.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Inventory.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/PerformanceReport.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Supplier.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Warehouse.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/client.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/supply.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_27_2026_3_54_AM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_27_2026_3_54_AM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/applyDiscount.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/applyDiscount.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/createSalesBill.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/createSalesBill.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/customerDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/customerDashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/dailySalesSummary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/dailySalesSummary.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/generateInvoice.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/generateInvoice.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/receivePayment.fml.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/receivePayment.fml.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/returnExchange.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/returnExchange.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/searchCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/searchCustomer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/CEOController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/CEOController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/InventoryOfficerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/InventoryOfficerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Supplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Inventoryofficer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Inventoryofficer.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,12 +65,12 @@
     &quot;assignee&quot;: &quot;tanjum2430&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/tanjum2430/ChainBoutique&quot;,
-    &quot;accountId&quot;: &quot;166d2989-8e5f-4402-b5fe-a7d078320aaa&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/tanjum2430/ChainBoutique",
+    "accountId": "166d2989-8e5f-4402-b5fe-a7d078320aaa"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>

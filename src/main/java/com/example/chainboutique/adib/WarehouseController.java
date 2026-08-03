@@ -1,57 +1,85 @@
 package com.example.chainboutique.adib;
 
-public class WarehouseController
-{
-    @javafx.fxml.FXML
-    private TextField locationField;
-    @javafx.fxml.FXML
-    private Button searchButton;
-    @javafx.fxml.FXML
-    private TableColumn locationColumn;
-    @javafx.fxml.FXML
-    private Button addWarehouseButton;
-    @javafx.fxml.FXML
-    private TextField searchField;
-    @javafx.fxml.FXML
-    private TableColumn warehouseIdColumn;
-    @javafx.fxml.FXML
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Spinner;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+
+public class WarehouseController {
+
+    @FXML
     private TextField warehouseIdField;
-    @javafx.fxml.FXML
-    private TableColumn warehouseNameColumn;
-    @javafx.fxml.FXML
-    private TableColumn capacityColumn;
-    @javafx.fxml.FXML
-    private TextField managerNameField;
-    @javafx.fxml.FXML
-    private Button clearButton;
-    @javafx.fxml.FXML
-    private Button refreshButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private TextField warehouseNameField;
-    @javafx.fxml.FXML
-    private TableView warehouseTable;
-    @javafx.fxml.FXML
-    private TableColumn managerNameColumn;
-    @javafx.fxml.FXML
-    private Spinner capacitySpinner;
 
-    @javafx.fxml.FXML
+    @FXML
+    private TextField locationField;
+
+    @FXML
+    private Spinner<Integer> capacitySpinner;
+
+    @FXML
+    private TextField managerNameField;
+
+    @FXML
+    private TextField searchField;
+
+    @FXML
+    private Button addWarehouseButton;
+
+    @FXML
+    private Button clearButton;
+
+    @FXML
+    private Button searchButton;
+
+    @FXML
+    private Button refreshButton;
+
+    @FXML
+    private TableView<?> warehouseTable;
+
+    @FXML
+    private TableColumn<?, ?> warehouseIdColumn;
+
+    @FXML
+    private TableColumn<?, ?> warehouseNameColumn;
+
+    @FXML
+    private TableColumn<?, ?> locationColumn;
+
+    @FXML
+    private TableColumn<?, ?> capacityColumn;
+
+    @FXML
+    private TableColumn<?, ?> managerNameColumn;
+
+    @FXML
     public void initialize() {
+
     }
 
-    @javafx.fxml.FXML
-    public void searchWarehouse(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
+    @FXML
     public void addWarehouse(ActionEvent actionEvent) {
+
     }
 
-    @javafx.fxml.FXML
-    public void refreshTable(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
+    @FXML
     public void clearFields(ActionEvent actionEvent) {
+
+    }
+
+    @FXML
+    public void searchWarehouse(ActionEvent actionEvent) {
+
+    }
+
+    @FXML
+    public void refreshTable(ActionEvent actionEvent) {
+
     }
 }

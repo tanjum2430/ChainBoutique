@@ -1,61 +1,91 @@
 package com.example.chainboutique.adib;
 
-public class SupplierController
-{
-    @javafx.fxml.FXML
-    private TableColumn companyNameColumn;
-    @javafx.fxml.FXML
-    private TableColumn addressColumn;
-    @javafx.fxml.FXML
-    private TextField companyNameField;
-    @javafx.fxml.FXML
-    private Button searchButton;
-    @javafx.fxml.FXML
-    private TextField phoneNumberField;
-    @javafx.fxml.FXML
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+
+public class SupplierController {
+
+    @FXML
     private TextField supplierIdField;
-    @javafx.fxml.FXML
-    private TextField searchField;
-    @javafx.fxml.FXML
+
+    @FXML
     private TextField supplierNameField;
-    @javafx.fxml.FXML
+
+    @FXML
+    private TextField companyNameField;
+
+    @FXML
     private TextField emailField;
-    @javafx.fxml.FXML
-    private Button addSupplierButton;
-    @javafx.fxml.FXML
-    private Button clearButton;
-    @javafx.fxml.FXML
-    private TableColumn supplierNameColumn;
-    @javafx.fxml.FXML
-    private Button refreshButton;
-    @javafx.fxml.FXML
-    private TableColumn supplierIdColumn;
-    @javafx.fxml.FXML
-    private TableColumn phoneNumberColumn;
-    @javafx.fxml.FXML
+
+    @FXML
+    private TextField phoneNumberField;
+
+    @FXML
     private TextArea addressArea;
-    @javafx.fxml.FXML
-    private TableColumn emailColumn;
-    @javafx.fxml.FXML
-    private TableView supplyTable;
 
-    @javafx.fxml.FXML
+    @FXML
+    private TextField searchField;
+
+    @FXML
+    private Button addSupplierButton;
+
+    @FXML
+    private Button clearButton;
+
+    @FXML
+    private Button searchButton;
+
+    @FXML
+    private Button refreshButton;
+
+    @FXML
+    private TableView<?> supplyTable;
+
+    @FXML
+    private TableColumn<?, ?> supplierIdColumn;
+
+    @FXML
+    private TableColumn<?, ?> supplierNameColumn;
+
+    @FXML
+    private TableColumn<?, ?> companyNameColumn;
+
+    @FXML
+    private TableColumn<?, ?> emailColumn;
+
+    @FXML
+    private TableColumn<?, ?> phoneNumberColumn;
+
+    @FXML
+    private TableColumn<?, ?> addressColumn;
+
+    @FXML
     public void initialize() {
+
     }
 
-    @javafx.fxml.FXML
-    public void searchSupplier(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
+    @FXML
     public void addSupplier(ActionEvent actionEvent) {
+
     }
 
-    @javafx.fxml.FXML
-    public void refreshTable(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
+    @FXML
     public void clearFields(ActionEvent actionEvent) {
+
+    }
+
+    @FXML
+    public void searchSupplier(ActionEvent actionEvent) {
+
+    }
+
+    @FXML
+    public void refreshTable(ActionEvent actionEvent) {
+
     }
 }
