@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="628.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.adib.WarehouseController">
+   <children>
+      <Label layoutX="33.0" layoutY="18.0" prefHeight="17.0" prefWidth="88.0" text="Warehouse ID" />
+      <TextField fx:id="warehouseIdField" layoutX="142.0" layoutY="14.0" />
+      <Label layoutX="23.0" layoutY="43.0" prefHeight="17.0" prefWidth="123.0" text="Warehouse Name" />
+      <TextField fx:id="warehouseNameField" layoutX="142.0" layoutY="39.0" />
+      <Label layoutX="67.0" layoutY="72.0" prefHeight="17.0" prefWidth="192.0" text="Location" />
+      <TextField fx:id="locationField" layoutX="142.0" layoutY="68.0" />
+      <Label layoutX="64.0" layoutY="107.0" prefHeight="17.0" prefWidth="165.0" text="Capacity" />
+      <Label layoutX="34.0" layoutY="139.0" prefHeight="17.0" prefWidth="251.0" text="Manager Name" />
+      <TextField fx:id="managerNameField" layoutX="142.0" layoutY="135.0" />
+      <Button fx:id="addWarehouseButton" layoutX="55.0" layoutY="177.0" mnemonicParsing="false" onAction="#addWarehouse" prefHeight="42.0" prefWidth="123.0" text="Add Warehouse" />
+      <Button fx:id="clearButton" layoutX="199.0" layoutY="177.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="42.0" prefWidth="110.0" text="Clear" />
+      <Label layoutX="21.0" layoutY="357.0" prefHeight="17.0" prefWidth="218.0" text="Search Warehouse" />
+      <TextField fx:id="searchField" layoutX="122.0" layoutY="353.0" />
+      <Button fx:id="searchButton" layoutX="301.0" layoutY="353.0" mnemonicParsing="false" onAction="#searchWarehouse" prefHeight="25.0" prefWidth="131.0" text="Search Button" />
+      <Button fx:id="refreshButton" layoutX="468.0" layoutY="353.0" mnemonicParsing="false" onAction="#refreshTable" prefHeight="25.0" prefWidth="123.0" text="Refresh Button" />
+      <Spinner fx:id="capacitySpinner" layoutX="142.0" layoutY="103.0" />
+      <TableView fx:id="warehouseTable" layoutY="387.0" prefHeight="200.0" prefWidth="890.0">
+        <columns>
+          <TableColumn fx:id="warehouseIdColumn" prefWidth="133.0" text="Warehouse ID" />
+          <TableColumn fx:id="warehouseNameColumn" prefWidth="169.0" text="Warehouse Name" />
+            <TableColumn fx:id="locationColumn" minWidth="0.0" prefWidth="219.0" text="Location" />
+            <TableColumn fx:id="capacityColumn" prefWidth="146.0" text="Capacity" />
+            <TableColumn fx:id="managerNameColumn" prefWidth="220.0" text="Manager Name" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

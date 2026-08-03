@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="489.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.adib.EmployeePerformanceReportController">
+   <children>
+      <TextField fx:id="departmentIdField" layoutX="124.0" layoutY="67.0" />
+      <Label layoutX="36.0" layoutY="42.0" text="Report ID" />
+      <TextField fx:id="topPerformerField" layoutX="372.0" layoutY="72.0" />
+      <Label layoutX="284.0" layoutY="39.0" text="Average Score" />
+      <TextField fx:id="averageScoreField" layoutX="372.0" layoutY="37.0" prefHeight="17.0" prefWidth="149.0" />
+      <Label layoutX="36.0" layoutY="71.0" text="Department ID" />
+      <Label layoutX="284.0" layoutY="76.0" text="Top Performer" />
+      <TextField fx:id="reportIdField" layoutX="124.0" layoutY="38.0" />
+      <Label layoutX="36.0" layoutY="112.0" prefHeight="17.0" prefWidth="79.0" text="Generated On" />
+      <DatePicker fx:id="generatedOnPicker" layoutX="118.0" layoutY="108.0" />
+      <Button fx:id="addReportButton" layoutX="309.0" layoutY="108.0" mnemonicParsing="false" onAction="#addReport" prefHeight="51.0" prefWidth="96.0" text="Add Report" />
+      <Button fx:id="clearButton" layoutX="420.0" layoutY="108.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="51.0" prefWidth="119.0" text="Clear" />
+      <TextField fx:id="searchField" layoutX="135.0" layoutY="188.0" />
+      <Label layoutX="50.0" layoutY="192.0" text="Search Report" />
+      <Button fx:id="searchButton" layoutX="309.0" layoutY="188.0" mnemonicParsing="false" onAction="#searchReport" prefHeight="51.0" prefWidth="109.0" text="Search Button" />
+      <Button fx:id="refreshButton" layoutX="427.0" layoutY="188.0" mnemonicParsing="false" onAction="#refreshTable" prefHeight="51.0" prefWidth="109.0" text="Refresh Button" />
+      <TableView fx:id="employeePerformanceReportTable" layoutY="259.0" prefHeight="230.0" prefWidth="585.0">
+        <columns>
+          <TableColumn fx:id="reportIdColumn" prefWidth="75.0" text="Report ID" />
+          <TableColumn fx:id="departmentIdColumn" prefWidth="134.0" text="Department ID" />
+            <TableColumn fx:id="averageScoreColumn" prefWidth="126.0" text="Average Score" />
+            <TableColumn fx:id="topPerformerColumn" prefWidth="98.0" text="Top Performer" />
+            <TableColumn fx:id="generatedOnColumn" prefWidth="151.0" text="Generated On" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

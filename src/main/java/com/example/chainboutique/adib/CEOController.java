@@ -3,7 +3,62 @@ package com.example.chainboutique.adib;
 import java.awt.*;
 
 public class CEOController {
-    package com.example.chainboutique.adib;
+    @javafx.fxml.FXML
+    private TextField employeeIdField;
+    @javafx.fxml.FXML
+    private Spinner filterYearSpinner;
+    @javafx.fxml.FXML
+    private ComboBox filterDepartmentCombo;
+    @javafx.fxml.FXML
+    private TextArea announcementMessageTextArea;
+    @javafx.fxml.FXML
+    private TableColumn financialSummaryColumn;
+    @javafx.fxml.FXML
+    private TableColumn clientAnalyticsColumn;
+    @javafx.fxml.FXML
+    private TextField filterCriteriaField;
+    @javafx.fxml.FXML
+    private TableColumn announcementColumn;
+    @javafx.fxml.FXML
+    private ComboBox decisionComboBox;
+    @javafx.fxml.FXML
+    private TableColumn performanceReportColumn;
+    @javafx.fxml.FXML
+    private TableColumn annualReportColumn;
+    @javafx.fxml.FXML
+    private DatePicker startDatePicker;
+    @javafx.fxml.FXML
+    private Spinner reportYearSpinner;
+    @javafx.fxml.FXML
+    private TextField announcementTitleField;
+    @javafx.fxml.FXML
+    private ComboBox filterReportTypeCombo;
+    @javafx.fxml.FXML
+    private TextField requestIdField;
+    @javafx.fxml.FXML
+    private Button generatereportButton;
+    @javafx.fxml.FXML
+    private ComboBox departmentComboBox;
+    @javafx.fxml.FXML
+    private TableColumn employeePerformanceColumn;
+    @javafx.fxml.FXML
+    private Button saveCEOActionButton;
+    @javafx.fxml.FXML
+    private DatePicker endDatePicker;
+    @javafx.fxml.FXML
+    private Button reportsummaryButton;
+    @javafx.fxml.FXML
+    private TableColumn employeeIdColumn;
+    @javafx.fxml.FXML
+    private TableView ceoTableView;
+    @javafx.fxml.FXML
+    private ComboBox reportTypeComboBox;
+    @javafx.fxml.FXML
+    private TextArea remarksTextArea;
+    @javafx.fxml.FXML
+    private TableColumn dashboardColumn;
+    @javafx.fxml.FXML
+    private Button filterButton;package com.example.chainboutique.adib;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
