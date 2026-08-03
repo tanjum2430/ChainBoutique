@@ -2,49 +2,32 @@ package com.example.chainboutique.adib;
 
 public class Supplier {
 
-    private String supplierID;      // Primary Key (Unique)
-    private String supplierName, address, status, contactPerson;
-    private String email;           // Unique
-    private String phoneNo;         // Unique
-    @javafx.fxml.FXML
-    private TableColumn companyNameColumn;
-    @javafx.fxml.FXML
-    private TableColumn addressColumn;
-    @javafx.fxml.FXML
-    private TextField companyNameField;
-    @javafx.fxml.FXML
-    private Button searchButton;
-    @javafx.fxml.FXML
-    private TextField phoneNumberField;
-    @javafx.fxml.FXML
-    private TextField supplierIdField;
-    @javafx.fxml.FXML
-    private TableView supplierTable;
-    @javafx.fxml.FXML
-    private TextField searchField;
-    @javafx.fxml.FXML
-    private TextField supplierNameField;
-    @javafx.fxml.FXML
-    private TextField emailField;
-    @javafx.fxml.FXML
-    private Button addSupplierButton;
-    @javafx.fxml.FXML
-    private Button clearButton;
-    @javafx.fxml.FXML
-    private TableColumn supplierNameColumn;
-    @javafx.fxml.FXML
-    private Button refreshButton;
-    @javafx.fxml.FXML
-    private TableColumn supplierIdColumn;
-    @javafx.fxml.FXML
-    private TableColumn phoneNumberColumn;
-    @javafx.fxml.FXML
-    private TextArea addressArea;
-    @javafx.fxml.FXML
-    private TableColumn emailColumn;
+    private String supplierID;
+    private String supplierName;
+
+    public Supplier(String supplierID, String supplierName, String companyName, String email, String phoneNumber, String address) {
+        this.supplierID = supplierID;
+        this.supplierName = supplierName;
+        this.companyName = companyName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+    }
 
     public String getSupplierID() {
         return supplierID;
+    }
+
+    @Override
+    public String toString() {
+        return "Supplier{" +
+                "supplierID='" + supplierID + '\'' +
+                ", supplierName='" + supplierName + '\'' +
+                ", companyName='" + companyName + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", address='" + address + '\'' +
+                '}';
     }
 
     public void setSupplierID(String supplierID) {
@@ -55,45 +38,16 @@ public class Supplier {
         return supplierName;
     }
 
-    @Override
-    public String toString() {
-        return "Supplier{" +
-                "supplierID='" + supplierID + '\'' +
-                ", supplierName='" + supplierName + '\'' +
-                ", address='" + address + '\'' +
-                ", status='" + status + '\'' +
-                ", contactPerson='" + contactPerson + '\'' +
-                ", email='" + email + '\'' +
-                ", phoneNo='" + phoneNo + '\'' +
-                '}';
-    }
-
     public void setSupplierName(String supplierName) {
         this.supplierName = supplierName;
     }
 
-    public String getAddress() {
-        return address;
+    public String getCompanyName() {
+        return companyName;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getContactPerson() {
-        return contactPerson;
-    }
-
-    public void setContactPerson(String contactPerson) {
-        this.contactPerson = contactPerson;
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
     }
 
     public String getEmail() {
@@ -104,37 +58,25 @@ public class Supplier {
         this.email = email;
     }
 
-    public String getPhoneNo() {
-        return phoneNo;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhoneNo(String phoneNo) {
-        this.phoneNo = phoneNo;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
-    public Supplier(String supplierID, String supplierName, String address, String status, String contactPerson, String email, String phoneNo) {
-        this.supplierID = supplierID;
-        this.supplierName = supplierName;
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
         this.address = address;
-        this.status = status;
-        this.contactPerson = contactPerson;
-        this.email = email;
-        this.phoneNo = phoneNo;
     }
 
-    @javafx.fxml.FXML
-    public void searchSupplier(ActionEvent actionEvent) {
-    }
+    private String companyName;
+    private String email;
+    private String phoneNumber;
+    private String address;
 
-    @javafx.fxml.FXML
-    public void addSupplier(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void refreshTable(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void clearFields(ActionEvent actionEvent) {
-    }
 }

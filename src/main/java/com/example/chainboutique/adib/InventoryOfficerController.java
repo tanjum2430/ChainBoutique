@@ -1,72 +1,114 @@
 package com.example.chainboutique.adib;
 
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Spinner;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+
 public class InventoryOfficerController {
-    @javafx.fxml.FXML
-    private TextField productNameField;
-    @javafx.fxml.FXML
-    private Button searchButton;
-    @javafx.fxml.FXML
-    private TextField searchField;
-    @javafx.fxml.FXML
-    private TableColumn warehouseColumn;
-    @javafx.fxml.FXML
-    private TableColumn unitPriceColumn;
-    @javafx.fxml.FXML
-    private TextField unitPriceField;
-    @javafx.fxml.FXML
-    private TextField sellingPriceField;
-    @javafx.fxml.FXML
-    private ComboBox filterCategoryComboBox;
-    @javafx.fxml.FXML
-    private TableColumn categoryColumn;
-    @javafx.fxml.FXML
-    private TableColumn productIdColumn;
-    @javafx.fxml.FXML
-    private Spinner quantitySpinner;
-    @javafx.fxml.FXML
-    private ComboBox warehouseComboBox;
-    @javafx.fxml.FXML
-    private TableView inventoryTable;
-    @javafx.fxml.FXML
-    private TableColumn quantityColumn;
-    @javafx.fxml.FXML
-    private ComboBox categoryComboBox;
-    @javafx.fxml.FXML
-    private Button clearButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private TextField productIdField;
-    @javafx.fxml.FXML
-    private Button refreshButton;
-    @javafx.fxml.FXML
+
+    @FXML
+    private TextField productNameField;
+
+    @FXML
+    private ComboBox<?> categoryComboBox;
+
+    @FXML
+    private Spinner<Integer> quantitySpinner;
+
+    @FXML
+    private ComboBox<?> supplierComboBox;
+
+    @FXML
+    private ComboBox<?> warehouseComboBox;
+
+    @FXML
+    private TextField unitPriceField;
+
+    @FXML
+    private TextField sellingPriceField;
+
+    @FXML
     private Button addProductButton;
-    @javafx.fxml.FXML
-    private TableColumn productNameColumn;
-    @javafx.fxml.FXML
-    private TableColumn supplierColumn;
-    @javafx.fxml.FXML
+
+    @FXML
+    private Button clearButton;
+
+    @FXML
+    private Button searchButton;
+
+    @FXML
     private Button filterButton;
-    @javafx.fxml.FXML
-    private ComboBox supplierComboBox;
-    @javafx.fxml.FXML
-    private TableColumn sellingPriceColumn;
 
-    @javafx.fxml.FXML
-    public void searchProduct(ActionEvent actionEvent) {
+    @FXML
+    private Button refreshButton;
+
+    @FXML
+    private TextField searchField;
+
+    @FXML
+    private ComboBox<?> filterCategoryComboBox;
+
+    @FXML
+    private TableView<?> inventoryTable;
+
+    @FXML
+    private TableColumn<?, ?> productIdColumn;
+
+    @FXML
+    private TableColumn<?, ?> productNameColumn;
+
+    @FXML
+    private TableColumn<?, ?> categoryColumn;
+
+    @FXML
+    private TableColumn<?, ?> quantityColumn;
+
+    @FXML
+    private TableColumn<?, ?> supplierColumn;
+
+    @FXML
+    private TableColumn<?, ?> warehouseColumn;
+
+    @FXML
+    private TableColumn<?, ?> unitPriceColumn;
+
+    @FXML
+    private TableColumn<?, ?> sellingPriceColumn;
+
+    @FXML
+    public void initialize() {
+
     }
 
-    @javafx.fxml.FXML
-    public void filterProducts(ActionEvent actionEvent) {
+    @FXML
+    private void addProduct() {
+
     }
 
-    @javafx.fxml.FXML
-    public void addProduct(ActionEvent actionEvent) {
+    @FXML
+    private void clearFields() {
+
     }
 
-    @javafx.fxml.FXML
-    public void refreshTable(ActionEvent actionEvent) {
+    @FXML
+    private void searchProduct() {
+
     }
 
-    @javafx.fxml.FXML
-    public void clearFields(ActionEvent actionEvent) {
+    @FXML
+    private void filterProducts() {
+
+    }
+
+    @FXML
+    private void refreshTable() {
+
     }
 }

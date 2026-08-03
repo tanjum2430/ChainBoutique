@@ -61,12 +61,6 @@ public class CEOController {
     private Button filterButton;
 
     @FXML
-    private ComboBox<?> filterDepartmentCombo;
-
-    @FXML
-    private ComboBox<?> filterReportTypeCombo;
-
-    @FXML
     private Spinner<?> filterYearSpinner;
 
     @FXML
@@ -95,9 +89,29 @@ public class CEOController {
 
     @FXML
     private TableColumn<?, ?> annualReportColumn;
+    @FXML
+    private ComboBox filterDepartmentComboBox;
+    @FXML
+    private ComboBox filterReportTypeComboBox;
 
     @FXML
     public void initialize() {
 
+    }
+
+    @FXML
+    public void filterRecords(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void generateReport(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void generateReportSummary(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void saveCEOAction(ActionEvent actionEvent) {
     }
 }
