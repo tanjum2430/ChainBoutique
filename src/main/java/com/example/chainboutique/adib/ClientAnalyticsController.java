@@ -10,37 +10,37 @@ public class ClientAnalyticsController
     @javafx.fxml.FXML
     private TextField searchField;
     @javafx.fxml.FXML
-    private TableColumn newClientsColumn;
+    private TableColumn <ClientAnalytics,Integer> newClientsColumn;
     @javafx.fxml.FXML
     private TextField reportIdField;
     @javafx.fxml.FXML
     private TextField retentionRateField;
     @javafx.fxml.FXML
-    private TableColumn totalClientsColumn;
+    private TableColumn <ClientAnalytics,Integer> totalClientsColumn;
     @javafx.fxml.FXML
-    private TableView clientAnalyticsTable;
+    private TableView <ClientAnalytics> clientAnalyticsTable;
     @javafx.fxml.FXML
-    private TableColumn retentionRateColumn;
+    private TableColumn <ClientAnalytics,Double> retentionRateColumn;
     @javafx.fxml.FXML
-    private Spinner totalClientsSpinner;
+    private Spinner <Integer> totalClientsSpinner;
     @javafx.fxml.FXML
     private DatePicker generatedOnPicker;
     @javafx.fxml.FXML
     private Button clearButton;
     @javafx.fxml.FXML
-    private TableColumn reportIdColumn;
+    private TableColumn <ClientAnalytics,String> reportIdColumn;
     @javafx.fxml.FXML
-    private Spinner retainedClientsSpinner;
+    private Spinner <Integer> retainedClientsSpinner;
     @javafx.fxml.FXML
     private Button refreshButton;
     @javafx.fxml.FXML
-    private Spinner newClientsSpinner;
+    private Spinner <Integer> newClientsSpinner;
     @javafx.fxml.FXML
     private Button addAnalyticsButton;
     @javafx.fxml.FXML
-    private TableColumn retainedClientsColumn;
+    private TableColumn<ClientAnalytics,Integer> retainedClientsColumn;
     @javafx.fxml.FXML
-    private TableColumn generatedOnColumn;
+    private TableColumn<ClientAnalytics,Integer> generatedOnColumn;
 
     @javafx.fxml.FXML
     public void initialize() {

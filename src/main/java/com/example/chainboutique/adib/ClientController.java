@@ -8,13 +8,13 @@ public class ClientController
     @javafx.fxml.FXML
     private TextField contactPersonField;
     @javafx.fxml.FXML
-    private TableColumn clientIdColumn;
+    private TableColumn <Client,String> clientIdColumn;
     @javafx.fxml.FXML
-    private TableColumn addressColumn;
+    private TableColumn <Client,String> addressColumn;
     @javafx.fxml.FXML
     private Button searchButton;
     @javafx.fxml.FXML
-    private TableView clientTable;
+    private TableView <Client> clientTable;
     @javafx.fxml.FXML
     private TextField phoneNumberField;
     @javafx.fxml.FXML
@@ -24,13 +24,13 @@ public class ClientController
     @javafx.fxml.FXML
     private TextField emailField;
     @javafx.fxml.FXML
-    private TableColumn clientNameColumn;
+    private TableColumn <Client,String> clientNameColumn;
     @javafx.fxml.FXML
-    private TableColumn contactPersonColumn;
+    private TableColumn <Client,String> contactPersonColumn;
     @javafx.fxml.FXML
     private Button clearButton;
     @javafx.fxml.FXML
-    private ComboBox statusComboBox;
+    private ComboBox  statusComboBox;
     @javafx.fxml.FXML
     private Button refreshButton;
     @javafx.fxml.FXML
