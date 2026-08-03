@@ -5,43 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b215a45a-9d31-42ac-9d01-6368b8318195" name="Changes" comment="Initial project upload">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/AnnouncementController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/AnnualReportController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/ApprovalRequestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/ClientAnalyticsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/ClientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/DashboardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/DepartmentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/EmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/EmployeePerformanceReportController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/FinancialSummaryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/InventoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/PerformanceReportController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/SupplierController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/SupplyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/WarehouseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Announcement.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/AnnualReport.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/ApprovalRequest.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/ClientAnalytics.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Dashboard.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Department.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Employee.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/EmployeePerformanceReport.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/FinancialSummary.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Inventory.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/PerformanceReport.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Supplier.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Warehouse.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/client.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/supply.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_27_2026_3_54_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_27_2026_3_54_AM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/CEOController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/CEOController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/InventoryOfficerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/InventoryOfficerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Supplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Inventoryofficer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/Inventoryofficer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/CEO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/CEO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/AnnualReport.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/adib/AnnualReport.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785023133817</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Initial project upload">
+      <option name="closed" value="true" />
+      <created>1785752705443</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1785752705443</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

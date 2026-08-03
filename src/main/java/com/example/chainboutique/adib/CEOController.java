@@ -1,65 +1,5 @@
 package com.example.chainboutique.adib;
 
-import java.awt.*;
-
-public class CEOController {
-    @javafx.fxml.FXML
-    private TextField employeeIdField;
-    @javafx.fxml.FXML
-    private Spinner filterYearSpinner;
-    @javafx.fxml.FXML
-    private ComboBox filterDepartmentCombo;
-    @javafx.fxml.FXML
-    private TextArea announcementMessageTextArea;
-    @javafx.fxml.FXML
-    private TableColumn financialSummaryColumn;
-    @javafx.fxml.FXML
-    private TableColumn clientAnalyticsColumn;
-    @javafx.fxml.FXML
-    private TextField filterCriteriaField;
-    @javafx.fxml.FXML
-    private TableColumn announcementColumn;
-    @javafx.fxml.FXML
-    private ComboBox decisionComboBox;
-    @javafx.fxml.FXML
-    private TableColumn performanceReportColumn;
-    @javafx.fxml.FXML
-    private TableColumn annualReportColumn;
-    @javafx.fxml.FXML
-    private DatePicker startDatePicker;
-    @javafx.fxml.FXML
-    private Spinner reportYearSpinner;
-    @javafx.fxml.FXML
-    private TextField announcementTitleField;
-    @javafx.fxml.FXML
-    private ComboBox filterReportTypeCombo;
-    @javafx.fxml.FXML
-    private TextField requestIdField;
-    @javafx.fxml.FXML
-    private Button generatereportButton;
-    @javafx.fxml.FXML
-    private ComboBox departmentComboBox;
-    @javafx.fxml.FXML
-    private TableColumn employeePerformanceColumn;
-    @javafx.fxml.FXML
-    private Button saveCEOActionButton;
-    @javafx.fxml.FXML
-    private DatePicker endDatePicker;
-    @javafx.fxml.FXML
-    private Button reportsummaryButton;
-    @javafx.fxml.FXML
-    private TableColumn employeeIdColumn;
-    @javafx.fxml.FXML
-    private TableView ceoTableView;
-    @javafx.fxml.FXML
-    private ComboBox reportTypeComboBox;
-    @javafx.fxml.FXML
-    private TextArea remarksTextArea;
-    @javafx.fxml.FXML
-    private TableColumn dashboardColumn;
-    @javafx.fxml.FXML
-    private Button filterButton;package com.example.chainboutique.adib;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -70,92 +10,94 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-    public class CEOController {
+public class CEOController {
 
-        @FXML
-        private TableColumn<?, ?> announcementColumn;
+    @FXML
+    private TextField employeeIdField;
 
-        @FXML
-        private TextArea announcementMessageTextArea;
+    @FXML
+    private DatePicker startDatePicker;
 
-        @FXML
-        private TextField announcementTitleField;
+    @FXML
+    private Spinner<?> reportYearSpinner;
 
-        @FXML
-        private TableColumn<?, ?> annualReportColumn;
+    @FXML
+    private DatePicker endDatePicker;
 
-        @FXML
-        private TableView<?> ceoTableView;
+    @FXML
+    private ComboBox<?> reportTypeComboBox;
 
-        @FXML
-        private TableColumn<?, ?> clientAnalyticsColumn;
+    @FXML
+    private ComboBox<?> departmentComboBox;
 
-        @FXML
-        private TableColumn<?, ?> dashboardColumn;
+    @FXML
+    private ComboBox<?> decisionComboBox;
 
-        @FXML
-        private ComboBox<?> decisionComboBox;
+    @FXML
+    private TextField filterCriteriaField;
 
-        @FXML
-        private ComboBox<?> departmentComboBox;
+    @FXML
+    private TextField requestIdField;
 
-        @FXML
-        private TableColumn<?, ?> employeeIdColumn;
+    @FXML
+    private TextArea remarksTextArea;
 
-        @FXML
-        private TextField employeeIdField;
+    @FXML
+    private TextField announcementTitleField;
 
-        @FXML
-        private TableColumn<?, ?> employeePerformanceColumn;
+    @FXML
+    private TextArea announcementMessageTextArea;
 
-        @FXML
-        private DatePicker endDatePicker;
+    @FXML
+    private Button saveCEOActionButton;
 
-        @FXML
-        private Button filterButton;
+    @FXML
+    private Button generatereportButton;
 
-        @FXML
-        private TextField filterCriteriaField;
+    @FXML
+    private Button reportsummaryButton;
 
-        @FXML
-        private ComboBox<?> filterDepartmentCombo;
+    @FXML
+    private Button filterButton;
 
-        @FXML
-        private ComboBox<?> filterReportTypeCombo;
+    @FXML
+    private ComboBox<?> filterDepartmentCombo;
 
-        @FXML
-        private Spinner<?> filterYearSpinner;
+    @FXML
+    private ComboBox<?> filterReportTypeCombo;
 
-        @FXML
-        private TableColumn<?, ?> financialSummaryColumn;
+    @FXML
+    private Spinner<?> filterYearSpinner;
 
-        @FXML
-        private Button generatereportButton;
+    @FXML
+    private TableView<?> ceoTableView;
 
-        @FXML
-        private TableColumn<?, ?> performanceReportColumn;
+    @FXML
+    private TableColumn<?, ?> employeeIdColumn;
 
-        @FXML
-        private TextArea remarksTextArea;
+    @FXML
+    private TableColumn<?, ?> dashboardColumn;
 
-        @FXML
-        private ComboBox<?> reportTypeComboBox;
+    @FXML
+    private TableColumn<?, ?> performanceReportColumn;
 
-        @FXML
-        private Spinner<?> reportYearSpinner;
+    @FXML
+    private TableColumn<?, ?> financialSummaryColumn;
 
-        @FXML
-        private Button reportsummaryButton;
+    @FXML
+    private TableColumn<?, ?> clientAnalyticsColumn;
 
-        @FXML
-        private TextField requestIdField;
+    @FXML
+    private TableColumn<?, ?> employeePerformanceColumn;
 
-        @FXML
-        private Button saveCEOActionButton;
+    @FXML
+    private TableColumn<?, ?> announcementColumn;
 
-        @FXML
-        private DatePicker startDatePicker;
+    @FXML
+    private TableColumn<?, ?> annualReportColumn;
+
+    @FXML
+    public void initialize() {
 
     }
-
 }

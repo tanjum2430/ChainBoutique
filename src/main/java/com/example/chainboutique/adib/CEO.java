@@ -1,63 +1,42 @@
 package com.example.chainboutique.adib;
 
+import java.time.LocalDate;
+
 public class CEO {
 
-    private String name;
-    private String email;// Unique
-    private String phoneNo; // Unique
-    private String password, address;
-    private String employeeID; // Primary Key (Unique)
+    private String employeeID;
 
-    public String getName() {
-        return name;
-    }
+    private LocalDate startDate;
+    private LocalDate endDate;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    private int reportYear;
 
-    @Override
-    public String toString() {
-        return "CEO{" +
-                "name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", phoneNo='" + phoneNo + '\'' +
-                ", password='" + password + '\'' +
-                ", address='" + address + '\'' +
-                ", employeeID='" + employeeID + '\'' +
-                '}';
-    }
+    private String reportType;
+    private String department;
 
-    public String getEmail() {
-        return email;
-    }
+    private String requestID;
+    private String decision;
+    private String remarks;
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    private String announcementTitle;
+    private String announcementMessage;
 
-    public String getPhoneNo() {
-        return phoneNo;
-    }
+    public CEO(String employeeID, LocalDate startDate, LocalDate endDate,
+               int reportYear, String reportType, String department,
+               String requestID, String decision, String remarks,
+               String announcementTitle, String announcementMessage) {
 
-    public void setPhoneNo(String phoneNo) {
-        this.phoneNo = phoneNo;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
+        this.employeeID = employeeID;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.reportYear = reportYear;
+        this.reportType = reportType;
+        this.department = department;
+        this.requestID = requestID;
+        this.decision = decision;
+        this.remarks = remarks;
+        this.announcementTitle = announcementTitle;
+        this.announcementMessage = announcementMessage;
     }
 
     public String getEmployeeID() {
@@ -68,12 +47,100 @@ public class CEO {
         this.employeeID = employeeID;
     }
 
-    public CEO(String name, String email, String phoneNo, String password, String address, String employeeID) {
-        this.name = name;
-        this.email = email;
-        this.phoneNo = phoneNo;
-        this.password = password;
-        this.address = address;
-        this.employeeID = employeeID;
+    public LocalDate getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
+    }
+
+    public LocalDate getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
+    }
+
+    public int getReportYear() {
+        return reportYear;
+    }
+
+    public void setReportYear(int reportYear) {
+        this.reportYear = reportYear;
+    }
+
+    public String getReportType() {
+        return reportType;
+    }
+
+    public void setReportType(String reportType) {
+        this.reportType = reportType;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public String getRequestID() {
+        return requestID;
+    }
+
+    public void setRequestID(String requestID) {
+        this.requestID = requestID;
+    }
+
+    public String getDecision() {
+        return decision;
+    }
+
+    public void setDecision(String decision) {
+        this.decision = decision;
+    }
+
+    public String getRemarks() {
+        return remarks;
+    }
+
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
+    }
+
+    public String getAnnouncementTitle() {
+        return announcementTitle;
+    }
+
+    public void setAnnouncementTitle(String announcementTitle) {
+        this.announcementTitle = announcementTitle;
+    }
+
+    public String getAnnouncementMessage() {
+        return announcementMessage;
+    }
+
+    public void setAnnouncementMessage(String announcementMessage) {
+        this.announcementMessage = announcementMessage;
+    }
+
+    @Override
+    public String toString() {
+        return "CEO{" +
+                "employeeID='" + employeeID + '\'' +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", reportYear=" + reportYear +
+                ", reportType='" + reportType + '\'' +
+                ", department='" + department + '\'' +
+                ", requestID='" + requestID + '\'' +
+                ", decision='" + decision + '\'' +
+                ", remarks='" + remarks + '\'' +
+                ", announcementTitle='" + announcementTitle + '\'' +
+                ", announcementMessage='" + announcementMessage + '\'' +
+                '}';
     }
 }
