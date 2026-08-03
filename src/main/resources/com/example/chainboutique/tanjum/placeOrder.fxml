@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="540.0" prefWidth="945.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.tanjum.placeOrderController">
+<AnchorPane prefHeight="540.0" prefWidth="945.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.tanjum.controller.PlaceOrderController">
    <children>
       <VBox alignment="CENTER" layoutX="309.0" layoutY="14.0" prefHeight="57.0" prefWidth="400.0">
          <children>

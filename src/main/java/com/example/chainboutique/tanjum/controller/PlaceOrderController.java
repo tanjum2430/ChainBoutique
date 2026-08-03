@@ -1,6 +1,6 @@
-package com.example.chainboutique.tanjum;
+package com.example.chainboutique.tanjum.controller;
 
-public class placeOrderController
+public class PlaceOrderController
 {
     @javafx.fxml.FXML
     private TableView orderSummaryTableView;

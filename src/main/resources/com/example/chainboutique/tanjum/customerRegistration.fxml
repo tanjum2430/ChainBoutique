@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="612.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.tanjum.customerRegistrationController">
+<AnchorPane prefHeight="612.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.tanjum.controller.CustomerRegistrationController">
    <children>
       <HBox alignment="CENTER" layoutX="126.0" layoutY="424.0" prefHeight="100.0" prefWidth="486.0" spacing="20.0">
          <children>

@@ -1,6 +1,6 @@
-package com.example.chainboutique.tanjum;
+package com.example.chainboutique.tanjum.controller;
 
-public class returnExchangeController
+public class ReturnExchangeController
 {
     @javafx.fxml.FXML
     private Button btnBack;
