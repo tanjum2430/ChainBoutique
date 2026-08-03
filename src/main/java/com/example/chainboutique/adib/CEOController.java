@@ -58,17 +58,17 @@ public class CEOController {
     @FXML
     private TableColumn<CEO,String> financialSummaryColumn;
     @FXML
-    private TableColumn<?, ?> clientAnalyticsColumn;
+    private TableColumn<CEO,String> clientAnalyticsColumn;
     @FXML
-    private TableColumn<?, ?> employeePerformanceColumn;
+    private TableColumn<CEO,String> employeePerformanceColumn;
     @FXML
-    private TableColumn<?, ?> announcementColumn;
+    private TableColumn<CEO,String> announcementColumn;
     @FXML
-    private TableColumn<?, ?> annualReportColumn;
+    private TableColumn<CEO,String> annualReportColumn;
     @FXML
-    private ComboBox filterDepartmentComboBox;
+    private ComboBox <String> filterDepartmentComboBox;
     @FXML
-    private ComboBox filterReportTypeComboBox;
+    private ComboBox <String> filterReportTypeComboBox;
 
     @FXML
     public void initialize() {
