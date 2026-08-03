@@ -1,19 +1,22 @@
 package com.example.chainboutique.adib;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.*;
+
 public class ApprovalRequestController
 {
     @javafx.fxml.FXML
     private Button searchButton;
     @javafx.fxml.FXML
-    private TableColumn remarksColumn;
+    private TableColumn <ApprovalRequest,String> remarksColumn;
     @javafx.fxml.FXML
     private TextField searchField;
     @javafx.fxml.FXML
-    private ComboBox requestTypeComboBox;
+    private ComboBox <String> requestTypeComboBox;
     @javafx.fxml.FXML
-    private TableColumn requestedOnColumn;
+    private TableColumn <ApprovalRequest,String> requestedOnColumn;
     @javafx.fxml.FXML
-    private TableColumn requestTypeColumn;
+    private TableColumn <ApprovalRequest,String> requestTypeColumn;
     @javafx.fxml.FXML
     private TextField requestedByField;
     @javafx.fxml.FXML
@@ -23,21 +26,21 @@ public class ApprovalRequestController
     @javafx.fxml.FXML
     private Button clearButton;
     @javafx.fxml.FXML
-    private ComboBox statusComboBox;
+    private ComboBox <String> statusComboBox;
     @javafx.fxml.FXML
     private Button refreshButton;
     @javafx.fxml.FXML
-    private TableColumn statusColumn;
+    private TableColumn <ApprovalRequest,String> statusColumn;
     @javafx.fxml.FXML
     private TextArea remarksArea;
     @javafx.fxml.FXML
     private DatePicker requestedOnPicker;
     @javafx.fxml.FXML
-    private TableColumn requestedByColumn;
+    private TableColumn <ApprovalRequest,String> requestedByColumn;
     @javafx.fxml.FXML
-    private TableView approvalRequestTable;
+    private TableView <ApprovalRequest> approvalRequestTable;
     @javafx.fxml.FXML
-    private TableColumn requestIdColumn;
+    private TableColumn <ApprovalRequest,String> requestIdColumn;
 
     @javafx.fxml.FXML
     public void initialize() {

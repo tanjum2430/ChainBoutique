@@ -1,5 +1,6 @@
 package com.example.chainboutique.adib;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -14,79 +15,54 @@ public class CEOController {
 
     @FXML
     private TextField employeeIdField;
-
     @FXML
     private DatePicker startDatePicker;
-
     @FXML
-    private Spinner<?> reportYearSpinner;
-
+    private Spinner<Integer> reportYearSpinner;
     @FXML
     private DatePicker endDatePicker;
-
     @FXML
-    private ComboBox<?> reportTypeComboBox;
-
+    private ComboBox<String> reportTypeComboBox;
     @FXML
-    private ComboBox<?> departmentComboBox;
-
+    private ComboBox<String> departmentComboBox;
     @FXML
-    private ComboBox<?> decisionComboBox;
-
+    private ComboBox<String> decisionComboBox;
     @FXML
     private TextField filterCriteriaField;
-
     @FXML
     private TextField requestIdField;
-
     @FXML
     private TextArea remarksTextArea;
-
     @FXML
     private TextField announcementTitleField;
-
     @FXML
     private TextArea announcementMessageTextArea;
-
     @FXML
     private Button saveCEOActionButton;
-
     @FXML
     private Button generatereportButton;
-
     @FXML
     private Button reportsummaryButton;
-
     @FXML
     private Button filterButton;
-
     @FXML
-    private Spinner<?> filterYearSpinner;
-
+    private Spinner<Integer> filterYearSpinner;
     @FXML
-    private TableView<?> ceoTableView;
-
+    private TableView<CEO> ceoTableView;
     @FXML
-    private TableColumn<?, ?> employeeIdColumn;
-
+    private TableColumn<CEO,String> employeeIdColumn;
     @FXML
-    private TableColumn<?, ?> dashboardColumn;
-
+    private TableColumn<CEO,String> dashboardColumn;
     @FXML
-    private TableColumn<?, ?> performanceReportColumn;
-
+    private TableColumn<CEO,String> performanceReportColumn;
     @FXML
-    private TableColumn<?, ?> financialSummaryColumn;
-
+    private TableColumn<CEO,String> financialSummaryColumn;
     @FXML
     private TableColumn<?, ?> clientAnalyticsColumn;
-
     @FXML
     private TableColumn<?, ?> employeePerformanceColumn;
-
     @FXML
     private TableColumn<?, ?> announcementColumn;
-
     @FXML
     private TableColumn<?, ?> annualReportColumn;
     @FXML

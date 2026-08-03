@@ -1,5 +1,8 @@
 package com.example.chainboutique.adib;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.*;
+
 public class ClientController
 {
     @javafx.fxml.FXML

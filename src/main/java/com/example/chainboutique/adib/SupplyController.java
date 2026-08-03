@@ -1,5 +1,11 @@
 package com.example.chainboutique.adib;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TextField;
+
 public class SupplyController
 {
     @javafx.fxml.FXML
