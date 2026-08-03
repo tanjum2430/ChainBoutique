@@ -5,57 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b215a45a-9d31-42ac-9d01-6368b8318195" name="Changes" comment="Initial project upload">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/ApplyDiscountController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/CancelOrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/CartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/CashierDashboardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/CashierLoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/CreateSalesBillController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/CustomerDashboardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/CustomerLoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/CustomerRegistrationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/DailySalesSummaryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/GenerateInvoiceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/OrderHistoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/PlaceOrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/ReceivePaymentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/ReturnExchangeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/SearchCustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/SearchProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/cashierDashboard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/applyDiscountController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/cancelOrderController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/cartController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/cashierLoginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/createSalesBillController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/customerDashboardController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/customerLoginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/customerRegistrationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/dailySalesSummaryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/generateInvoiceController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/orderHistoryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/placeOrderController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/receivePaymentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/returnExchangeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/searchCustomerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/applyDiscount.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/applyDiscount.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/cancelOrder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/cancelOrder.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/cart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/cart.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/cashierLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/cashierLogin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/createSalesBill.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/createSalesBill.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/customerDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/customerDashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/customerLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/customerLogin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/customerRegistration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/customerRegistration.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/dailySalesSummary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/dailySalesSummary.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/generateInvoice.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/generateInvoice.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/orderHistory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/orderHistory.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/placeOrder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/placeOrder.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/receivePayment.fml.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/receivePayment.fml.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/returnExchange.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/returnExchange.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/searchCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/searchCustomer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/searchProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/searchProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/ClientAnalyticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/ClientAnalyticsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/ClientController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

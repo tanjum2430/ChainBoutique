@@ -15,17 +15,17 @@ public class SupplyController
     @javafx.fxml.FXML
     private TextField supplierIdField;
     @javafx.fxml.FXML
-    private TableColumn deliveryDateColumn;
+    private TableColumn <Supply,DatePicker> deliveryDateColumn;
     @javafx.fxml.FXML
     private TextField searchField;
     @javafx.fxml.FXML
-    private TableColumn supplyIdColumn;
+    private TableColumn <Supply,String >supplyIdColumn;
     @javafx.fxml.FXML
-    private TableColumn productIdColumn;
+    private TableColumn <Supply,String> productIdColumn;
     @javafx.fxml.FXML
     private TextField supplyIdField;
     @javafx.fxml.FXML
-    private TableColumn purchasePriceColumn;
+    private TableColumn <Supply,String> purchasePriceColumn;
     @javafx.fxml.FXML
     private TextField purchasePriceField;
     @javafx.fxml.FXML
@@ -35,9 +35,11 @@ public class SupplyController
     @javafx.fxml.FXML
     private Button refreshButton;
     @javafx.fxml.FXML
-    private TableColumn supplierIdColumn;
+    private TableColumn <Supply,String>supplierIdColumn;
     @javafx.fxml.FXML
     private Button addSupplyButton;
+    @javafx.fxml.FXML
+    private TableView <Supply> supplierTable;
 
     @javafx.fxml.FXML
     public void initialize() {

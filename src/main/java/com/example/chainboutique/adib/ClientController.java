@@ -30,21 +30,21 @@ public class ClientController
     @javafx.fxml.FXML
     private Button clearButton;
     @javafx.fxml.FXML
-    private ComboBox  statusComboBox;
+    private ComboBox <String> statusComboBox;
     @javafx.fxml.FXML
     private Button refreshButton;
     @javafx.fxml.FXML
     private Button addClientButton;
     @javafx.fxml.FXML
-    private TableColumn statusColumn;
+    private TableColumn <Client,String> statusColumn;
     @javafx.fxml.FXML
     private TextArea addressArea;
     @javafx.fxml.FXML
-    private TableColumn phoneNumberColumn;
+    private TableColumn <Client,String> phoneNumberColumn;
     @javafx.fxml.FXML
     private TextField clientIdField;
     @javafx.fxml.FXML
-    private TableColumn emailColumn;
+    private TableColumn <Client,String> emailColumn;
 
     @javafx.fxml.FXML
     public void initialize() {
