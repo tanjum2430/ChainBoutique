@@ -1,5 +1,6 @@
-package com.example.chainboutique.adib;
+package com.example.chainboutique.adib.Controller;
 
+import com.example.chainboutique.adib.Employee;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 

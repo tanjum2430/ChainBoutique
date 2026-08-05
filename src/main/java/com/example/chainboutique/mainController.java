@@ -1,5 +1,8 @@
 package com.example.chainboutique;
 
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+
 public class mainController
 {
     @javafx.fxml.FXML

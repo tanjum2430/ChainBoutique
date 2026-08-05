@@ -8,7 +8,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="534.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.adib.DepartmentController">
+<AnchorPane prefHeight="534.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.adib.Controller.DepartmentController">
    <children>
       <Label layoutX="88.0" layoutY="71.0" text="Department Id" />
       <TextField fx:id="departmentIdField" layoutX="185.0" layoutY="67.0" />
