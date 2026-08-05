@@ -17,8 +17,7 @@ public class LoginController
     @javafx.fxml.FXML
     public void initialize() {
     }
-
     @javafx.fxml.FXML
-    public void loginButtonOnClic(ActionEvent actionEvent) {
+    public void loginButtonOnClick(ActionEvent actionEvent) {
     }
 }
