@@ -72,6 +72,16 @@ public class AnnouncementController
         String createdBy = createdByField.getText();
 
         LocalDateTime createdOn = createdOnPicker.getValue().atStartOfDay();
+
+        Announcement announcement = new Announcement(
+                id,
+                title,
+                message,
+                createdBy,
+                createdOn
+        );
+        announcementList.add(announcement);
+        announcementTable.setItems(announcementList);
     }
 
     @javafx.fxml.FXML
