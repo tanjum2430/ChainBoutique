@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="566.0" prefWidth="1538.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.tanjum.createSalesBillController">
+<AnchorPane prefHeight="566.0" prefWidth="1538.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.tanjum.controller.CreateSalesBillController">
    <children>
       <VBox alignment="CENTER" layoutX="623.0" layoutY="23.0" prefHeight="67.0" prefWidth="455.0">
          <children>

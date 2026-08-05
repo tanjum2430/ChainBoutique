@@ -1,11 +1,13 @@
-package com.example.chainboutique.tanjum;
+package com.example.chainboutique.tanjum.controller;
 
-public class orderHistoryController
+public class OrderHistoryController
 {
     @javafx.fxml.FXML
     private Label orderHistoryLabel;
     @javafx.fxml.FXML
     private Label orderDetailsLabel;
+    @javafx.fxml.FXML
+    private TextArea orderDetailsTextArea;
     @javafx.fxml.FXML
     private TableColumn totalAmountCol;
     @javafx.fxml.FXML
@@ -20,8 +22,6 @@ public class orderHistoryController
     private TextArea deliveryAddressTextArea;
     @javafx.fxml.FXML
     private TableColumn orderIdCol;
-    @javafx.fxml.FXML
-    private TextArea orderDetailsTextArea;
 
     @javafx.fxml.FXML
     public void initialize() {

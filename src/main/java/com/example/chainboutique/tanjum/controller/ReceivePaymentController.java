@@ -1,6 +1,6 @@
-package com.example.chainboutique.tanjum;
+package com.example.chainboutique.tanjum.controller;
 
-public class receivePaymentController
+public class ReceivePaymentController
 {
     @javafx.fxml.FXML
     private Label transactionIdLabel;

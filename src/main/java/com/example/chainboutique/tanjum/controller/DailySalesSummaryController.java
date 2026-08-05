@@ -1,6 +1,6 @@
-package com.example.chainboutique.tanjum;
+package com.example.chainboutique.tanjum.controller;
 
-public class dailySalesSummaryController
+public class DailySalesSummaryController
 {
     @javafx.fxml.FXML
     private TableView salesSummaryTableView;

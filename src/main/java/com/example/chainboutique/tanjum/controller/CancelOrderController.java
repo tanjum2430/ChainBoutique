@@ -1,6 +1,6 @@
-package com.example.chainboutique.tanjum;
+package com.example.chainboutique.tanjum.controller;
 
-public class cancelOrderController
+public class CancelOrderController
 {
     @javafx.fxml.FXML
     private TextArea reasonForCancellationTextArea;
