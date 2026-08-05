@@ -1,6 +1,7 @@
 package com.example.chainboutique.tanjum;
+import java.io.Serializable;
 
-public class Product {
+public class Product implements Serializable {
     private String productName,category,size,image;
     private int productId; // Primary Key
     private int stock;

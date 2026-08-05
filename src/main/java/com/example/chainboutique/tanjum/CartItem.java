@@ -3,12 +3,13 @@ package com.example.chainboutique.tanjum;
 public class CartItem {
     private int quantity;
     private double subTotal;
-    private Product product;
+    private final Product product;
 
 
-    public CartItem(int quantity, double subTotal) {
+    public CartItem(Product product, int quantity) {
+        this.product = product;
         this.quantity = quantity;
-        this.subTotal = subTotal;
+        this.subTotal = calculateSubtotal();
     }
 
     public int getQuantity() {
@@ -24,8 +25,12 @@ public class CartItem {
     }
 
     public void setSubTotal(double subTotal) {
+
         this.subTotal = subTotal;
     }
+
+    public Product getProduct() {
+        return product; }
 
     @Override
     public String toString() {

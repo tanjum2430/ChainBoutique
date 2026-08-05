@@ -1,6 +1,6 @@
-package com.example.chainboutique.tanjum;
+package com.example.chainboutique.tanjum.controller;
 
-public class applyDiscountController
+public class ApplyDiscountController
 {
     @javafx.fxml.FXML
     private TextField billIdTextField;

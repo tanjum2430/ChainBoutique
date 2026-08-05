@@ -1,6 +1,6 @@
-package com.example.chainboutique.tanjum;
+package com.example.chainboutique.tanjum.controller;
 
-public class generateInvoiceController
+public class GenerateInvoiceController
 {
     @javafx.fxml.FXML
     private TextField invoiceIdTextField;
@@ -14,6 +14,8 @@ public class generateInvoiceController
     private TextField discountTextField;
     @javafx.fxml.FXML
     private TableColumn subtotalCol;
+    @javafx.fxml.FXML
+    private Label invoiceInfoLabel;
     @javafx.fxml.FXML
     private TableColumn unitPriceCol;
     @javafx.fxml.FXML
@@ -52,8 +54,6 @@ public class generateInvoiceController
     private TextField paymentMethodTextField;
     @javafx.fxml.FXML
     private TableView invoiceTableView;
-    @javafx.fxml.FXML
-    private Label invoiceInfoLabel;
 
     @javafx.fxml.FXML
     public void initialize() {

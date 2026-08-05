@@ -1,6 +1,6 @@
-package com.example.chainboutique.tanjum;
+package com.example.chainboutique.tanjum.controller;
 
-public class createSalesBillController
+public class CreateSalesBillController
 {
     @javafx.fxml.FXML
     private TableColumn sizeCol;

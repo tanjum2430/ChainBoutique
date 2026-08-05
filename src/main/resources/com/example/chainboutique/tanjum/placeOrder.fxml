@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="540.0" prefWidth="945.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.tanjum.placeOrderController">
+<AnchorPane prefHeight="540.0" prefWidth="945.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.tanjum.controller.PlaceOrderController">
    <children>
       <VBox alignment="CENTER" layoutX="309.0" layoutY="14.0" prefHeight="57.0" prefWidth="400.0">
          <children>
@@ -49,9 +48,9 @@
       </VBox>
       <HBox alignment="CENTER" layoutX="312.0" layoutY="379.0" prefHeight="100.0" prefWidth="417.0" spacing="20.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#handleConfirmOrderButton" text="Confirm Order" />
-            <Button mnemonicParsing="false" onAction="#handleCancelOrderButton" text="Cancel Order" />
-            <Button mnemonicParsing="false" onAction="#handleBackToCartButton" text="Back to Cart" />
+            <Button fx:id="btnConfirmOrder" mnemonicParsing="false" onAction="#handleConfirmOrderButton" text="Confirm Order" />
+            <Button fx:id="btnCancelOrder" mnemonicParsing="false" onAction="#handleCancelOrderButton" text="Cancel Order" />
+            <Button fx:id="btnBackToCart" mnemonicParsing="false" onAction="#handleBackToCartButton" text="Back to Cart" />
          </children>
       </HBox>
    </children>
