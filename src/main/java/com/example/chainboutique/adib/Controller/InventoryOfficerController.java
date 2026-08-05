@@ -1,5 +1,6 @@
-package com.example.chainboutique.adib;
+package com.example.chainboutique.adib.Controller;
 
+import com.example.chainboutique.adib.InventoryOfficer;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;

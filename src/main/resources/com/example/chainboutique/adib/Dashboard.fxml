@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="488.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.adib.DashboardController">
+<AnchorPane prefHeight="488.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.adib.Controller.DashboardController">
    <children>
       <Label layoutX="113.0" layoutY="56.0" text="Dashboard ID" />
       <Label layoutX="348.0" layoutY="57.0" text="Total Revenue" />

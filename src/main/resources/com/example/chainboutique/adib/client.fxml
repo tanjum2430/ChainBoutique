@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="586.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.adib.ClientController">
+<AnchorPane prefHeight="586.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.adib.Controller.ClientController">
    <children>
       <Label layoutX="61.0" layoutY="32.0" prefHeight="17.0" prefWidth="53.0" text="Client ID" />
       <TextArea fx:id="addressArea" layoutX="111.0" layoutY="207.0" prefHeight="58.0" prefWidth="200.0" />

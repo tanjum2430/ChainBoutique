@@ -1,7 +1,12 @@
-package com.example.chainboutique.adib;
+package com.example.chainboutique.adib.Controller;
 
+import com.example.chainboutique.adib.Announcement;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import java.time.LocalDateTime;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class AnnouncementController
 {
@@ -36,14 +41,47 @@ public class AnnouncementController
     @javafx.fxml.FXML
     private TextArea messageArea;
     @javafx.fxml.FXML
-    private TableColumn <Announcement,String> createdOnColumn;
-
+    private TableColumn <Announcement,LocalDateTime> createdOnColumn;
+    private ObservableList<Announcement> announcementList =
+            FXCollections.observableArrayList();
     @javafx.fxml.FXML
     public void initialize() {
+        announcementIdColumn.setCellValueFactory(
+                new PropertyValueFactory<>("announcementID"));
+
+        titleColumn.setCellValueFactory(
+                new PropertyValueFactory<>("title"));
+
+        messageColumn.setCellValueFactory(
+                new PropertyValueFactory<>("message"));
+
+        createdByColumn.setCellValueFactory(
+                new PropertyValueFactory<>("createdBy"));
+
+        createdOnColumn.setCellValueFactory(
+                new PropertyValueFactory<>("createdOn"));
+
     }
 
     @javafx.fxml.FXML
     public void addAnnouncement(ActionEvent actionEvent) {
+
+        String id = announcementIdField.getText();
+        String title = titleField.getText();
+        String message = messageArea.getText();
+        String createdBy = createdByField.getText();
+
+        LocalDateTime createdOn = createdOnPicker.getValue().atStartOfDay();
+
+        Announcement announcement = new Announcement(
+                id,
+                title,
+                message,
+                createdBy,
+                createdOn
+        );
+        announcementList.add(announcement);
+        announcementTable.setItems(announcementList);
     }
 
     @javafx.fxml.FXML
