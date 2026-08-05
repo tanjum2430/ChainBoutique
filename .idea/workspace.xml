@@ -4,34 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b215a45a-9d31-42ac-9d01-6368b8318195" name="Changes" comment="Merge remote-tracking branch 'origin/master'">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/ApprovalRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/ApprovalRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/ClientAnalytics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/ClientAnalytics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Controller/SupplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Controller/SupplyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/EmployeePerformanceReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/EmployeePerformanceReport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/FinancialSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/FinancialSummary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/PerformanceReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/PerformanceReport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Supply.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/adib/Supply.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/mainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/ReturnRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/ReturnRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/ApplyDiscountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/ApplyDiscountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/CancelOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/CancelOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/CashierDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/CashierDashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/CashierLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/CashierLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/CreateSalesBillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/CreateSalesBillController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/DailySalesSummaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/DailySalesSummaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/GenerateInvoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/GenerateInvoiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/OrderHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/OrderHistoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/ReceivePaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/ReceivePaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/ReturnExchangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/ReturnExchangeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/SearchCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/SearchCustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/SearchProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chainboutique/tanjum/controller/SearchProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/searchCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/chainboutique/tanjum/searchCustomer.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="b215a45a-9d31-42ac-9d01-6368b8318195" name="Changes" comment="Merge remote-tracking branch 'origin/master'" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,6 +72,26 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.chainboutique.HelloApplication" />
+      <module name="ChainBoutique" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.chainboutique.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HelloApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -301,7 +294,23 @@
       <option name="project" value="LOCAL" />
       <updated>1785951204521</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Merge remote-tracking branch 'origin/master'">
+      <option name="closed" value="true" />
+      <created>1785952655180</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1785952655180</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Merge remote-tracking branch 'origin/master'">
+      <option name="closed" value="true" />
+      <created>1785953658173</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1785953658173</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
