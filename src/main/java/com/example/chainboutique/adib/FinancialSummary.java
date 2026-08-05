@@ -1,5 +1,7 @@
 package com.example.chainboutique.adib;
 
+import java.time.LocalDate;
+
 public class FinancialSummary {
 
     private String reportID;        // Primary Key (Unique)

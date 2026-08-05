@@ -2,10 +2,7 @@ package com.example.chainboutique.adib.Controller;
 
 import com.example.chainboutique.adib.Supply;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 public class SupplyController
 {
@@ -40,7 +37,7 @@ public class SupplyController
     @javafx.fxml.FXML
     private Button addSupplyButton;
     @javafx.fxml.FXML
-    private TableView <Supply> supplierTable;
+    private TableView<Supply> supplierTable;
 
     @javafx.fxml.FXML
     public void initialize() {

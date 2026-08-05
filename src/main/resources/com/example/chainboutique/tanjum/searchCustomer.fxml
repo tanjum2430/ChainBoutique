@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="531.0" prefWidth="1029.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.tanjum.controller.SearchCustomerController">
    <children>
       <VBox alignment="CENTER" layoutX="302.0" layoutY="14.0" prefHeight="47.0" prefWidth="389.0">
@@ -27,8 +26,8 @@
       <TextField fx:id="enterCustomerIdTextField" layoutX="113.0" layoutY="74.0" promptText="Enter Customer ID" />
       <Label fx:id="customerNameLabel" layoutX="19.0" layoutY="116.0" text="Customer Name" />
       <TextField fx:id="enterCustomerNameTextField" layoutX="113.0" layoutY="112.0" promptText="Enter Customer Name" />
-      <Button fx:id="handleSearchButton" layoutX="29.0" layoutY="165.0" mnemonicParsing="false" onAction="#searchOnAction" prefHeight="25.0" prefWidth="117.0" text="Search" />
-      <Button fx:id="handleClearButton" layoutX="159.0" layoutY="165.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="101.0" text="Clear" />
+      <Button fx:id="searchButton" layoutX="29.0" layoutY="165.0" mnemonicParsing="false" onAction="#searchOnAction" prefHeight="25.0" prefWidth="117.0" text="Search" />
+      <Button fx:id="clearButton" layoutX="159.0" layoutY="165.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="25.0" prefWidth="101.0" text="Clear" />
       <TableView fx:id="searchCustomerTableView" layoutX="279.0" layoutY="74.0" prefHeight="306.0" prefWidth="476.0">
         <columns>
           <TableColumn fx:id="customerIdCol" prefWidth="113.0" text="Customer ID" />
@@ -45,9 +44,9 @@
       </VBox>
       <HBox alignment="CENTER" layoutX="279.0" layoutY="406.0" prefHeight="100.0" prefWidth="476.0" spacing="20.0">
          <children>
-            <Button fx:id="handleSelectButton" mnemonicParsing="false" onAction="#selectCustomerOnAction" prefHeight="25.0" prefWidth="128.0" text="Select Customer" />
-            <Button fx:id="handleBackButton" mnemonicParsing="false" onAction="#backOnAction" prefHeight="25.0" prefWidth="103.0" text="Back" />
-            <Button fx:id="handleLogoutButton" mnemonicParsing="false" onAction="#logoutOnAction" prefHeight="25.0" prefWidth="104.0" text="Logout" />
+            <Button fx:id="selectButton" mnemonicParsing="false" onAction="#selectCustomerOnAction" prefHeight="25.0" prefWidth="128.0" text="Select Customer" />
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#backOnAction" prefHeight="25.0" prefWidth="103.0" text="Back" />
+            <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logoutOnAction" prefHeight="25.0" prefWidth="104.0" text="Logout" />
          </children>
       </HBox>
    </children>

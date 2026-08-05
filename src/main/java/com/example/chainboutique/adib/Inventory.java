@@ -1,5 +1,7 @@
 package com.example.chainboutique.adib;
 
+import java.time.LocalDateTime;
+
 public class Inventory {
 
     private String inventoryID;     // Primary Key (Unique)

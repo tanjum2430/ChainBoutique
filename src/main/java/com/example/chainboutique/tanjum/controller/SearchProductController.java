@@ -1,5 +1,8 @@
 package com.example.chainboutique.tanjum.controller;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.*;
+
 public class SearchProductController
 {
     @javafx.fxml.FXML

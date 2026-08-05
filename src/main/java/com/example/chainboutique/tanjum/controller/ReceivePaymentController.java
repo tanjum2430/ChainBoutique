@@ -1,5 +1,8 @@
 package com.example.chainboutique.tanjum.controller;
 
+import javafx.scene.control.*;
+import javafx.event.ActionEvent;
+
 public class ReceivePaymentController
 {
     @javafx.fxml.FXML
@@ -33,7 +36,7 @@ public class ReceivePaymentController
     @javafx.fxml.FXML
     private Button btnVerify;
     @javafx.fxml.FXML
-    private ComboBox paymentMethodComboBox;
+    private ComboBox<String> paymentMethodComboBox;
     @javafx.fxml.FXML
     private Button btnReceive;
     @javafx.fxml.FXML

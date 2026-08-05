@@ -90,7 +90,6 @@ public class ReturnRequest {
 
     public void approveReturn() {
         status = "Approved";
-        return true;
     }
 
     public boolean rejectedReturn(){
