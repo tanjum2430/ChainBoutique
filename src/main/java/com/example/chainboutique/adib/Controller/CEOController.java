@@ -1,5 +1,6 @@
-package com.example.chainboutique.adib;
+package com.example.chainboutique.adib.Controller;
 
+import com.example.chainboutique.adib.CEO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
