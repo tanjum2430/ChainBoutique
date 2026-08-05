@@ -1,5 +1,11 @@
 package com.example.chainboutique.tanjum.controller;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
+
 public class OrderHistoryController
 {
     @javafx.fxml.FXML

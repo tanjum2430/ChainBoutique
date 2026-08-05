@@ -12,9 +12,9 @@
    <children>
       <HBox alignment="CENTER" layoutX="126.0" layoutY="424.0" prefHeight="100.0" prefWidth="486.0" spacing="20.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#handleRegisterButton" prefHeight="25.0" prefWidth="89.0" text="Register" />
-            <Button mnemonicParsing="false" onAction="#handleResetButton" prefHeight="25.0" prefWidth="75.0" text="Reset" />
-            <Button mnemonicParsing="false" onAction="#handleBackButton" prefHeight="25.0" prefWidth="84.0" text="Back" />
+            <Button fx:id="btnRegister" mnemonicParsing="false" onAction="#handleRegisterButton" prefHeight="25.0" prefWidth="89.0" text="Register" />
+            <Button fx:id="btnReset" mnemonicParsing="false" onAction="#handleResetButton" prefHeight="25.0" prefWidth="75.0" text="Reset" />
+            <Button fx:id="btnBack" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="25.0" prefWidth="84.0" text="Back" />
          </children>
       </HBox>
       <Label fx:id="nameLabel" alignment="CENTER" layoutX="124.0" layoutY="148.0" prefHeight="36.0" prefWidth="130.0" text="Name">

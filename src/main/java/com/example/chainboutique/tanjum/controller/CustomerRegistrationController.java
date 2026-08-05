@@ -2,6 +2,7 @@ package com.example.chainboutique.tanjum.controller;
 
 import com.example.chainboutique.tanjum.Customer;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.fxml.FXMLLoader;
@@ -10,9 +11,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 
 public class CustomerRegistrationController
 {
+    private static final String CUSTOMER_FILE = "customer.bin";
+
     @javafx.fxml.FXML
     private TextField passwordTextField;
     @javafx.fxml.FXML
@@ -39,6 +44,12 @@ public class CustomerRegistrationController
     private Label nameLabel;
     @javafx.fxml.FXML
     private Label msgLabel;
+    @javafx.fxml.FXML
+    private Button btnBack;
+    @javafx.fxml.FXML
+    private Button btnRegister;
+    @javafx.fxml.FXML
+    private Button btnReset;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -75,7 +86,7 @@ public class CustomerRegistrationController
         String email = emailTextField.getText();
         String address = addressTextField.getText();
         String password = passwordTextField.getText();
-        int customerId = 1001;
+        int customerId = (int) (Math.random() * 9000) + 1000;
 
 
         if (name.isEmpty()|| phone.isEmpty()|| email.isEmpty()
@@ -90,6 +101,7 @@ public class CustomerRegistrationController
         }
 
 
+
         Customer customer = new Customer(
                 name,
                 email,
@@ -100,10 +112,24 @@ public class CustomerRegistrationController
         );
 
 
-        if (customer.createAccount()){
-            messageLabel.setText("Registration Successful!");
-        }
-        else{
+
+        if (customer.createAccount()) {
+
+            try {
+                ObjectOutputStream oos = new ObjectOutputStream(
+                        new FileOutputStream(CUSTOMER_FILE)
+                );
+
+                oos.writeObject(customer);
+                oos.close();
+
+                messageLabel.setText("Registration Successful!");
+
+            } catch (IOException e) {
+                messageLabel.setText("Error saving customer.");
+            }
+
+        } else {
             messageLabel.setText("Registration Failed!");
         }
     }

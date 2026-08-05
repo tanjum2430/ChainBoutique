@@ -26,10 +26,10 @@
       <Label fx:id="messageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="177.0" layoutY="184.0" prefHeight="17.0" prefWidth="236.0" style="-fx-background-color: gray;" textAlignment="CENTER" />
       <HBox alignment="CENTER" layoutX="86.0" layoutY="238.0" prefHeight="100.0" prefWidth="429.0" spacing="20.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#handleLoginButton" prefHeight="25.0" prefWidth="65.0" text="Login" />
-            <Button mnemonicParsing="false" onAction="#handleClearButton" prefHeight="25.0" prefWidth="56.0" text="Clear" />
-            <Button mnemonicParsing="false" onAction="#handleRegisterButton" text="Register" />
-            <Button mnemonicParsing="false" onAction="#handleExitButton" prefHeight="25.0" prefWidth="57.0" text="Exit" />
+            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#handleLoginButton" prefHeight="25.0" prefWidth="65.0" text="Login" />
+            <Button fx:id="btnClear" mnemonicParsing="false" onAction="#handleClearButton" prefHeight="25.0" prefWidth="56.0" text="Clear" />
+            <Button fx:id="btnRegister" mnemonicParsing="false" onAction="#handleRegisterButton" text="Register" />
+            <Button fx:id="btnExit" mnemonicParsing="false" onAction="#handleExitButton" prefHeight="25.0" prefWidth="57.0" text="Exit" />
          </children>
       </HBox>
    </children>

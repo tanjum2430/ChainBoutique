@@ -1,25 +1,19 @@
 package com.example.chainboutique.tanjum.controller;
 
+import javafx.scene.control.*;
+import javafx.event.ActionEvent;
+
+
 public class SearchCustomerController
 {
     @javafx.fxml.FXML
-    private Button handleBackButton;
-    @javafx.fxml.FXML
-    private Button handleSearchButton;
-    @javafx.fxml.FXML
     private TextField enterCustomerIdTextField;
-    @javafx.fxml.FXML
-    private Button handleLogoutButton;
     @javafx.fxml.FXML
     private Label customerdeatilsLabel;
     @javafx.fxml.FXML
     private TextArea customerDetailsTextArea;
     @javafx.fxml.FXML
-    private Button handleClearButton;
-    @javafx.fxml.FXML
     private Label customerIdLabel;
-    @javafx.fxml.FXML
-    private Button handleSelectButton;
     @javafx.fxml.FXML
     private TableColumn nameCol;
     @javafx.fxml.FXML
@@ -34,6 +28,16 @@ public class SearchCustomerController
     private TableColumn customerIdCol;
     @javafx.fxml.FXML
     private Label customerNameLabel;
+    @javafx.fxml.FXML
+    private Button searchButton;
+    @javafx.fxml.FXML
+    private Button logoutButton;
+    @javafx.fxml.FXML
+    private Button clearButton;
+    @javafx.fxml.FXML
+    private Button backButton;
+    @javafx.fxml.FXML
+    private Button selectButton;
 
     @javafx.fxml.FXML
     public void initialize() {

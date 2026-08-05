@@ -42,15 +42,15 @@
             <TextField fx:id="totalAmountTextField" />
             <Label fx:id="discountLabel" text="Discount" />
             <TextField fx:id="DiscountCodeTextField" promptText="Discount Code" />
-            <Button mnemonicParsing="false" onAction="#handleApplyDiscountButton" text="Apply Discount" />
+            <Button fx:id="btnApplyDiscount" mnemonicParsing="false" onAction="#handleApplyDiscountButton" text="Apply Discount" />
          </children>
       </VBox>
       <HBox alignment="CENTER" layoutX="42.0" layoutY="383.0" prefHeight="100.0" prefWidth="710.0" spacing="20.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#handleRemoveItemButton" text="Remove Item" />
-            <Button mnemonicParsing="false" onAction="#handleClearCartButton" prefHeight="25.0" prefWidth="86.0" text="Clear Cart" />
-            <Button mnemonicParsing="false" onAction="#handleCheckoutButton" prefHeight="25.0" prefWidth="168.0" text="Checkout" />
-            <Button mnemonicParsing="false" onAction="#handleContinueShoppingButton" prefHeight="25.0" prefWidth="224.0" text="Continue Shopping" />
+            <Button fx:id="btnRemoveItem" mnemonicParsing="false" onAction="#handleRemoveItemButton" text="Remove Item" />
+            <Button fx:id="btnCartClear" mnemonicParsing="false" onAction="#handleClearCartButton" prefHeight="25.0" prefWidth="86.0" text="Clear Cart" />
+            <Button fx:id="btnCheckOut" mnemonicParsing="false" onAction="#handleCheckoutButton" prefHeight="25.0" prefWidth="168.0" text="Checkout" />
+            <Button fx:id="btnContinueShopping" mnemonicParsing="false" onAction="#handleContinueShoppingButton" prefHeight="25.0" prefWidth="224.0" text="Continue Shopping" />
          </children>
       </HBox>
    </children>
