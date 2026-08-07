@@ -9,12 +9,21 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import com.example.chainboutique.tanjum.SharedData;
 import com.example.chainboutique.tanjum.SalesBill;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
 import java.io.IOException;
 import java.util.Objects;
 
 public class ReceivePaymentController
 {
+
+    private static final String PAYMENT_FILE = "payments.bin";
+
     @javafx.fxml.FXML
     private Label transactionIdLabel;
     @javafx.fxml.FXML
@@ -109,6 +118,37 @@ public class ReceivePaymentController
         paymentStatusTextField.setText(
                 currentPayment.getPaymentStatus()
         );
+
+        try {
+
+            ArrayList<Payment> payments = new ArrayList<>();
+
+            File file = new File(PAYMENT_FILE);
+
+            if (file.exists() && file.length() > 0) {
+
+                ObjectInputStream ois = new ObjectInputStream(
+                        new FileInputStream(PAYMENT_FILE)
+                );
+
+                payments = (ArrayList<Payment>) ois.readObject();
+                ois.close();
+            }
+
+            payments.add(currentPayment);
+
+            ObjectOutputStream oos = new ObjectOutputStream(
+                    new FileOutputStream(PAYMENT_FILE)
+            );
+
+            oos.writeObject(payments);
+            oos.close();
+
+        } catch (IOException | ClassNotFoundException e) {
+
+            paymentDeatilsTextArea.setText("Error saving payment.");
+            return;
+        }
 
         transactionIdTextField.setText(
                 currentPayment.getTransactionId()
