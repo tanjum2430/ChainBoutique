@@ -16,6 +16,12 @@ import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import com.example.chainboutique.tanjum.SalesBill;
 import java.time.LocalDate;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -26,6 +32,9 @@ import java.util.Objects;
 
 public class CreateSalesBillController
 {
+    private static final String SALES_BILL_FILE = "salesBills.bin";
+
+
     @javafx.fxml.FXML
     private TableColumn<Product,String> sizeCol;
     @javafx.fxml.FXML
@@ -239,6 +248,37 @@ public class CreateSalesBillController
         }
 
         SharedData.salesBills.add(salesBill);
+
+        try {
+
+            ArrayList<SalesBill> salesBills = new ArrayList<>();
+
+            File file = new File(SALES_BILL_FILE);
+
+            if (file.exists() && file.length() > 0) {
+
+                ObjectInputStream ois = new ObjectInputStream(
+                        new FileInputStream(SALES_BILL_FILE)
+                );
+
+                salesBills = (ArrayList<SalesBill>) ois.readObject();
+                ois.close();
+            }
+
+            salesBills.add(salesBill);
+
+            ObjectOutputStream oos = new ObjectOutputStream(
+                    new FileOutputStream(SALES_BILL_FILE)
+            );
+
+            oos.writeObject(salesBills);
+            oos.close();
+
+        } catch (IOException | ClassNotFoundException e) {
+
+            totalAmountTextField.setText("Error saving bill.");
+            return;
+        }
 
         totalAmountTextField.setText(
                 "Bill Generated. ID: " + billId

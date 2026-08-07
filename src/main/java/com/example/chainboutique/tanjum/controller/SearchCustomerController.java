@@ -12,7 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import com.example.chainboutique.tanjum.SharedData;
-
+import java.util.ArrayList;
 import java.util.Objects;
 
 
@@ -93,36 +93,39 @@ public class SearchCustomerController
                     new FileInputStream(CUSTOMER_FILE)
             );
 
-            Customer customer = (Customer) ois.readObject();
+            ArrayList<Customer> customers = (ArrayList<Customer>) ois.readObject();
+
             ois.close();
 
-            boolean idMatches =
-                    idText.isEmpty()
-                            || customer.getCustomerId() == Integer.parseInt(idText);
+            searchCustomerTableView.getItems().clear();
 
-            boolean nameMatches =
-                    nameText.isEmpty()
-                            || customer.getName()
-                            .toLowerCase()
-                            .contains(nameText.toLowerCase());
+            for (Customer customer : customers) {
 
-            if (idMatches && nameMatches) {
+                boolean idMatches =
+                        idText.isEmpty()
+                                || customer.getCustomerId() == Integer.parseInt(idText);
 
-                searchCustomerTableView.getItems().clear();
-                searchCustomerTableView.getItems().add(customer);
+                boolean nameMatches =
+                        nameText.isEmpty()
+                                || customer.getName()
+                                .toLowerCase()
+                                .contains(nameText.toLowerCase());
 
-                customerDetailsTextArea.setText(
-                        "Customer ID: " + customer.getCustomerId()
-                                + "\nName: " + customer.getName()
-                                + "\nPhone: " + customer.getPhoneNo()
-                                + "\nEmail: " + customer.getEmail()
-                                + "\nAddress: " + customer.getAddress()
-                );
+                if (idMatches && nameMatches) {
+                    searchCustomerTableView.getItems().add(customer);
+                }
+            }
+
+            if (searchCustomerTableView.getItems().isEmpty()) {
+
+                customerDetailsTextArea.setText("Customer not found.");
 
             } else {
 
-                searchCustomerTableView.getItems().clear();
-                customerDetailsTextArea.setText("Customer not found.");
+                customerDetailsTextArea.setText(
+                        searchCustomerTableView.getItems().size()
+                                + " customer(s) found."
+                );
             }
 
         } catch (IOException | ClassNotFoundException e) {

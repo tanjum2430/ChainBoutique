@@ -18,10 +18,18 @@ import java.util.Objects;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import com.example.chainboutique.tanjum.Order;
 import java.time.LocalDate;
-
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
 public class PlaceOrderController
 {
+    private static final String ORDER_FILE = "orders.bin";
+
+
     @javafx.fxml.FXML
     private TableView<CartItem> orderSummaryTableView;
     @javafx.fxml.FXML
@@ -142,6 +150,38 @@ public class PlaceOrderController
         );
 
         SharedData.orders.add(order);
+
+        try {
+
+            ArrayList<Order> orders = new ArrayList<>();
+
+            File file = new File(ORDER_FILE);
+
+            if (file.exists() && file.length() > 0) {
+
+                ObjectInputStream ois = new ObjectInputStream(
+                        new FileInputStream(ORDER_FILE)
+                );
+
+                orders = (ArrayList<Order>) ois.readObject();
+                ois.close();
+            }
+
+            orders.add(order);
+
+            ObjectOutputStream oos = new ObjectOutputStream(
+                    new FileOutputStream(ORDER_FILE)
+            );
+
+            oos.writeObject(orders);
+            oos.close();
+
+        } catch (IOException | ClassNotFoundException e) {
+
+            orderStatusTextField.setText("Error saving order.");
+            return;
+        }
+
 
         orderStatusTextField.setText( "Order Confirmed! Order ID: " + orderId);
     }

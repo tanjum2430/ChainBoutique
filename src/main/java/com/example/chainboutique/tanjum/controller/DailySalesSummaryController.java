@@ -10,12 +10,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
 
 import java.io.IOException;
 import java.util.Objects;
 
 public class DailySalesSummaryController
 {
+    private static final String SALES_BILL_FILE = "salesBills.bin";
+
     @javafx.fxml.FXML
     private TableView<SalesBill> salesSummaryTableView;
     @javafx.fxml.FXML
@@ -87,6 +92,23 @@ public class DailySalesSummaryController
         );
 
         reportDateDatePicker.setValue(LocalDate.now());
+
+        try {
+
+            ObjectInputStream ois = new ObjectInputStream(
+                    new FileInputStream(SALES_BILL_FILE)
+            );
+
+            ArrayList<SalesBill> salesBills =
+                    (ArrayList<SalesBill>) ois.readObject();
+
+            ois.close();
+
+            SharedData.salesBills.setAll(salesBills);
+
+        } catch (IOException | ClassNotFoundException e) {
+            // If the file does not exist yet, keep the list empty.
+        }
 
         salesSummaryTableView.setItems(SharedData.salesBills);
     }

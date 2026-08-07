@@ -10,12 +10,18 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+
+
 import java.util.Objects;
 
 public class OrderHistoryController
 {
+    private static final String ORDER_FILE = "orders.bin";
+
     @javafx.fxml.FXML
     private Label orderHistoryLabel;
     @javafx.fxml.FXML
@@ -61,7 +67,26 @@ public class OrderHistoryController
                 new PropertyValueFactory<>("status")
         );
 
+        try {
+
+            ObjectInputStream ois = new ObjectInputStream(
+                    new FileInputStream(ORDER_FILE)
+            );
+
+            ArrayList<Order> orders =
+                    (ArrayList<Order>) ois.readObject();
+
+            ois.close();
+
+            SharedData.orders.setAll(orders);
+
+        } catch (IOException | ClassNotFoundException e) {
+            // If no file exists yet, keep the list empty.
+        }
+
         orderHistoryTableView.setItems(SharedData.orders);
+
+
 
     }
 

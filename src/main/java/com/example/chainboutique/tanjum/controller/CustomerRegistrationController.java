@@ -13,6 +13,10 @@ import java.io.IOException;
 import java.util.Objects;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
 
 public class CustomerRegistrationController
 {
@@ -50,6 +54,7 @@ public class CustomerRegistrationController
     private Button btnRegister;
     @javafx.fxml.FXML
     private Button btnReset;
+
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -116,11 +121,33 @@ public class CustomerRegistrationController
         if (customer.createAccount()) {
 
             try {
+                ArrayList<Customer> customers = new ArrayList<>();
+
+                File file = new File(CUSTOMER_FILE);
+
+                if (file.exists() && file.length() > 0) {
+
+                    try {
+                        ObjectInputStream ois = new ObjectInputStream(
+                                new FileInputStream(CUSTOMER_FILE)
+                        );
+
+                        customers = (ArrayList<Customer>) ois.readObject();
+                        ois.close();
+
+                    } catch (ClassNotFoundException e) {
+                        messageLabel.setText("Error reading customer data.");
+                        return;
+                    }
+                }
+
+                customers.add(customer);
+
                 ObjectOutputStream oos = new ObjectOutputStream(
                         new FileOutputStream(CUSTOMER_FILE)
                 );
 
-                oos.writeObject(customer);
+                oos.writeObject(customers);
                 oos.close();
 
                 messageLabel.setText("Registration Successful!");
