@@ -13,10 +13,16 @@ import java.util.Objects;
 import com.example.chainboutique.tanjum.Invoice;
 import com.example.chainboutique.tanjum.ReturnRequest;
 import java.time.LocalDate;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class ReturnExchangeController
 {
+    private static final String INVOICE_FILE = "invoices.bin";
+
     @javafx.fxml.FXML
     private Button btnBack;
     @javafx.fxml.FXML
@@ -166,6 +172,24 @@ public class ReturnExchangeController
     public void searchInvoiceOnAction(ActionEvent actionEvent) {
 
         String invoiceIdText = invoiceIdTextField.getText();
+
+        try {
+
+            ObjectInputStream ois = new ObjectInputStream(
+                    new FileInputStream(INVOICE_FILE)
+            );
+
+            ArrayList<Invoice> invoices =
+                    (ArrayList<Invoice>) ois.readObject();
+
+            ois.close();
+
+            SharedData.invoices.setAll(invoices);
+
+        } catch (IOException | ClassNotFoundException e) {
+            statusTextField.setText("No saved invoices found.");
+            return;
+        }
 
         if (invoiceIdText.isEmpty()) {
             statusTextField.setText("Enter Invoice ID.");
