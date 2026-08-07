@@ -65,6 +65,16 @@ public class AnnouncementController
 
     @javafx.fxml.FXML
     public void addAnnouncement(ActionEvent actionEvent) {
+        if (announcementIdField.getText().isEmpty()) {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Input Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Announcement ID cannot be empty.");
+            alert.showAndWait();
+
+            return;
+        }
 
         String id = announcementIdField.getText();
         String title = titleField.getText();
@@ -82,6 +92,8 @@ public class AnnouncementController
         );
         announcementList.add(announcement);
         announcementTable.setItems(announcementList);
+
+
     }
 
     @javafx.fxml.FXML
