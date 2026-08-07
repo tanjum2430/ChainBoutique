@@ -7,6 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import com.example.chainboutique.tanjum.SharedData;
+import com.example.chainboutique.tanjum.SalesBill;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -94,6 +96,15 @@ public class ReceivePaymentController
         );
 
         currentPayment.makePayment(method, amount);
+
+        if (!SharedData.salesBills.isEmpty()) {
+            SalesBill latestBill =
+                    SharedData.salesBills.get(
+                            SharedData.salesBills.size() - 1
+                    );
+
+            latestBill.setPaymentMethod(method);
+        }
 
         paymentStatusTextField.setText(
                 currentPayment.getPaymentStatus()

@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.tanjum.controller.CashierLoginController">
    <children>
       <Label layoutX="218.0" layoutY="31.0" text="Cashier Login">
@@ -24,10 +23,10 @@
       <Label fx:id="writeMessageLabel" layoutX="161.0" layoutY="192.0" prefHeight="17.0" prefWidth="188.0" style="-fx-background-color: grey;" text="Write Here" />
       <HBox alignment="CENTER" layoutX="60.0" layoutY="237.0" prefHeight="100.0" prefWidth="429.0" spacing="30.0">
          <children>
-            <Button fx:id="handleLoginButton" mnemonicParsing="false" onAction="#handleLoginButton" prefHeight="25.0" prefWidth="124.0" text="Login" />
-            <Button mnemonicParsing="false" onAction="#handleClearButton" prefHeight="25.0" prefWidth="57.0" text="Clear" />
-            <Button mnemonicParsing="false" onAction="#handleBackButton" prefHeight="25.0" prefWidth="52.0" text="Back" />
-            <Button mnemonicParsing="false" onAction="#handleExitButton" prefHeight="25.0" prefWidth="45.0" text="Exit" />
+            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#handleLoginButton" prefHeight="25.0" prefWidth="124.0" text="Login" />
+            <Button fx:id="btnClear" mnemonicParsing="false" onAction="#handleClearButton" prefHeight="25.0" prefWidth="57.0" text="Clear" />
+            <Button fx:id="btnBack" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="25.0" prefWidth="52.0" text="Back" />
+            <Button fx:id="btnExit" mnemonicParsing="false" onAction="#handleExitButton" prefHeight="25.0" prefWidth="45.0" text="Exit" />
          </children>
       </HBox>
    </children>

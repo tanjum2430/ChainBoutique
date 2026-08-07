@@ -14,8 +14,9 @@ public class HelloApplication extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader(
                 HelloApplication.class.getResource(
-                        "/com/example/chainboutique/tanjum/customerLogin.fxml"
+                        "/com/example/chainboutique/main.fxml"
                 )
+
         );
 
         Scene scene = new Scene(fxmlLoader.load());

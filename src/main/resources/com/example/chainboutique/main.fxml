@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="674.0" prefWidth="982.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.mainController">
+<AnchorPane prefHeight="674.0" prefWidth="982.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.MainController">
    <children>
       <VBox alignment="CENTER" layoutX="160.0" layoutY="28.0" prefHeight="194.0" prefWidth="648.0" spacing="10.0">
          <children>

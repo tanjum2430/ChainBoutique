@@ -6,6 +6,8 @@ public class SalesBill {
     private int billId; // Primary Key
     private LocalDate billDate;
     private double totalAmount;
+    private String customerName;
+    private String paymentMethod;
 
 
     public SalesBill(int billId, LocalDate billDate, double totalAmount) {
@@ -36,6 +38,21 @@ public class SalesBill {
 
     public void setTotalAmount(double totalAmount) {
         this.totalAmount = totalAmount;
+    }
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
     }
 
     @Override

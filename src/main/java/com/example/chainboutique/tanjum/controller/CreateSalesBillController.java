@@ -232,6 +232,11 @@ public class CreateSalesBillController
                 LocalDate.now(),
                 total
         );
+        if (SharedData.selectedCustomer != null) {
+            salesBill.setCustomerName(
+                    SharedData.selectedCustomer.getName()
+            );
+        }
 
         SharedData.salesBills.add(salesBill);
 

@@ -31,7 +31,7 @@ public class DailySalesSummaryController
     @javafx.fxml.FXML
     private Label dailySalesSummaryTitleLabel;
     @javafx.fxml.FXML
-    private TableColumn paymentMethodCol;
+    private TableColumn<SalesBill,String> paymentMethodCol;
     @javafx.fxml.FXML
     private Label totalReturnsSummaryLabel;
     @javafx.fxml.FXML
@@ -49,7 +49,7 @@ public class DailySalesSummaryController
     @javafx.fxml.FXML
     private TextField totalReturnsSummaryTextField;
     @javafx.fxml.FXML
-    private TableColumn customerNameCol;
+    private TableColumn<SalesBill,String> customerNameCol;
     @javafx.fxml.FXML
     private Button btnGenerateReport;
     @javafx.fxml.FXML
@@ -77,6 +77,13 @@ public class DailySalesSummaryController
 
         dateCol.setCellValueFactory(
                 new PropertyValueFactory<>("billDate")
+        );
+        customerNameCol.setCellValueFactory(
+                new PropertyValueFactory<>("customerName")
+        );
+
+        paymentMethodCol.setCellValueFactory(
+                new PropertyValueFactory<>("paymentMethod")
         );
 
         reportDateDatePicker.setValue(LocalDate.now());
