@@ -1,10 +1,18 @@
 package com.example.chainboutique.tanjum.controller;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
+import com.example.chainboutique.tanjum.Order;
+import com.example.chainboutique.tanjum.SharedData;
+import javafx.scene.control.cell.PropertyValueFactory;
+import java.time.LocalDate;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.util.Objects;
 
 public class OrderHistoryController
 {
@@ -15,33 +23,110 @@ public class OrderHistoryController
     @javafx.fxml.FXML
     private TextArea orderDetailsTextArea;
     @javafx.fxml.FXML
-    private TableColumn totalAmountCol;
+    private TableColumn<Order,Double> totalAmountCol;
     @javafx.fxml.FXML
-    private TableColumn statusCol;
+    private TableColumn<Order,String> statusCol;
     @javafx.fxml.FXML
-    private TableView orderHistoryTableView;
+    private TableView<Order> orderHistoryTableView;
     @javafx.fxml.FXML
-    private TableColumn orderDateCol;
+    private TableColumn<Order,LocalDate> orderDateCol;
     @javafx.fxml.FXML
     private Label deliveryAddressLabel;
     @javafx.fxml.FXML
     private TextArea deliveryAddressTextArea;
     @javafx.fxml.FXML
-    private TableColumn orderIdCol;
+    private TableColumn<Order, Integer> orderIdCol;
+    @javafx.fxml.FXML
+    private Button btnBack;
+    @javafx.fxml.FXML
+    private Button btnViewDetails;
+    @javafx.fxml.FXML
+    private Button btnCancelOrder;
 
     @javafx.fxml.FXML
     public void initialize() {
+        orderIdCol.setCellValueFactory(
+                new PropertyValueFactory<>("orderId")
+        );
+
+        orderDateCol.setCellValueFactory(
+                new PropertyValueFactory<>("orderDate")
+        );
+
+        totalAmountCol.setCellValueFactory(
+                new PropertyValueFactory<>("totalAmount")
+        );
+
+        statusCol.setCellValueFactory(
+                new PropertyValueFactory<>("status")
+        );
+
+        orderHistoryTableView.setItems(SharedData.orders);
+
     }
 
     @javafx.fxml.FXML
-    public void handleBackButton(ActionEvent actionEvent) {
+    public void handleBackButton(ActionEvent actionEvent) throws IOException {
+
+        Parent root = FXMLLoader.load(
+                Objects.requireNonNull(
+                        getClass().getResource(
+                                "/com/example/chainboutique/tanjum/customerDashboard.fxml"
+                        )
+                )
+        );
+
+        Stage stage = (Stage) orderHistoryTableView.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+
+    @javafx.fxml.FXML
+    public void handleViewDetailsButton(ActionEvent actionEvent) {
+        Order selectedOrder =
+                orderHistoryTableView.getSelectionModel().getSelectedItem();
+
+        if (selectedOrder == null) {
+            orderDetailsTextArea.setText("Please select an order.");
+            return;
+        }
+
+        orderDetailsTextArea.setText(
+                "Order ID: " + selectedOrder.getOrderId()
+                        + "\nOrder Date: " + selectedOrder.getOrderDate()
+                        + "\nStatus: " + selectedOrder.getStatus()
+                        + "\nTotal Amount: " + selectedOrder.getTotalAmount()
+        );
+
+        deliveryAddressTextArea.setText(
+                selectedOrder.getDeliveryAddress()
+        );
     }
 
     @javafx.fxml.FXML
-    public void handleViewDeatilsButton(ActionEvent actionEvent) {
-    }
+    public void handleCancelOrderButton(ActionEvent actionEvent) {
+        Order selectedOrder =
+                orderHistoryTableView.getSelectionModel().getSelectedItem();
 
-    @javafx.fxml.FXML
-    public void handleCancelOrderBuntton(ActionEvent actionEvent) {
+        if (selectedOrder == null) {
+            orderDetailsTextArea.setText("Please select an order.");
+            return;
+        }
+
+        if (selectedOrder.cancelOrder()) {
+
+            orderHistoryTableView.refresh();
+
+            orderDetailsTextArea.setText(
+                    "Order " + selectedOrder.getOrderId() + " cancelled successfully."
+            );
+
+        } else {
+
+            orderDetailsTextArea.setText(
+                    "This order cannot be cancelled."
+            );
+        }
     }
 }

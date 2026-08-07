@@ -2,6 +2,14 @@ package com.example.chainboutique.tanjum.controller;
 
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
+import com.example.chainboutique.tanjum.Payment;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.util.Objects;
 
 public class ReceivePaymentController
 {
@@ -46,23 +54,113 @@ public class ReceivePaymentController
     @javafx.fxml.FXML
     private Label receivePaymentLabel;
 
+    private Payment currentPayment;
+
     @javafx.fxml.FXML
     public void initialize() {
+        paymentMethodComboBox.getItems().addAll(
+                "Cash",
+                "Card",
+                "bKash",
+                "Nagad"
+        );
+
+        paymentStatusTextField.setText("Pending");
     }
 
     @javafx.fxml.FXML
     public void receivePaymentOnAction(ActionEvent actionEvent) {
+
+        String method = paymentMethodComboBox.getValue();
+        String amountText = paidAmountTextField.getText();
+
+        if (method == null || amountText.isEmpty()) {
+            paymentDeatilsTextArea.setText(
+                    "Please select payment method and enter paid amount."
+            );
+            return;
+        }
+
+        double amount = Double.parseDouble(amountText);
+
+        int paymentID = (int) (Math.random() * 9000) + 1000;
+
+        currentPayment = new Payment(
+                paymentID,
+                method,
+                "Pending",
+                "",
+                amount
+        );
+
+        currentPayment.makePayment(method, amount);
+
+        paymentStatusTextField.setText(
+                currentPayment.getPaymentStatus()
+        );
+
+        transactionIdTextField.setText(
+                currentPayment.getTransactionId()
+        );
     }
 
     @javafx.fxml.FXML
-    public void backOnAction(ActionEvent actionEvent) {
+    public void backOnAction(ActionEvent actionEvent) throws IOException {
+
+        Parent root = FXMLLoader.load(
+                Objects.requireNonNull(
+                        getClass().getResource(
+                                "/com/example/chainboutique/tanjum/applyDiscount.fxml"
+                        )
+                )
+        );
+
+        Stage stage = (Stage) btnBack.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     @javafx.fxml.FXML
     public void verifyPaymentOnAction(ActionEvent actionEvent) {
+
+        if (currentPayment == null) {
+            paymentDeatilsTextArea.setText(
+                    "No payment has been received yet."
+            );
+            return;
+        }
+
+        if (currentPayment.verifyPayment()) {
+
+            paymentStatusTextField.setText("Paid");
+
+            paymentDeatilsTextArea.setText(
+                    "Payment verified successfully."
+            );
+
+        } else {
+
+            paymentStatusTextField.setText("Pending");
+
+            paymentDeatilsTextArea.setText(
+                    "Payment verification failed."
+            );
+        }
     }
 
     @javafx.fxml.FXML
-    public void generateInvoiceOnAction(ActionEvent actionEvent) {
+    public void generateInvoiceOnAction(ActionEvent actionEvent) throws IOException {
+
+        Parent root = FXMLLoader.load(
+                Objects.requireNonNull(
+                        getClass().getResource(
+                                "/com/example/chainboutique/tanjum/generateInvoice.fxml"
+                        )
+                )
+        );
+
+        Stage stage = (Stage) btnInvoice.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 }

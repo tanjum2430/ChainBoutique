@@ -3,23 +3,23 @@ package com.example.chainboutique.tanjum;
 import java.time.LocalDate;
 
 public class SalesBill {
-    private int build; // Primary Key
+    private int billId; // Primary Key
     private LocalDate billDate;
     private double totalAmount;
-    private String billId;
 
-    public SalesBill(int build, LocalDate billDate, double totalAmount) {
-        this.build = build;
+
+    public SalesBill(int billId, LocalDate billDate, double totalAmount) {
+        this.billId = billId;
         this.billDate = billDate;
         this.totalAmount = totalAmount;
     }
 
-    public int getBuild() {
-        return build;
+    public int getBillId() {
+        return billId;
     }
 
-    public void setBuild(int build) {
-        this.build = build;
+    public void setBillId(int billId) {
+        this.billId = billId;
     }
 
     public LocalDate getBillDate() {
@@ -41,7 +41,7 @@ public class SalesBill {
     @Override
     public String toString() {
         return "SalesBill{" +
-                "build=" + build +
+                "billId=" + billId +
                 ", billDate=" + billDate +
                 ", totalAmount=" + totalAmount +
                 '}';

@@ -7,4 +7,11 @@ public class SharedData {
     public static final Cart cart = new Cart(1, 0);
     public static final ObservableList<Order> orders =
             FXCollections.observableArrayList();
+    public static final ObservableList<Invoice> invoices =
+            FXCollections.observableArrayList();
+    public static final ObservableList<ReturnRequest> returnRequests =
+            FXCollections.observableArrayList();
+    public static final ObservableList<SalesBill> salesBills =
+            FXCollections.observableArrayList();
+    public static Customer selectedCustomer;
 }

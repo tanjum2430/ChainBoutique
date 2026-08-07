@@ -58,7 +58,7 @@ public class CustomerRegistrationController
     @javafx.fxml.FXML
     public void handleBackButton(ActionEvent actionEvent) throws IOException{
         Parent root = FXMLLoader.load(
-                Objects.requireNonNull(getClass().getResource("/com/example/chainboutique/tanjum/customerLogin.fxml")));
+                Objects.requireNonNull(CustomerRegistrationController.class.getResource("/com/example/chainboutique/tanjum/customerLogin.fxml")));
         Stage stage = (Stage) nameTextField.getScene().getWindow();
 
         stage.setScene(new Scene(root));

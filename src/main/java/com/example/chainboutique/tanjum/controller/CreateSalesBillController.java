@@ -2,27 +2,48 @@ package com.example.chainboutique.tanjum.controller;
 
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import com.example.chainboutique.tanjum.Product;
+import com.example.chainboutique.tanjum.CartItem;
+import com.example.chainboutique.tanjum.SharedData;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.beans.property.ReadOnlyStringWrapper;
+import com.example.chainboutique.tanjum.SalesBill;
+import java.time.LocalDate;
+
+import java.io.IOException;
+import java.util.Objects;
+
+
+
+
 
 public class CreateSalesBillController
 {
     @javafx.fxml.FXML
-    private TableColumn sizeCol;
+    private TableColumn<Product,String> sizeCol;
     @javafx.fxml.FXML
     private Button handleAddItemButton;
     @javafx.fxml.FXML
-    private TableColumn stockCol;
+    private TableColumn<Product,Integer> stockCol;
     @javafx.fxml.FXML
     private TextField phoneTextField;
     @javafx.fxml.FXML
     private TextField customerIdTextField;
     @javafx.fxml.FXML
-    private TableColumn subtotalCol;
+    private TableColumn<CartItem,Double> subtotalCol;
     @javafx.fxml.FXML
     private Button btnCalculate;
     @javafx.fxml.FXML
-    private TableColumn productIdCol;
+    private TableColumn<Product,Integer> productIdCol;
     @javafx.fxml.FXML
-    private TableColumn unitPriceCol;
+    private TableColumn<CartItem,Double> unitPriceCol;
     @javafx.fxml.FXML
     private Label phoneLabel;
     @javafx.fxml.FXML
@@ -30,7 +51,7 @@ public class CreateSalesBillController
     @javafx.fxml.FXML
     private Label customerNameLabel;
     @javafx.fxml.FXML
-    private TableView createSalesBillTableView;
+    private TableView<Product> createSalesBillTableView;
     @javafx.fxml.FXML
     private TextField quantityTextField;
     @javafx.fxml.FXML
@@ -46,41 +67,206 @@ public class CreateSalesBillController
     @javafx.fxml.FXML
     private Label quantityLabel;
     @javafx.fxml.FXML
-    private TableColumn productCol;
+    private TableColumn<CartItem,String> productCol;
     @javafx.fxml.FXML
     private TextField totalAmountTextField;
     @javafx.fxml.FXML
-    private TableColumn productNameCol;
+    private TableColumn<Product,String> productNameCol;
     @javafx.fxml.FXML
-    private TableColumn priceCol;
+    private TableColumn<Product,Double> priceCol;
     @javafx.fxml.FXML
-    private TableView cartItemTableView;
+    private TableView<CartItem> cartItemTableView;
     @javafx.fxml.FXML
     private Label customerIdLabel;
     @javafx.fxml.FXML
-    private TableColumn quantityCol;
+    private TableColumn<CartItem,Integer> quantityCol;
+
+    private final ObservableList<Product> productList =
+            FXCollections.observableArrayList();
+
+    private final ObservableList<CartItem> billItems =
+            FXCollections.observableArrayList();
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        // Product table
+        productIdCol.setCellValueFactory(
+                new PropertyValueFactory<>("productId")
+        );
+
+        productNameCol.setCellValueFactory(
+                new PropertyValueFactory<>("productName")
+        );
+
+        sizeCol.setCellValueFactory(
+                new PropertyValueFactory<>("size")
+        );
+
+        priceCol.setCellValueFactory(
+                new PropertyValueFactory<>("price")
+        );
+
+        stockCol.setCellValueFactory(
+                new PropertyValueFactory<>("stock")
+        );
+
+        // Bill items table
+        productCol.setCellValueFactory(cellData ->
+                new ReadOnlyStringWrapper(
+                        cellData.getValue().getProduct().getProductName()
+                )
+        );
+
+        quantityCol.setCellValueFactory(
+                new PropertyValueFactory<>("quantity")
+        );
+
+        unitPriceCol.setCellValueFactory(cellData ->
+                new ReadOnlyObjectWrapper<>(
+                        cellData.getValue().getProduct().getPrice()
+                )
+        );
+
+        subtotalCol.setCellValueFactory(
+                new PropertyValueFactory<>("subTotal")
+        );
+
+        // Temporary products
+        productList.addAll(
+                new Product("Men's Shirt", "Men", "M", "shirt.jpg", 101, 1500.0, 20),
+                new Product("Women's Kurti", "Women", "L", "kurti.jpg", 102, 1800.0, 15),
+                new Product("Kids T-Shirt", "Kids", "S", "kids.jpg", 103, 800.0, 25)
+        );
+
+        createSalesBillTableView.setItems(productList);
+        cartItemTableView.setItems(billItems);
+
+        // Selected customer
+        if (SharedData.selectedCustomer != null) {
+
+            customerIdTextField.setText(
+                    String.valueOf(SharedData.selectedCustomer.getCustomerId())
+            );
+
+            customerNameTextField.setText(
+                    SharedData.selectedCustomer.getName()
+            );
+
+            phoneTextField.setText(
+                    SharedData.selectedCustomer.getPhoneNo()
+            );
+        }
     }
 
     @javafx.fxml.FXML
     public void addItemOnAction(ActionEvent actionEvent) {
+
+        Product selectedProduct =
+                createSalesBillTableView.getSelectionModel().getSelectedItem();
+
+        if (selectedProduct == null) {
+            totalAmountTextField.setText("Select a product.");
+            return;
+        }
+
+        if (quantityTextField.getText().isEmpty()) {
+            totalAmountTextField.setText("Enter quantity.");
+            return;
+        }
+
+        int quantity = Integer.parseInt(quantityTextField.getText());
+
+        if (!selectedProduct.checkAvailability(quantity)) {
+            totalAmountTextField.setText("Not enough stock.");
+            return;
+        }
+
+        CartItem item = new CartItem(
+                selectedProduct,
+                quantity
+        );
+
+        billItems.add(item);
+
+        selectedProduct.updateStock(quantity);
+
+        createSalesBillTableView.refresh();
+        cartItemTableView.refresh();
     }
 
     @javafx.fxml.FXML
-    public void backOnAction(ActionEvent actionEvent) {
+    public void backOnAction(ActionEvent actionEvent) throws IOException {
+
+        Parent root = FXMLLoader.load(
+                Objects.requireNonNull(
+                        getClass().getResource(
+                                "/com/example/chainboutique/tanjum/cashierDashboard.fxml"
+                        )
+                )
+        );
+
+        Stage stage = (Stage) btnBack.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     @javafx.fxml.FXML
     public void generateBillOnAction(ActionEvent actionEvent) {
+
+        if (billItems.isEmpty()) {
+            totalAmountTextField.setText("Add items first.");
+            return;
+        }
+
+        double total = 0.0;
+
+        for (CartItem item : billItems) {
+            total += item.getSubTotal();
+        }
+
+        int billId = (int) (Math.random() * 9000) + 1000;
+
+        SalesBill salesBill = new SalesBill(
+                billId,
+                LocalDate.now(),
+                total
+        );
+
+        SharedData.salesBills.add(salesBill);
+
+        totalAmountTextField.setText(
+                "Bill Generated. ID: " + billId
+        );
     }
 
     @javafx.fxml.FXML
-    public void nextOnAction(ActionEvent actionEvent) {
+    public void nextOnAction(ActionEvent actionEvent) throws IOException {
+
+        Parent root = FXMLLoader.load(
+                Objects.requireNonNull(
+                        getClass().getResource(
+                                "/com/example/chainboutique/tanjum/applyDiscount.fxml"
+                        )
+                )
+        );
+
+        Stage stage = (Stage) btnNext.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     @javafx.fxml.FXML
     public void calculateTotalOnAction(ActionEvent actionEvent) {
+
+        double total = 0.0;
+
+        for (CartItem item : billItems) {
+            total += item.getSubTotal();
+        }
+
+        totalAmountTextField.setText(
+                String.valueOf(total)
+        );
     }
 }
