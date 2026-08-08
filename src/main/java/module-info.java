@@ -6,4 +6,7 @@ module com.example.chainboutique {
     opens com.example.chainboutique to javafx.fxml;
     opens com.example.chainboutique.tanjum.controller to javafx.fxml;
     exports com.example.chainboutique;
+
+    opens com.example.chainboutique.adib to javafx.fxml;
+    exports com.example.chainboutique.adib;
 }
