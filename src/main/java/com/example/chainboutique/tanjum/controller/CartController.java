@@ -16,6 +16,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
+import com.example.chainboutique.tanjum.SharedData;
 
 
 public class CartController
@@ -59,7 +60,7 @@ public class CartController
 
     private final ObservableList<CartItem> cartItemList =
             FXCollections.observableArrayList();
-    private Cart cart = new Cart(1, 0);
+    private final Cart cart = SharedData.cart;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -90,12 +91,16 @@ public class CartController
                 )
         );
 
-        quantityCol.setCellValueFactory(
-                new PropertyValueFactory<>("quantity")
+        quantityCol.setCellValueFactory(cellData ->
+                new ReadOnlyObjectWrapper<>(
+                        cellData.getValue().getQuantity()
+                )
         );
 
-        subtotalCol.setCellValueFactory(
-                new PropertyValueFactory<>("subTotal")
+        subtotalCol.setCellValueFactory(cellData ->
+                new ReadOnlyObjectWrapper<>(
+                        cellData.getValue().getSubTotal()
+                )
         );
 
         myShoppingCartTableView.setItems(cartItemList);
