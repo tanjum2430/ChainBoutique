@@ -11,12 +11,21 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
 import java.io.IOException;
 import java.util.Objects;
 
 public class CashierLoginController
 {
+
+    private static final String CASHIER_FILE = "cashiers.bin";
+
     @javafx.fxml.FXML
     private Label cashierIDLabel;
     @javafx.fxml.FXML
@@ -39,12 +48,65 @@ public class CashierLoginController
     @javafx.fxml.FXML
     private Button btnExit;
 
-    private final Cashier cashier =
-            new Cashier(2001, "Cashier", "1234");
+    private final ArrayList<Cashier> cashiers =
+            new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        File file = new File(CASHIER_FILE);
+
+        if (file.exists() && file.length() > 0) {
+
+            try {
+
+                ObjectInputStream ois = new ObjectInputStream(
+                        new FileInputStream(CASHIER_FILE)
+                );
+
+                ArrayList<Cashier> savedCashiers =
+                        (ArrayList<Cashier>) ois.readObject();
+
+                ois.close();
+
+                cashiers.clear();
+                cashiers.addAll(savedCashiers);
+
+            } catch (IOException | ClassNotFoundException e) {
+
+                messageLabel.setText("Error loading cashier data.");
+            }
+
+        } else {
+
+            cashiers.add(
+                    new Cashier(2001, "Nora", "1234")
+            );
+
+            cashiers.add(
+                    new Cashier(2002, "Reedwan", "5678")
+            );
+
+            cashiers.add(
+                    new Cashier(2003, "Ahnaf", "91011")
+            );
+
+            try {
+
+                ObjectOutputStream oos = new ObjectOutputStream(
+                        new FileOutputStream(CASHIER_FILE)
+                );
+
+                oos.writeObject(cashiers);
+                oos.close();
+
+            } catch (IOException e) {
+
+                messageLabel.setText("Error creating cashier file.");
+            }
+        }
     }
+
 
     @javafx.fxml.FXML
     public void handleBackButton(ActionEvent actionEvent) throws IOException {
@@ -83,8 +145,19 @@ public class CashierLoginController
 
         int cashierId = Integer.parseInt(idText);
 
-        if (cashierId == cashier.getCashierID()
-                && cashier.login(password)) {
+        Cashier matchedCashier = null;
+
+        for (Cashier c : cashiers) {
+
+            if (c.getCashierID() == cashierId
+                    && c.login(password)) {
+
+                matchedCashier = c;
+                break;
+            }
+        }
+
+        if (matchedCashier != null) {
 
             Parent root = FXMLLoader.load(
                     Objects.requireNonNull(

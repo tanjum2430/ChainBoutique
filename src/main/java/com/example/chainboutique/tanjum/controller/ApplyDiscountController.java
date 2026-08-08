@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
+import com.example.chainboutique.tanjum.SharedData;
 
 import com.example.chainboutique.tanjum.Discount;
 import com.example.chainboutique.tanjum.SalesBill;
@@ -68,6 +69,26 @@ public class ApplyDiscountController
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        if (!SharedData.salesBills.isEmpty()) {
+
+            SalesBill latestBill =
+                    SharedData.salesBills.get(
+                            SharedData.salesBills.size() - 1
+                    );
+
+            billIdTextField.setText(
+                    String.valueOf(latestBill.getBillId())
+            );
+
+            customerNameTextField.setText(
+                    latestBill.getCustomerName()
+            );
+
+            totalAmountTextField.setText(
+                    String.valueOf(latestBill.getTotalAmount())
+            );
+        }
     }
 
     @javafx.fxml.FXML
