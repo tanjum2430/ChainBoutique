@@ -76,6 +76,52 @@ public class AnnouncementController
             return;
         }
 
+        if (titleField.getText().isEmpty()) {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Input Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Title cannot be empty.");
+            alert.showAndWait();
+
+            return;
+        }
+
+        if (messageArea.getText().isEmpty()) {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Input Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Message cannot be empty.");
+            alert.showAndWait();
+
+            return;
+        }
+
+        if (createdByField.getText().isEmpty()) {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Input Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Created By cannot be empty.");
+            alert.showAndWait();
+
+            return;
+        }
+
+        if (createdOnPicker.getValue() == null) {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Input Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Please select a date.");
+            alert.showAndWait();
+
+            return;
+        }
+
+
+
         String id = announcementIdField.getText();
         String title = titleField.getText();
         String message = messageArea.getText();
@@ -98,13 +144,38 @@ public class AnnouncementController
 
     @javafx.fxml.FXML
     public void searchAnnouncement(ActionEvent actionEvent) {
+
+        String searchText = searchField.getText().toLowerCase();
+
+        ObservableList<Announcement> searchResults =
+                FXCollections.observableArrayList();
+
+        for (Announcement announcement : announcementList) {
+
+            if (announcement.getAnnouncementID().toLowerCase().contains(searchText) ||
+                    announcement.getTitle().toLowerCase().contains(searchText) ||
+                    announcement.getMessage().toLowerCase().contains(searchText) ||
+                    announcement.getCreatedBy().toLowerCase().contains(searchText)) {
+
+                searchResults.add(announcement);
+            }
+        }
+
+        announcementTable.setItems(searchResults);
     }
 
     @javafx.fxml.FXML
     public void refreshTable(ActionEvent actionEvent) {
+        announcementTable.setItems(announcementList);
+        searchField.clear();
     }
 
     @javafx.fxml.FXML
     public void clearFields(ActionEvent actionEvent) {
+        announcementIdField.clear();
+        titleField.clear();
+        messageArea.clear();
+        createdByField.clear();
+        createdOnPicker.setValue(null);
     }
 }

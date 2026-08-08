@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="784.0" prefWidth="914.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.adib.Controller.CEOController">
+<AnchorPane prefHeight="816.0" prefWidth="984.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chainboutique.adib.Controller.CEOController">
    <children>
       <TextField fx:id="employeeIdField" layoutX="16.0" layoutY="65.0" />
       <DatePicker fx:id="startDatePicker" layoutX="16.0" layoutY="102.0" />
@@ -31,16 +31,19 @@
       <Text layoutX="196.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date" />
       <Text layoutX="196.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EndDate" />
       <Button fx:id="saveCEOActionButton" layoutX="622.0" layoutY="369.0" mnemonicParsing="false" onAction="#saveCEOAction" prefHeight="49.0" prefWidth="136.0" text="Save CEO Action" />
-      <TableView fx:id="ceoTableView" layoutY="616.0" prefHeight="200.0" prefWidth="914.0">
+      <TableView fx:id="ceoTableView" layoutY="616.0" prefHeight="200.0" prefWidth="984.0">
         <columns>
           <TableColumn fx:id="employeeIdColumn" prefWidth="93.0" text="Employee ID" />
-          <TableColumn fx:id="dashboardColumn" prefWidth="110.0" text="Dashboard" />
-            <TableColumn fx:id="performanceReportColumn" prefWidth="145.0" text="Performance Report" />
-            <TableColumn fx:id="financialSummaryColumn" prefWidth="130.0" text="Financial Summary" />
-            <TableColumn fx:id="clientAnalyticsColumn" prefWidth="99.0" text="Client Analytics" />
-            <TableColumn fx:id="employeePerformanceColumn" prefWidth="135.0" text="Employee Performance" />
-            <TableColumn fx:id="announcementColumn" prefWidth="100.0" text="Announcement" />
-            <TableColumn fx:id="annualReportColumn" prefWidth="101.0" text="Annual Report" />
+            <TableColumn fx:id="startDateColumn" prefWidth="75.0" text="Start Date" />
+            <TableColumn fx:id="endDateColumn" prefWidth="75.0" text="End Date" />
+            <TableColumn fx:id="reportYearColumn" prefWidth="75.0" text="Report Year" />
+            <TableColumn fx:id="reportTypeColumn" prefWidth="75.0" text="Report Type" />
+            <TableColumn fx:id="departmentColumn" prefWidth="75.0" text="Department" />
+            <TableColumn fx:id="requestIdColumn" prefWidth="75.0" text="Request ID" />
+            <TableColumn fx:id="decisionColumn" prefWidth="75.0" text="Decision" />
+            <TableColumn fx:id="remarksColumn" prefWidth="75.0" text="Remarks" />
+            <TableColumn fx:id="announcementTitleColumn" prefWidth="144.0" text="Announcement Title" />
+            <TableColumn fx:id="announcementMessageColumn" prefWidth="146.0" text="Announcement Message" />
         </columns>
       </TableView>
       <HBox layoutX="4.0" layoutY="516.0" prefHeight="100.0" prefWidth="906.0">
