@@ -1,23 +1,80 @@
 package com.example.chainboutique.adib.Controller;
+
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-public class InventoryOfficerLoginController
-{
-    @javafx.fxml.FXML
+import java.io.IOException;
+import java.util.Objects;
+
+public class InventoryOfficerLoginController {
+
+    @FXML
     private TextField userIdField;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button loginButton;
-    @javafx.fxml.FXML
+
+    @FXML
     private PasswordField passwordField;
 
-    @javafx.fxml.FXML
+    private final String INVENTORY_OFFICER_ID = "5678";
+    private final String INVENTORY_OFFICER_PASSWORD = "inventory123";
+
+    @FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
-    public void loginOnAction(ActionEvent actionEvent) {
+    @FXML
+    public void loginOnAction(ActionEvent actionEvent) throws IOException {
+
+        String userID = userIdField.getText();
+        String password = passwordField.getText();
+
+        if (userID.isEmpty() || password.isEmpty()) {
+
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Login Error");
+            alert.setHeaderText(null);
+            alert.setContentText(
+                    "Please enter Inventory Officer ID and password."
+            );
+            alert.showAndWait();
+
+            return;
+        }
+
+        if (userID.equals(INVENTORY_OFFICER_ID)
+                && password.equals(INVENTORY_OFFICER_PASSWORD)) {
+
+            Parent root = FXMLLoader.load(
+                    Objects.requireNonNull(
+                            getClass().getResource(
+                                    "/com/example/chainboutique/adib/InventoryOfficer.fxml"
+                            )
+                    )
+            );
+
+            Stage stage = (Stage) loginButton.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } else {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Login Failed");
+            alert.setHeaderText(null);
+            alert.setContentText(
+                    "Invalid Inventory Officer ID or password."
+            );
+            alert.showAndWait();
+        }
     }
 }

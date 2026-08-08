@@ -2,12 +2,7 @@ package com.example.chainboutique.adib.Controller;
 
 import com.example.chainboutique.adib.InventoryOfficer;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -118,8 +113,10 @@ public class InventoryOfficerController {
                 "Bags"
         );
 
-        quantitySpinner.getValueFactory().setValue(0);
+        SpinnerValueFactory.IntegerSpinnerValueFactory quantityFactory =
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 10000, 0);
 
+        quantitySpinner.setValueFactory(quantityFactory);
     }
 
     @FXML
