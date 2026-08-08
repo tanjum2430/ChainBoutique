@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -38,7 +39,13 @@ public class CEOLoginController {
         String password = passwordField.getText();
 
         if (userID.isEmpty() || password.isEmpty()) {
-            System.out.println("Please enter CEO ID and password.");
+
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Login Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Please enter CEO ID and password.");
+            alert.showAndWait();
+
             return;
         }
 
@@ -52,13 +59,17 @@ public class CEOLoginController {
                     )
             );
 
-            Stage stage = (Stage) userIdField.getScene().getWindow();
+            Stage stage = (Stage) loginButton.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();
 
         } else {
 
-            System.out.println("Invalid CEO ID or password.");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Login Failed");
+            alert.setHeaderText(null);
+            alert.setContentText("Invalid CEO ID or password.");
+            alert.showAndWait();
         }
     }
 }

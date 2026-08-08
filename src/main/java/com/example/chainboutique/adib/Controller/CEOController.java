@@ -5,14 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.collections.transformation.FilteredList;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.time.LocalDate;
@@ -85,6 +78,16 @@ public class CEOController {
 
     @FXML
     public void initialize() {
+
+        SpinnerValueFactory.IntegerSpinnerValueFactory yearFactory =
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(2020, 2030, 2026);
+
+        SpinnerValueFactory.IntegerSpinnerValueFactory filterYearFactory =
+                new SpinnerValueFactory.IntegerSpinnerValueFactory(2020, 2030, 2026);
+
+        reportYearSpinner.setValueFactory(yearFactory);
+        filterYearSpinner.setValueFactory(filterYearFactory);
+
         ceoTableView.setItems(ceoList);
 
         employeeIdColumn.setCellValueFactory(
@@ -152,11 +155,6 @@ public class CEOController {
                 "Quarterly",
                 "Monthly"
         );
-
-        reportYearSpinner.getValueFactory().setValue(2026);
-        filterYearSpinner.getValueFactory().setValue(2026);
-
-
     }
 
     @FXML
