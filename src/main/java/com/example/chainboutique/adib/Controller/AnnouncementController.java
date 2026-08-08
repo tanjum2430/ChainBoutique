@@ -144,10 +144,30 @@ public class AnnouncementController
 
     @javafx.fxml.FXML
     public void searchAnnouncement(ActionEvent actionEvent) {
+
+        String searchText = searchField.getText().toLowerCase();
+
+        ObservableList<Announcement> searchResults =
+                FXCollections.observableArrayList();
+
+        for (Announcement announcement : announcementList) {
+
+            if (announcement.getAnnouncementID().toLowerCase().contains(searchText) ||
+                    announcement.getTitle().toLowerCase().contains(searchText) ||
+                    announcement.getMessage().toLowerCase().contains(searchText) ||
+                    announcement.getCreatedBy().toLowerCase().contains(searchText)) {
+
+                searchResults.add(announcement);
+            }
+        }
+
+        announcementTable.setItems(searchResults);
     }
 
     @javafx.fxml.FXML
     public void refreshTable(ActionEvent actionEvent) {
+        announcementTable.setItems(announcementList);
+        searchField.clear();
     }
 
     @javafx.fxml.FXML
