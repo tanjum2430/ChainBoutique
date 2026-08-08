@@ -55,7 +55,20 @@ public class MainController
     }
 
     @javafx.fxml.FXML
-    public void ceoOnAction(ActionEvent actionEvent) {
+    public void ceoOnAction(ActionEvent actionEvent)  throws IOException {
+
+        Parent root = FXMLLoader.load(
+                Objects.requireNonNull(
+                        getClass().getResource(
+                                "/com/example/chainboutique/adib/CEOLogin.fxml"
+                        )
+                )
+        );
+
+        Stage stage = (Stage) btnCEO.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+
     }
 
     @javafx.fxml.FXML
