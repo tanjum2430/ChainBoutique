@@ -14,6 +14,8 @@ import java.io.IOException;
 import java.util.Objects;
 import com.example.chainboutique.tanjum.Cart;
 import com.example.chainboutique.tanjum.SharedData;
+import javafx.beans.property.ReadOnlyStringWrapper;
+import javafx.beans.property.ReadOnlyObjectWrapper;
 
 public class CustomerDashboardController
 {
@@ -79,8 +81,10 @@ public class CustomerDashboardController
                 new PropertyValueFactory<>("productId")
         );
 
-        productNameCol.setCellValueFactory(
-                new PropertyValueFactory<>("productName")
+        productNameCol.setCellValueFactory(cellData ->
+                new ReadOnlyStringWrapper(
+                        cellData.getValue().getProductName()
+                )
         );
 
         categoryCol.setCellValueFactory(
