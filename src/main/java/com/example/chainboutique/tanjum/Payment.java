@@ -1,6 +1,10 @@
 package com.example.chainboutique.tanjum;
 
-public class Payment {
+
+import java.io.Serializable;
+
+
+public class Payment implements Serializable {
     private int paymentID; // Primary Key
     private String paymentMethod, paymentStatus, transactionId;
     private double paidAmount;
