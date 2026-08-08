@@ -15,6 +15,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -23,6 +29,10 @@ import java.time.LocalDate;
 
 public class GenerateInvoiceController
 {
+
+    private static final String INVOICE_FILE = "invoices.bin";
+
+
     @javafx.fxml.FXML
     private TextField invoiceIdTextField;
     @javafx.fxml.FXML
@@ -171,6 +181,36 @@ public class GenerateInvoiceController
         );
 
         SharedData.invoices.add(currentInvoice);
+
+        try {
+
+            ArrayList<Invoice> invoices = new ArrayList<>();
+
+            File file = new File(INVOICE_FILE);
+
+            if (file.exists() && file.length() > 0) {
+
+                ObjectInputStream ois = new ObjectInputStream(
+                        new FileInputStream(INVOICE_FILE)
+                );
+
+                invoices = (ArrayList<Invoice>) ois.readObject();
+                ois.close();
+            }
+
+            invoices.add(currentInvoice);
+
+            ObjectOutputStream oos = new ObjectOutputStream(
+                    new FileOutputStream(INVOICE_FILE)
+            );
+
+            oos.writeObject(invoices);
+            oos.close();
+
+        } catch (IOException | ClassNotFoundException e) {
+            grandTotalTextField.setText("Error saving invoice.");
+            return;
+        }
 
         currentInvoice.generateInvoice();
 

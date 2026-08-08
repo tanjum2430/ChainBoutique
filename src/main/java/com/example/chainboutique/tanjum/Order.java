@@ -1,8 +1,9 @@
 package com.example.chainboutique.tanjum;
 
 import java.time.LocalDate;
+import java.io.Serializable;
 
-public class Order {
+public class Order implements Serializable {
     private int orderId; // Primary Key
     private LocalDate orderDate;
     private String status,deliveryAddress;

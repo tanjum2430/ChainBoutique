@@ -12,6 +12,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class CustomerLoginController
@@ -82,10 +84,20 @@ public class CustomerLoginController
                     new FileInputStream(CUSTOMER_FILE)
             );
 
-            Customer customer = (Customer) ois.readObject();
+            ArrayList<Customer> customers =
+                    (ArrayList<Customer>) ois.readObject();
             ois.close();
 
-            if (customer.login(email, password)) {
+            Customer customer = null;
+
+            for (Customer c : customers) {
+                if (c.login(email, password)) {
+                    customer = c;
+                    break;
+                }
+            }
+
+            if (customer != null) {
 
                 Parent root = FXMLLoader.load(
                         Objects.requireNonNull(
