@@ -35,7 +35,19 @@ public class MainController
     }
 
     @javafx.fxml.FXML
-    public void inventoryOfficerOnAction(ActionEvent actionEvent) {
+    public void inventoryOfficerOnAction(ActionEvent actionEvent)  throws IOException {
+
+        Parent root = FXMLLoader.load(
+                Objects.requireNonNull(
+                        getClass().getResource(
+                                "/com/example/chainboutique/adib/InventoryOfficerLogin.fxml"
+                        )
+                )
+        );
+
+        Stage stage = (Stage) btnInventoryOfficer.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     @javafx.fxml.FXML
