@@ -1,8 +1,9 @@
 package com.example.chainboutique.tanjum;
 
 import java.time.LocalDate;
+import java.io.Serializable;
 
-public class ReturnRequest {
+public class ReturnRequest implements Serializable {
     private int returnId; // Primary Key
     private int invoiceId; // Foreign Key
     private int productId; // Foreign Key

@@ -15,13 +15,19 @@ import com.example.chainboutique.tanjum.ReturnRequest;
 import java.time.LocalDate;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
-import java.io.IOException;
+
 import java.util.ArrayList;
+import java.io.File;
+
+import java.io.FileOutputStream;
+
+import java.io.ObjectOutputStream;
 
 
 public class ReturnExchangeController
 {
     private static final String INVOICE_FILE = "invoices.bin";
+    private static final String RETURN_REQUEST_FILE = "returnRequests.bin";
 
     @javafx.fxml.FXML
     private Button btnBack;
@@ -162,6 +168,41 @@ public class ReturnExchangeController
         );
 
         SharedData.returnRequests.add(request);
+
+
+        try {
+
+            ArrayList<ReturnRequest> returnRequests = new ArrayList<>();
+
+            File file = new File(RETURN_REQUEST_FILE);
+
+            if (file.exists() && file.length() > 0) {
+
+                ObjectInputStream ois = new ObjectInputStream(
+                        new FileInputStream(RETURN_REQUEST_FILE)
+                );
+
+                returnRequests =
+                        (ArrayList<ReturnRequest>) ois.readObject();
+
+                ois.close();
+            }
+
+            returnRequests.add(request);
+
+            ObjectOutputStream oos = new ObjectOutputStream(
+                    new FileOutputStream(RETURN_REQUEST_FILE)
+            );
+
+            oos.writeObject(returnRequests);
+            oos.close();
+
+        } catch (IOException | ClassNotFoundException e) {
+
+            statusTextField.setText("Error saving return request.");
+            return;
+        }
+
 
         statusTextField.setText(
                 "Request Created. Return ID: " + returnId
