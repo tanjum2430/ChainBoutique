@@ -77,8 +77,10 @@ public class CustomerDashboardController
                 "Kids"
         );
 
-        productIdCol.setCellValueFactory(
-                new PropertyValueFactory<>("productId")
+        productIdCol.setCellValueFactory(cellData ->
+                new ReadOnlyObjectWrapper<>(
+                        cellData.getValue().getProductId()
+                )
         );
 
         productNameCol.setCellValueFactory(cellData ->
@@ -87,20 +89,28 @@ public class CustomerDashboardController
                 )
         );
 
-        categoryCol.setCellValueFactory(
-                new PropertyValueFactory<>("category")
+        categoryCol.setCellValueFactory(cellData ->
+                new ReadOnlyStringWrapper(
+                        cellData.getValue().getCategory()
+                )
         );
 
-        sizeCol.setCellValueFactory(
-                new PropertyValueFactory<>("size")
+        sizeCol.setCellValueFactory(cellData ->
+                new ReadOnlyStringWrapper(
+                        cellData.getValue().getSize()
+                )
         );
 
-        priceCol.setCellValueFactory(
-                new PropertyValueFactory<>("price")
+        priceCol.setCellValueFactory(cellData ->
+                new ReadOnlyObjectWrapper<>(
+                        cellData.getValue().getPrice()
+                )
         );
 
-        stockCol.setCellValueFactory(
-                new PropertyValueFactory<>("stock")
+        stockCol.setCellValueFactory(cellData ->
+                new ReadOnlyObjectWrapper<>(
+                        cellData.getValue().getStock()
+                )
         );
 
         productList.addAll(
