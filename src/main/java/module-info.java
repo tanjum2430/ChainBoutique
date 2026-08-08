@@ -9,4 +9,6 @@ module com.example.chainboutique {
 
     opens com.example.chainboutique.adib to javafx.fxml;
     exports com.example.chainboutique.adib;
+    exports com.example.chainboutique.adib.Controller;
+    opens com.example.chainboutique.adib.Controller to javafx.fxml;
 }
