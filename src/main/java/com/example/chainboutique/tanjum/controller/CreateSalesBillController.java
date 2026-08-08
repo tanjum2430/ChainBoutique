@@ -33,6 +33,7 @@ import java.util.Objects;
 public class CreateSalesBillController
 {
     private static final String SALES_BILL_FILE = "salesBills.bin";
+    private static final String PRODUCT_FILE = "products.bin";
 
 
     @javafx.fxml.FXML
@@ -100,24 +101,34 @@ public class CreateSalesBillController
     public void initialize() {
 
         // Product table
-        productIdCol.setCellValueFactory(
-                new PropertyValueFactory<>("productId")
+        productIdCol.setCellValueFactory(cellData ->
+                new ReadOnlyObjectWrapper<>(
+                        cellData.getValue().getProductId()
+                )
         );
 
-        productNameCol.setCellValueFactory(
-                new PropertyValueFactory<>("productName")
+        productNameCol.setCellValueFactory(cellData ->
+                new ReadOnlyStringWrapper(
+                        cellData.getValue().getProductName()
+                )
         );
 
-        sizeCol.setCellValueFactory(
-                new PropertyValueFactory<>("size")
+        sizeCol.setCellValueFactory(cellData ->
+                new ReadOnlyStringWrapper(
+                        cellData.getValue().getSize()
+                )
         );
 
-        priceCol.setCellValueFactory(
-                new PropertyValueFactory<>("price")
+        priceCol.setCellValueFactory(cellData ->
+                new ReadOnlyObjectWrapper<>(
+                        cellData.getValue().getPrice()
+                )
         );
 
-        stockCol.setCellValueFactory(
-                new PropertyValueFactory<>("stock")
+        stockCol.setCellValueFactory(cellData ->
+                new ReadOnlyObjectWrapper<>(
+                        cellData.getValue().getStock()
+                )
         );
 
         // Bill items table
@@ -142,11 +153,34 @@ public class CreateSalesBillController
         );
 
         // Temporary products
-        productList.addAll(
-                new Product("Men's Shirt", "Men", "M", "shirt.jpg", 101, 1500.0, 20),
-                new Product("Women's Kurti", "Women", "L", "kurti.jpg", 102, 1800.0, 15),
-                new Product("Kids T-Shirt", "Kids", "S", "kids.jpg", 103, 800.0, 25)
-        );
+        File file = new File(PRODUCT_FILE);
+
+        if (file.exists() && file.length() > 0) {
+
+            try {
+                ObjectInputStream ois = new ObjectInputStream(
+                        new FileInputStream(PRODUCT_FILE)
+                );
+
+                ArrayList<Product> products =
+                        (ArrayList<Product>) ois.readObject();
+
+                ois.close();
+
+                productList.setAll(products);
+
+            } catch (IOException | ClassNotFoundException e) {
+                totalAmountTextField.setText("Error loading products.");
+            }
+
+        } else {
+
+            productList.addAll(
+                    new Product("Men's Shirt", "Men", "M", "shirt.jpg", 101, 1500.0, 20),
+                    new Product("Women's Kurti", "Women", "L", "kurti.jpg", 102, 1800.0, 15),
+                    new Product("Kids T-Shirt", "Kids", "S", "kids.jpg", 103, 800.0, 25)
+            );
+        }
 
         createSalesBillTableView.setItems(productList);
         cartItemTableView.setItems(billItems);
@@ -199,6 +233,20 @@ public class CreateSalesBillController
         billItems.add(item);
 
         selectedProduct.updateStock(quantity);
+
+        try {
+
+            ObjectOutputStream oos = new ObjectOutputStream(
+                    new FileOutputStream(PRODUCT_FILE)
+            );
+
+            oos.writeObject(new ArrayList<>(productList));
+            oos.close();
+
+        } catch (IOException e) {
+            totalAmountTextField.setText("Error updating product stock.");
+            return;
+        }
 
         createSalesBillTableView.refresh();
         cartItemTableView.refresh();

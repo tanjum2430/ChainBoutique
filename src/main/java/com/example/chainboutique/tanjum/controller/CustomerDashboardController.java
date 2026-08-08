@@ -16,9 +16,19 @@ import com.example.chainboutique.tanjum.Cart;
 import com.example.chainboutique.tanjum.SharedData;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.beans.property.ReadOnlyObjectWrapper;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+
+
 
 public class CustomerDashboardController
 {
+    private static final String PRODUCT_FILE = "products.bin";
+
     @javafx.fxml.FXML
     private TableColumn<Product,String> sizeCol;
     @javafx.fxml.FXML
@@ -113,11 +123,47 @@ public class CustomerDashboardController
                 )
         );
 
-        productList.addAll(
-                new Product("Men's Shirt", "Men", "M", "shirt.jpg", 101, 1500.0, 20),
-                new Product("Women's Kurti", "Women", "L", "kurti.jpg", 102, 1800.0, 15),
-                new Product("Kids T-Shirt", "Kids", "S", "kids.jpg", 103, 800.0, 25)
-        );
+        File file = new File(PRODUCT_FILE);
+
+        if (file.exists() && file.length() > 0) {
+
+            try {
+                ObjectInputStream ois = new ObjectInputStream(
+                        new FileInputStream(PRODUCT_FILE)
+                );
+
+                ArrayList<Product> products =
+                        (ArrayList<Product>) ois.readObject();
+
+                ois.close();
+
+                productList.setAll(products);
+
+            } catch (IOException | ClassNotFoundException e) {
+                searchProductsLabel.setText("Error loading products.");
+            }
+
+        } else {
+
+            productList.addAll(
+                    new Product("Men's Shirt", "Men", "M", "shirt.jpg", 101, 1500.0, 20),
+                    new Product("Women's Kurti", "Women", "L", "kurti.jpg", 102, 1800.0, 15),
+                    new Product("Kids T-Shirt", "Kids", "S", "kids.jpg", 103, 800.0, 25)
+            );
+
+            try {
+
+                ObjectOutputStream oos = new ObjectOutputStream(
+                        new FileOutputStream(PRODUCT_FILE)
+                );
+
+                oos.writeObject(new ArrayList<>(productList));
+                oos.close();
+
+            } catch (IOException e) {
+                searchProductsLabel.setText("Error saving products.");
+            }
+        }
 
 
         customerDashboardTableView.setItems(productList);
@@ -163,6 +209,20 @@ public class CustomerDashboardController
 
             cart.addItem(selectedProduct, quantity);
             selectedProduct.updateStock(quantity);
+
+            try {
+
+                ObjectOutputStream oos = new ObjectOutputStream(
+                        new FileOutputStream(PRODUCT_FILE)
+                );
+
+                oos.writeObject(new ArrayList<>(productList));
+                oos.close();
+
+            } catch (IOException e) {
+                searchProductsLabel.setText("Error updating product stock.");
+                return;
+            }
 
             selectedProductTextField.setText(
                     selectedProduct.getProductName()

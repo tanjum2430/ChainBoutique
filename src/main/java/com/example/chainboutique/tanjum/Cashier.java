@@ -1,8 +1,9 @@
 package com.example.chainboutique.tanjum;
 
 import java.time.LocalDate;
+import java.io.Serializable;
 
-public class Cashier {
+public class Cashier implements Serializable {
     private int cashierID; // Primary Key (Unique)
     private String name,password;
 

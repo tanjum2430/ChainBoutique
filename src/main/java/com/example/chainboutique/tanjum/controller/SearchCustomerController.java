@@ -1,6 +1,7 @@
 package com.example.chainboutique.tanjum.controller;
 
 import com.example.chainboutique.tanjum.Customer;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -14,6 +15,8 @@ import javafx.stage.Stage;
 import com.example.chainboutique.tanjum.SharedData;
 import java.util.ArrayList;
 import java.util.Objects;
+import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.beans.property.ReadOnlyStringWrapper;
 
 
 public class SearchCustomerController
@@ -54,20 +57,29 @@ public class SearchCustomerController
 
     @javafx.fxml.FXML
     public void initialize() {
-        customerIdCol.setCellValueFactory(
-                new PropertyValueFactory<>("customerId")
+
+        customerIdCol.setCellValueFactory(cellData ->
+                new ReadOnlyObjectWrapper<>(
+                        cellData.getValue().getCustomerId()
+                )
         );
 
-        nameCol.setCellValueFactory(
-                new PropertyValueFactory<>("name")
+        nameCol.setCellValueFactory(cellData ->
+                new ReadOnlyStringWrapper(
+                        cellData.getValue().getName()
+                )
         );
 
-        phoneNumberCol.setCellValueFactory(
-                new PropertyValueFactory<>("phoneNo")
+        phoneNumberCol.setCellValueFactory(cellData ->
+                new ReadOnlyStringWrapper(
+                        cellData.getValue().getPhoneNo()
+                )
         );
 
-        emailCol.setCellValueFactory(
-                new PropertyValueFactory<>("email")
+        emailCol.setCellValueFactory(cellData ->
+                new ReadOnlyStringWrapper(
+                        cellData.getValue().getEmail()
+                )
         );
     }
 
