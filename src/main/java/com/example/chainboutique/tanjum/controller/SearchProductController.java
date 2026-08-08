@@ -98,9 +98,9 @@ public class SearchProductController
         );
 
         productList.addAll(
-                new Product("Men's Shirt", "Men", "M", "shirt.jpg", 101, 1500.0, 20),
-                new Product("Women's Kurti", "Women", "L", "kurti.jpg", 102, 1800.0, 15),
-                new Product("Kids T-Shirt", "Kids", "S", "kids.jpg", 103, 800.0, 25)
+                new Product("Men's Shirt", "Men", "M", "shirt.jpg", 101, 1500.0, 200000000),
+                new Product("Women's Kurti", "Women", "L", "kurti.jpg", 102, 1800.0, 15000000),
+                new Product("Kids T-Shirt", "Kids", "S", "kids.jpg", 103, 800.0, 250000000)
         );
 
         searchProductsTableView.setItems(productList);

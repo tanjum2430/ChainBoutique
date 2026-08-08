@@ -6,9 +6,21 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
+import com.example.chainboutique.tanjum.Product;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class InventoryController
 {
+
+    private static final String PRODUCT_FILE = "products.bin";
+
+
     @javafx.fxml.FXML
     private TextField totalStockValueField;
     @javafx.fxml.FXML
@@ -31,6 +43,12 @@ public class InventoryController
     private DatePicker lastUpdatedPicker;
     @javafx.fxml.FXML
     private TableColumn <Inventory,String> inventoryIdColumn;
+    @javafx.fxml.FXML
+    private Button updateStockButton;
+    @javafx.fxml.FXML
+    private TextField productIdField;
+    @javafx.fxml.FXML
+    private TextField stockQuantityField;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -50,5 +68,9 @@ public class InventoryController
 
     @javafx.fxml.FXML
     public void searchInventory(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void updateStockOnAction(ActionEvent actionEvent) {
     }
 }

@@ -94,6 +94,10 @@ public class Product implements Serializable {
         stock = stock - quantity;
     }
 
+    public void addStock(int quantity) {
+        stock = stock + quantity;
+    }
+
     public String getProductDetails(){
 
         return "Product: " + productName +

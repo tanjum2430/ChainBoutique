@@ -79,8 +79,52 @@ public class CustomerDashboardController
             FXCollections.observableArrayList();
     private final Cart cart = SharedData.cart;
 
+
+    private void restockProductsManually() {
+
+        try {
+            ObjectInputStream ois = new ObjectInputStream(
+                    new FileInputStream(PRODUCT_FILE)
+            );
+
+            ArrayList<Product> products =
+                    (ArrayList<Product>) ois.readObject();
+
+            ois.close();
+
+            for (Product product : products) {
+
+                if (product.getProductId() == 101) {
+                    product.setStock(5000000);
+                }
+
+                if (product.getProductId() == 102) {
+                    product.setStock(4000000);
+                }
+
+                if (product.getProductId() == 103) {
+                    product.setStock(3000000);
+                }
+            }
+
+            ObjectOutputStream oos = new ObjectOutputStream(
+                    new FileOutputStream(PRODUCT_FILE)
+            );
+
+            oos.writeObject(products);
+            oos.close();
+
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     @javafx.fxml.FXML
     public void initialize() {
+
+        restockProductsManually();
+
         categoryComboBox.getItems().addAll(
                 "Men",
                 "Women",
@@ -146,9 +190,9 @@ public class CustomerDashboardController
         } else {
 
             productList.addAll(
-                    new Product("Men's Shirt", "Men", "M", "shirt.jpg", 101, 1500.0, 20),
-                    new Product("Women's Kurti", "Women", "L", "kurti.jpg", 102, 1800.0, 15),
-                    new Product("Kids T-Shirt", "Kids", "S", "kids.jpg", 103, 800.0, 25)
+                    new Product("Men's Shirt", "Men", "M", "shirt.jpg", 101, 1500.0, 5000000),
+                    new Product("Women's Kurti", "Women", "L", "kurti.jpg", 102, 1800.0, 4000000),
+                    new Product("Kids T-Shirt", "Kids", "S", "kids.jpg", 103, 800.0, 3000000)
             );
 
             try {
